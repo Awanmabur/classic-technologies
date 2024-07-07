@@ -1,0 +1,31 @@
+<h1 style="color: #cd7700;">Latest News</h1>
+
+<% blog.reverse() %>
+<% if (blog.length > 0) { %>
+
+  <div class="row">
+
+    <% blog.forEach((blog, index) => { %>
+      <div class="column2">
+        <div data-rotate-y="180deg" data-move-z="-200px" data-move-x="-300px" data-aos="fade-left" data-aos-duration="1100">
+        <img id="serv2" src="/uploads/<%= blog.image %>" alt="Blog Image" width="100%" height="200" alt="">
+        <h4 id="serv"><%= blog.title %></h4>
+        <p id="serv1"><%= blog.content?.slice(0, 130) %>.... <a href="/morePost/<%= blog._id %>">Read More</a></p>
+      </div>
+      </div>
+      <% }); %>
+
+      <div class="column2">
+        <a href="/BlogPost">
+        <div data-rotate-y="180deg" data-move-z="-200px" data-move-x="-300px" data-aos="fade-left" data-aos-duration="1100">
+        <img id="serv2" src="/images/more.png " alt="Blog Image" width="100%" height="300" alt="">
+      </div>
+      </a>
+      </div>
+
+      </div>
+
+      <% } else { %>
+      <p style="text-align:center; font-size:1em; margin-top: 25px; margin-bottom: -30px">No Blog found now, please come back later.</p>
+      <% } %>
+ 

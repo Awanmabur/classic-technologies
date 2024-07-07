@@ -1,0 +1,33 @@
+<!-- creating page starts here -->
+
+<%-include("../partials/header") %>
+
+<%-include("../partials/flash") %>
+
+<div id="contact">
+  <div class="create">
+    <span>Update Your Review</span>
+  </div>
+  <div class="row">
+    <form action="/edit-review/<%= review._id %>" method="POST" enctype="multipart/form-data">
+    <div class="column" data-aos="zoom-in-left" data-aos-delay="180">
+      <img id="text" src="/uploads/<%= review.image %>" width="auto" height="auto" alt="">
+    </div>
+    <div class="column" data-aos="zoom-in-right" data-aos-delay="250">
+      <label class="create-review">Your Review Image</label>
+      <input class="contact2" type="file" id="image" value="<%= review.image %>" name="imageUrl">
+      <label class="create-review">Your Full Name</label>
+      <input required="true" autocomplete="false" class="contact2" type="text" value="<%= review.username %>" name="username">
+      <label class="create-review">Your Title</label>
+      <input required="true" autocomplete="false" class="contact2" type="text" maxlength="15" value="<%= review.title %>" name="title">
+      <label class="create-review" for="subject">Write Your Review Below</label>
+      <textarea required="true" autocomplete="false" id="subject" name="review" placeholder="Write something.." style="height:170px"><%= review.review %></textarea>
+      <input type="submit" value="Update Review">
+     </form>
+    </div>
+  </div>
+</div>
+
+<%-include("../partials/footer") %>
+
+<!-- creating page starts end here -->

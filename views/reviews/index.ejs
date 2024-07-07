@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta charset="UTF-8">
+
+<title>CodePen - Slick Slider: custom styled centerMode</title>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css'>
+<link rel="stylesheet" href="./css/review.css">
+
+</head>
+<body>
+
+  <h1 style="color: #cd7700;">Reviews from our clients</h1>
+
+<!-- partial:index.partial.html -->
+<div class="review-container full-width">
+	<div class="bf-testimonial-slick">
+<% review.forEach((review, index) => { %>
+  <div class="bf-testimonial-slick-single">
+
+    <div class="testimonial">
+         <span class="icon fa fa-quote-left"></span>
+         <p class="description">
+           <%= review.review?.slice(0, 50) %>.... <a href="/morereview/<%= review._id %>">Read More</a>
+         </p>
+         <div class="testimonial-content">
+           <div class="pic">
+             <img id="serv2" src="/uploads/<%= review.image %>" alt="Blog Image" width="100" height="100" alt="">
+           </div>
+           <h3 class="name"> <%= review.username %> </h3>
+           <span style="color: white;"><%= review.title %></span>
+         </div>
+       </div>
+
+	</div>
+
+ <% }); %>
+
+</div>
+<a class="btn" href="/create-review">Rate us</a>
+
+</div>
+
+<!-- partial -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.0/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js'>
+</script><script  src="./js/review.js"></script>
+
+</body>
+</html>

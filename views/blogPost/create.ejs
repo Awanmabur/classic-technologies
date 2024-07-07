@@ -1,0 +1,25 @@
+<%-include("../partials/header") %>
+<%-include("../partials/flash") %>
+
+<div id="contact" class="container">
+  <div class="create">
+    <span>create blog here</span>
+  </div>
+  <div class="row">
+    <form action="/create-blog" method="POST" enctype="multipart/form-data" autocomplete="off">
+    <div class="column" data-aos="zoom-in-left" data-aos-delay="180">
+      <input id="uploadsheet" type="file" name="image" accept="image/*" required>
+    </div>
+    <div class="column" data-aos="zoom-in-right" data-aos-delay="250">
+        <label class="contact1" for="email">blog title</label>
+        <input required="true" autocomplete="false" class="contact2" maxlength="50" type="text" id="email" name="title" placeholder="Your email..">
+        <label class="contact1" for="subject">content</label>
+        <textarea required="true" autocomplete="false" id="subject" name="content" placeholder="Write something.." style="height:170px"></textarea>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </div>
+</div>
+<!-- contact -->
+
+<%-include("../partials/footer") %>

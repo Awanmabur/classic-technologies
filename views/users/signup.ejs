@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Responsive Login Form Section</title>
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Syahrizaldev"><link rel='stylesheet' href='https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css'>
+<link rel="stylesheet" href="./css/login.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<%-include("../partials/flash") %>
+<main class="main">
+	<div class="container">
+		<section class="wrapper">
+			<div class="heading">
+				<h1 class="text text-large">Sign Up</h1>
+				<p class="text text-normal">Already has an account? <span><a href="/login" class="text text-links">Login Here</a></span>
+				</p>
+			</div>
+			<form action="/Register" autocomplete="nofill" method="post" name="signin" class="form">
+				<div class="input-control">
+					<label for="fname" class="input-label" hidden>First Name</label>
+					<input type="text" name="fname" id="email" class="input-field" placeholder="First name" required>
+				</div>
+				<div class="input-control">
+					<label for="lname" class="input-label" hidden>Last Name</label>
+					<input type="text" name="lname" id="password" class="input-field" placeholder="Last name" required>
+				</div>
+        <div class="input-control">
+					<label for="email" class="input-label" hidden>Email Address</label>
+					<input type="email" name="email" id="email" class="input-field" placeholder="Email Address" required>
+				</div>
+				<div class="input-control">
+					<label for="password" class="input-label" hidden>Password</label>
+					<input type="password" name="password" id="password" class="input-field" placeholder="Password" required>
+				</div>
+				<div class="input-control">
+					<input type="submit" name="submit" class="input-submit" value="Sign Up">
+				</div>
+			</form>
+			<div class="striped">
+				<span class="striped-line"></span>
+				<span class="striped-text">Or</span>
+				<span class="striped-line"></span>
+			</div>
+			<div class="method">
+				<div class="method-control">
+					<a href="#" class="method-action">
+						<i class="ion ion-logo-google"></i>
+						<span>Sign Up with Google</span>
+					</a>
+				</div>
+				<div class="method-control">
+					<a href="#" class="method-action">
+						<i class="ion ion-logo-facebook"></i>
+						<span>Sign Up with Facebook</span>
+					</a>
+				</div>
+				<div class="method-control">
+					<a href="#" class="method-action">
+						<i class="ion ion-logo-apple"></i>
+						<span>Sign Up with Apple</span>
+					</a>
+				</div>
+			</div>
+		</section>
+	</div>
+</main>
+<!-- partial -->
+
+</body>
+</html>

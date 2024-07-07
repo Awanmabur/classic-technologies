@@ -1,0 +1,132 @@
+body{
+  overflow-x: hidden;
+  }
+
+
+@media screen and (max-width: 600px) {
+ #alert{
+	 width: 90%;
+   margin: auto;
+	 border: 2px solid #5cb85c;
+	 border-radius: 5px;
+	 background-color: #ddffdd;
+	 color: black;
+	 margin-top: 20px;
+   margin-left: 20px;
+   margin-right: 20px;
+	 position:  absolute;
+	 z-index: 99
+ }
+}
+
+@media screen and (max-width: 600px) {
+ #danger1{
+	 width: 90%;
+   margin: auto;
+   border: 2px solid #f44336;
+   border-radius: 5px;
+   background-color: #ffdddd;
+	 color: black;
+	 margin-top: 20px;
+   margin-left: 20px;
+   margin-right: 20px;
+	 position:  absolute;
+	 z-index: 99
+ }
+}
+
+@media screen and (max-width: 600px) {
+ #alert2{
+	 width: 90%;
+   margin: auto;
+   border: 2px solid #ffeb3b;
+   border-radius: 5px;
+   background-color: #ffffcc;
+	 color: black;
+	 margin-top: 20px;
+   margin-left: 20px;
+   margin-right: 20px;
+	 position:  absolute;
+	 z-index: 99
+ }
+}
+
+	.warning{
+	  padding: 20px;
+	  width: 700px;
+	  border: 2px solid #ffeb3b;
+	  border-radius: 5px;
+	  background-color: #ffffcc;
+	  color: black;
+	  margin-top: 20px;
+	  margin-left: 25%;
+	  position:  absolute;
+	  z-index: 99
+	}
+
+
+  .alert {
+    padding: 20px;
+    width: 700px;
+    border: 2px solid #5cb85c;
+    border-radius: 5px;
+    background-color: #ddffdd;
+    color: black;
+    margin-top: 20px;
+    margin-left: 25%;
+    position:  absolute;
+    z-index: 99
+  }
+
+	.danger {
+	  padding: 20px;
+	  width: 700px;
+	  border: 2px solid #f44336;
+	  border-radius: 5px;
+	  background-color: #ffdddd;
+	  color: black;
+	  margin-top: 20px;
+	  margin-left: 25%;
+	  position:  absolute;
+	  z-index: 99
+	}
+
+	.closebtn {
+	  margin-left: 15px;
+	  color: black;
+	  font-weight: bold;
+	  float: right;
+	  font-size: 22px;
+	  line-height: 20px;
+	  cursor: pointer;
+	  transition: 0.3s;
+	}
+
+	.closebtn:hover {
+	  color: black;
+	}
+	#alert {
+	  animation: hideAnimation 0s ease-in 5s;
+	  animation-fill-mode: forwards;
+	}
+
+	@keyframes hideAnimation {
+	  to {
+	    visibility: hidden;
+	    width: 0;
+	    height: 0;
+	  }
+	}
+
+	#danger {
+	  animation: hideAnimation 0s ease-in 5s;
+	  animation-fill-mode: forwards;
+	}
+
+	@keyframes hideAnimation {
+	  to {
+	    visibility: hidden;
+	    width: 0;
+	    height: 0;
+	  }
+	}

@@ -1,0 +1,41 @@
+<%-include("../partials/header") %>
+
+<div id="contact" class="container">
+
+  <h2 style="text-align:center; color: #cd7700; font-size:2em; margin-bottom: -25px; margin-top: 25px">Edit User Info</h2>
+
+  <div class="row">
+    <form action="/edit-user/<%= user._id %>" method="POST" enctype="multipart/form-data">
+    <div class="column" data-aos="zoom-in-left" data-aos-delay="180">
+
+      <% if (oneUser.length === 1) { %>
+
+          <% oneUser.forEach((oneUser, index) => { %>
+            <img id="serv2" src="/uploads/<%= oneUser.image %>" alt="Image Preview" width="100%">
+          <% }); %>
+
+      <% } else { %>
+
+        <img id="serv2" src="/images/logo.png" alt="" width="100%">
+
+      <% } %>
+
+    </div>
+
+    <div class="column" data-aos="zoom-in-right" data-aos-delay="250">
+        <label class="contact1" for="image">Profile Image</label>
+        <input class="contact2" type="file" value="<%= user.image %>" name="imageUrl">
+        <label class="contact1" for="email">First Name</label>
+        <input class="contact2" type="text" name="fname" maxlength="10" value="<%= user.fname %>">
+        <label class="contact1" for="email">Last Name</label>
+        <input class="contact2" type="text" name="lname" maxlength="10" value="<%= user.lname %>">
+        <label class="contact1" for="email">Bios Data</label>
+        <input class="contact2" type="text" name="bios" maxlength="100" value="<%= user.bios %>">
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </div>
+</div>
+<!-- contact -->
+ 
+<%-include("../partials/footer") %>

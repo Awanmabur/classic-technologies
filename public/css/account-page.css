@@ -1,0 +1,520 @@
+.admin, h2{
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 50px
+}
+
+.admintable {
+border-collapse: collapse;
+border-spacing: 0;
+width: 100%;
+border: 1px solid #ddd;
+}
+
+.admintable th {
+text-align: left;
+padding: 8px;
+border: 1px solid #ddd;
+}
+
+.admintable td {
+text-align: left;
+padding: 8px;
+border: 1px solid #ddd;
+}
+
+
+/* style.css */
+
+.tabs {
+  display: flex;
+  flex-direction: column;
+}
+
+.tab-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tab-header {
+  display: inline-block;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: -10px
+}
+
+.tab-content {
+  display: none;
+  padding: 20px;
+  /*border: 1px solid #ccc;*/
+}
+
+.tab-content.active {
+  display: block;
+}
+
+#trans{
+  overflow-x: auto;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+#subscription{
+  margin-top: -30px;
+ }
+
+ .editbtn{
+   margin-left: -35px;
+   margin-top: 20px;
+   position: absolute;
+ }
+
+/* 7 */
+.btn-7 {
+  background: linear-gradient(0deg, rgba(255,151,0,1) 0%, rgba(251,75,2,1) 100%);
+  line-height: 42px;
+  padding: 0;
+  border: none;
+}
+.btn-7 span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.btn-7:before,
+.btn-7:after {
+  position: absolute;
+  content: "";
+  right: 0;
+  bottom: 0;
+  background: rgba(251,75,2,1);
+  box-shadow:
+   -7px -7px 20px 0px rgba(255,255,255,.9),
+   -4px -4px 5px 0px rgba(255,255,255,.9),
+   7px 7px 20px 0px rgba(0,0,0,.2),
+   4px 4px 5px 0px rgba(0,0,0,.3);
+  transition: all 0.3s ease;
+}
+.btn-7:before{
+   height: 0%;
+   width: 2px;
+}
+.btn-7:after {
+  width: 0%;
+  height: 2px;
+}
+.btn-7:hover{
+  color: white;
+  background: transparent;
+}
+.btn-7:hover:before {
+  height: 100%;
+}
+.btn-7:hover:after {
+  width: 100%;
+}
+.btn-7 span:before,
+.btn-7 span:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  background: rgba(251,75,2,1);
+  box-shadow:
+   -7px -7px 20px 0px rgba(255,255,255,.9),
+   -4px -4px 5px 0px rgba(255,255,255,.9),
+   7px 7px 20px 0px rgba(0,0,0,.2),
+   4px 4px 5px 0px rgba(0,0,0,.3);
+  transition: all 0.3s ease;
+}
+.btn-7 span:before {
+  width: 2px;
+  height: 0%;
+}
+.btn-7 span:after {
+  height: 2px;
+  width: 0%;
+}
+.btn-7 span:hover:before {
+  height: 100%;
+}
+.btn-7 span:hover:after {
+  width: 100%;
+}
+
+
+.custom-btn {
+  width: 150px;
+  height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  margin: 0 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+}
+
+
+
+
+
+
+
+
+* {
+	margin:0px;
+	padding:0px;
+}
+*, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing:border-box; -o-box-sizing:border-box; box-sizing: border-box; }
+
+.clearfix:before, .clearfix:after { display: table; content: ''; }
+.clearfix:after { clear: both; }
+
+
+input:focus, textarea:focus, keygen:focus, select:focus {
+	outline: none;
+}
+::-moz-placeholder {
+	color: #666;
+	font-weight: 300;
+	opacity: 1;
+}
+
+::-webkit-input-placeholder {
+	color: #666;
+	font-weight: 300;
+}
+
+.grid .col2 {
+	width: 50%;
+	padding: 0 10px 0 0;
+}
+.grid .col2.first {
+	float: left;
+}
+.grid .col2.last {
+	float: right;
+}
+
+.grid .col3 {
+	width: 32%;
+	float: left;
+	margin-right: 11px;
+}
+.grid .col3.first {
+	margin-left: 0;
+	float: left;
+}
+.grid .col3.last {
+	margin-right: 0;
+	float: right;
+}
+
+/* profile page */
+.profile-container {
+    padding: 0px  0px 70px;
+}
+
+.innerwrap {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.section1 {
+	background: #fff;
+	position: relative;
+	border-radius: 2px;
+	background: #E2e2e2;
+	color: #333;
+}
+.section1 div .row:first-child {
+	padding: 25px;
+}
+
+
+.section1 .col2.first img {
+	border-radius: 50%;
+	margin: 0 20px;
+	width: 120px;
+	border:2px solid #f1f1f1;
+	padding: 2px;
+	float: left;
+}
+.section1 .col2.first {
+	line-height: 25px;
+	position: relative;
+	border-right:1px solid #a2a2a2;
+}
+.section1 .col2.first h1 {
+    font-weight: normal;
+    margin-bottom: 10px;
+	margin-top: 15px;
+	text-transform: capitalize;
+}
+.section1 .col2.first p {
+	font-size: 14px;
+}
+.section1 .col2.first span {
+	position: absolute;
+    right: 15px;
+    top: 16px;
+    background: #6AAFEA;
+    padding: 5px 11px;
+    font-size: 12px;
+    line-height: 1;
+    border-radius: 2px;
+    color: #fff;
+  cursor:pointer;
+}
+
+.section1 .col2.last {
+	padding: 8px 0;
+}
+.section1 .col2.last .col3 span {
+    color: #a2a2a2;
+    font-size: 14px;
+}
+.section1 .col2.last .col3 h1 {
+    color: #FB4C22;
+}
+
+.section1 .col2.last .col3 {
+    text-align: center;
+    line-height: 30px;
+    border-right: 1px solid #ccc;
+}
+.section1 .col2.last .col3.last {
+	border-right: 0;
+}
+
+.row2tab li {
+    list-style: none;
+    float: left;
+    width: 25%;
+    padding: 15px;
+    font-size: 14px;
+    text-align: center;
+    cursor:pointer;
+    background: #f1f1f1;
+    color: #555;
+    border-bottom: 2px solid #f1f1f1;
+}
+.row2tab li:first-child {
+    border-bottom: 2px solid #6AAFEA;
+    border-radius: 0 0 2px 2px;
+}
+.row2tab li:first-child {
+	color:  #6AAFEA;
+}
+.row2tab li i {
+        margin-right: 3px;
+    font-size: 14px;
+}
+
+.smalltri {
+	    border-right: 40px solid #6AAFEA;
+    height: 0;
+    width: 0;
+    border-left: 20px solid transparent;
+    border-top: 10px solid #6AAFEA;
+    border-bottom: 20px solid transparent;
+    padding: 0px;
+    top: 0;
+    right: 0;
+    position: absolute;
+}
+.smalltri i {
+    position: absolute;
+    top: -5px;
+    right: -33px;
+    color: #fff;
+    border: 0px;
+    font-size: 12px;
+}
+
+section.section2 {
+    margin: 50px 0;
+}
+
+.section2 .col3 {
+	width: 30%;
+	margin-right: 60px;
+	background: #fff;
+	border-radius: 2px;
+}
+
+.section2 .postcont img {
+
+	width: 100%;
+}
+.section2 .profileinfo {
+    text-align: center;
+    padding: 0 10px 30px;
+    color: #555;
+    font-size: 14px;
+    line-height: 25px;
+}
+.section2 .profileinfo img {
+    border-radius: 50%;
+    width: 80px;
+    padding: 2px;
+    border: 3px solid #6AAFEA;
+    margin-top: -48px;
+    margin-bottom: 18px;
+}
+.section2 .col3.center .profileinfo img {
+    border: 3px solid #FB4C22;
+
+}
+.section2 .profileinfo p {
+	text-align: justify;
+}
+.section2 .profileinfo span {
+	margin-top: 15px;
+    display: block;
+    text-align: left;
+    color: #6AAFEA;
+    cursor: pointer;
+}
+.section2 .profileinfo span i {
+	margin-left: 10px;
+}
+
+@media only screen and (max-width: 1300px) {
+	.innerwrap {
+		width: 100%;
+	}
+	.section2 .col3 {
+		margin-right: 5%;
+	}
+	.section1 .grid .col3 {
+		margin-right: 2%;
+	}
+	.section1 .col2.last .col3.last {
+		margin-right: 0;
+	}
+}
+
+@media only screen and (max-width: 1060px) {
+	.section1 .col2 {
+		width: 100%;
+		border-right:0 !important;
+		padding: 0;
+	}
+}
+
+@media only screen and (max-width: 660px) {
+	.section2 .col3 {
+		width: 100%;
+		float: none !important;
+		margin-bottom: 10px;
+	}
+	.row2tab li {
+		width: 50%;
+		text-align: left;
+	}
+	.section1 .col2.first {
+		text-align: center;
+	}
+	.section1 .col2.first img {
+		display: inline-block;
+		float: none;
+	}
+	.section1 .col2.first span {
+		position: relative;
+		right: 0;
+	}
+  .section1 .col2.last {
+    margin-top:25px;
+  }
+}
+@media only screen and (max-width: 480px) {
+	/*.profile-container {
+    padding: -10px 5px 10px;
+}*/
+  /*.row2tab li {
+		width: 100%;
+		text-align: left;
+	}*/
+	.section1 .col2.last .col3 span {
+		font-size: 10px;
+	}
+	.section1 .col2.last .col3 h1 {
+		font-size: 18px;
+	}
+
+}
+
+
+
+
+/*services*/
+
+/* Clear floats after the columns */
+.row:after {
+ content: "";
+ display: table;
+ clear: both;
+}
+
+.column1 {
+ float: left;
+ width: 33.3%;
+ margin-top: 6px;
+ padding: 10px;
+}
+
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+ .column1 {
+	 width: 50%;
+	 margin-top: 0;
+ }
+}
+
+
+#serv{
+ margin: 8px
+}
+
+#serv1{
+ margin: 5px
+}
+
+#serv2{
+ border-top-right-radius: 6%;
+ border-top-left-radius: 7%
+}
+
+/*services*/
+
+
+
+
+.tabs {
+display: flex;
+flex-direction: column;
+}
+
+#notshow{
+	display: none;
+}
+
+
+.tab-content {
+display: none;
+margin-top: -100px;
+margin-bottom: 20px;
+}
+
+.tab-content.active {
+display: block;
+}

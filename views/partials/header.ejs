@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>classic technologies</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href=".././css/style.css">
+
+    <link rel="stylesheet" href=".././css/account-page.css">
+
+    <link rel="stylesheet" href=".././css/cssfile.css">
+
+    <link rel="stylesheet" href=".././css/showmore.css">
+
+    <link rel="stylesheet" href=".././css/team.css">
+
+    <link rel="icon" href="/images/logo.png">
+
+    <!-- Aos file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <!--font-awesome-->
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+    <script src="https://kit.fontawesome.com/b14347f964.js" crossorigin="anonymous"></script>
+
+
+ </head>
+
+<body onload="displayGreeting()">
+
+<!-- header section starts  -->
+
+
+<table>
+  <tr class="heading-btn">
+    <td><a href="/"> <img id="top-logo" src=".././images/logo.png" width="60px" height="60px" alt=""> </a></td>
+    <td><a id="heading-icon" style="margin-top: 5px" href="mailto:info@classictechnologies.com"> info@classictechnologies.com </a></td>
+    <td><a href="tel: +211927996390"> <i id="heading-icon" style="font-size: 15px; margin-top: -1px" class="fa fa-phone"></i></a></td>
+    <td><a href="https://api.whatsapp.com/send?phone=256781977217"> <i style="font-size: 19px; margin-top: -1px" id="heading-icon" class="fab fa-whatsapp" ></i></a></td>
+  </tr>
+</table>
+
+   <header class="header">
+
+       <div id="menu-btn" class="fas fa-bars"></div>
+
+          <a data-aos="zoom-in-left" data-aos-delay="150" href="/" class="logo">Classic Technologies</a>
+
+          <nav class="navbar">
+              <a data-aos="zoom-in-left" data-aos-delay="300" href="/">Home</a>
+              <a id="dropdown" data-aos="zoom-in-left" data-aos-delay="300" href="#home"><div class="dropdown">
+                <a class="dropbtn" data-aos="zoom-in-left" data-aos-delay="450" href="#">About</a>
+                <div class="dropdown-content" style="left:0;">
+                  <a href="/about">About Us</a>
+                  <a href="/team">Our Team</a>
+                  <a href="/partners">Partners</a>
+                </div>
+              </div>
+              </a>
+
+              <a data-aos="zoom-in-left" data-aos-delay="600" href="/services">Services</a>
+              <a data-aos="zoom-in-left" data-aos-delay="750" href="/review">Reviews</a>
+              <a data-aos="zoom-in-left" data-aos-delay="750" href="/blogpost">Blogs</a>
+              <a data-aos="zoom-in-left" data-aos-delay="1150" href="/contact">Contact</a>
+
+              <% if( !user ){ %>
+                <a data-aos="zoom-in-left" data-aos-delay="1150" href="/login">login</a>
+                <% } else { %>
+                <a data-aos="zoom-in-left" data-aos-delay="1150"><%= user.fname %></a>
+                <a data-aos="zoom-in-left" href="/logout" data-aos-delay="1150">Logout</a>
+              <% } %>
+
+          </nav>
+
+      </header>
+
+      <!-- header section ends -->

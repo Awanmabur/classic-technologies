@@ -1,0 +1,35 @@
+<%-include("../partials/header") %>
+ 
+<section class="about" id="about">
+
+  <div class="container">
+    <div class="review" style="text-align:center" style="text-align:center">
+      <span>Blog Overview</span>
+    </div>
+    <div class="row">
+      <div style="margin-top: 30px" class="column" data-skew="90deg,90deg" data-aos="fade-left" data-aos-duration="1000">
+        <img id="text" src="/uploads/<%= blog.image %>" width="100%" height="auto"alt="">
+      </div>
+
+      <div id="about1" class="column" data-scale="4" data-aos="fade-right" data-aos-duration="1000">
+
+        <div class="review-inner">
+
+          <h3> <strong> <em><%= blog.title %></em> </strong> </h3>
+
+        </div>
+        <p><%= blog.content %></p>
+
+     <% if (String(blog.owner) === userId) { %>
+        <p style="margin-top: 20px">
+        <a href="/edit-blogPost/<%= blog._id %>" class="btn btn-warning">Edit</a>
+        <a href="/delete-blogPost/<%= blog._id %>" class="btn btn-warning">Delete</a>
+        </p>
+     <% } %>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<%-include("../partials/footer") %>

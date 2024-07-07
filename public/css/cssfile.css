@@ -1,0 +1,373 @@
+
+
+/*ToTop*/
+
+#goto-topJS:hover{
+  cursor:pointer;
+}
+
+#goto-topJS {
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 1000000; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+}
+
+/*ToTop*/
+#call-logo{
+  color: white;
+}
+
+
+/* slide show start */
+
+.slider{
+	position: relative;
+	width: 100%;
+	background: -webkit-gradient(linear, left top, left bottom, from(rgba(17, 17, 17, 0.7)), to(rgba(17, 17, 17, 0.7))), url(../images/banner-bg.jpg) no-repeat;
+	background: linear-gradient(rgba(17, 17, 17, 0.7), rgba(17, 17, 17, 0.7)), url(../images/app.jpg) no-repeat;
+	background-size: cover;
+	background-position: center;
+	margin-top: -90px;
+}
+
+.heading-page{
+  padding-top: 50px;
+  font-size: 6rem;
+	color: white;
+  line-height: 1.5
+
+}
+
+#slogan{
+  font-size: 3rem;
+	color: #cd7700;
+	text-align: center;
+}
+
+
+.myslide{
+	height: 655px;
+	display: none;
+	overflow-x: hidden;
+	margin-top: -350px
+}
+
+.prev, .next{
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+	font-size: 50px;
+	padding: 15px;
+	cursor: pointer;
+	color: #fff;
+	transition: 0.1s;
+	user-select: none;
+}
+.prev:hover, .next:hover{
+	color: #cd7700; /* blue */
+}
+.next{
+	right: 0;
+}
+.dotsbox{
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%);
+	bottom: 20px;
+	cursor: pointer;
+}
+.dot{
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	border: 3px solid #fff;
+	border-radius: 50%;
+	margin: 0 10px;
+	cursor: pointer;
+}
+/* /2 */
+
+/* javascript */
+.active, .dot:hover{
+	border-color: #cd7700; /* blue */
+}
+/* /javascript */
+/*#00a7ff;*/
+/* muslide add fade */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: 0.8}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: 0.8}
+  to {opacity: 1}
+}
+/* /muslide add fade */
+
+/* 3 */
+.txt{
+	position: absolute;
+	color: #fff;
+	top: 40%;
+	left: 20%;
+	-webkit-animation-name: posi;
+  	-webkit-animation-duration: 2s;
+  	animation-name: posi;
+  	animation-duration: 2s;
+	z-index: 1;
+}
+
+@-webkit-keyframes posi {
+  from {left: 85%;}
+  to {left: 20%;}
+}
+
+
+@keyframes posi {
+  from {left: 85%;}
+  to {left: 20%;}
+}
+
+.txt h1{
+	color: white; /* blue */
+	font-size: 40px;
+	margin-top: 80px;
+}
+.txt p{
+	font-weight: lighter;
+	font-size: 18px;
+	margin-top: -20px;
+	margin-bottom: 30px;
+  color: #cd7700;
+}
+/* /3 */
+
+/* 4 */
+#slide{
+	transform: scale(1.5, 1.5);
+	-webkit-animation-name: zoomin;
+  	-webkit-animation-duration: 40s;
+  	animation-name: zoomin;
+  	animation-duration: 40s;
+}
+@-webkit-keyframes zoomin {
+  from {transform: scale(1, 1);}
+  to {transform: scale(1.5, 1.5);}
+}
+
+
+@keyframes zoomin {
+  from {transform: scale(1, 1);}
+  to {transform: scale(1.5, 1.5);}
+}
+/* /4 */
+
+
+
+/* 5 */
+@media screen and (max-width: 800px){
+	.myslide{
+		height: 500px;
+	}
+	.txt{
+		letter-spacing: 2px;
+		line-height: 25px;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		-webkit-animation-name: posi2;
+		-webkit-animation-duration: 2s;
+		animation-name: posi2;
+		animation-duration: 2s;
+	}
+
+	@-webkit-keyframes posi2 {
+	  from {top: 35%;}
+	  to {top: 50%;}
+	}
+
+
+	@keyframes posi2 {
+	  from {top: 35%;}
+	  to {top: 50%;}
+	}
+
+	.txt h1{
+		font-size: 40px;
+	}
+	.txt p{
+		font-size: 13px;
+	}
+
+}
+/* /5 */
+
+/* 6 */
+@media screen and (max-width: 1024px){
+  .myslide{
+  	height: 670px;
+  	display: none;
+  	overflow-x: hidden;
+  	margin-top: -350px
+  }
+  .txt{
+    margin-top: 35px;
+  }
+	.txt h1{
+		font-size: 18px;
+    margin-top: 120px;
+		margin-bottom: 20px;
+	}
+
+  .txt p{
+  	font-weight: normal;
+  	font-size: 10px;
+  	margin-top: -20px;
+  	margin-bottom: 30px;
+  }
+
+
+	.sign{
+		margin-right: 20px;
+	}
+	.sign a{
+		font-size: 12px;
+	}
+
+  .heading-page{
+    padding-top: 50px;
+    font-size: 3rem;
+  	color: white;
+    letter-spacing: 2px;
+    line-height: 1.5;
+    font-weight: normal;
+  }
+
+  .prev, .next{
+  	position: absolute;
+  	top: 50%;
+  	transform: translate(0, -50%);
+  	font-size: 35px;
+  	padding: 20px;
+  	cursor: pointer;
+  	color: #fff;
+  	transition: 0.1s;
+  	user-select: none;
+  }
+
+  #slogan{
+    font-size: 1.6rem;
+  	color: #cd7700;
+  	text-align: center;
+    margin-top: -20px;
+    font-weight: normal;
+  }
+
+  .dot{
+  	display: inline-block;
+  	width: 12px;
+  	height: 12px;
+  	border: 3px solid #fff;
+  	border-radius: 50%;
+  	margin: 0 10px;
+  	cursor: pointer;
+  }
+
+}
+/* /6 */
+
+
+
+@media screen and (max-width: 480px){
+  .myslide{
+  	height: 670px;
+  	display: none;
+  	overflow-x: hidden;
+  	margin-top: -350px
+  }
+  .txt{
+    margin-top: 35px;
+  }
+
+  #lastslide{
+    font-size: 14px;
+  }
+
+	.txt h1{
+		font-size: 18px;
+    margin-top: 120px;
+		margin-bottom: 20px;
+	}
+
+  .txt p{
+  	font-weight: normal;
+  	font-size: 10px;
+  	margin-top: -20px;
+  	margin-bottom: 30px;
+  }
+
+
+	.sign{
+		margin-right: 20px;
+	}
+	.sign a{
+		font-size: 12px;
+	}
+
+  .heading-page{
+    padding-top: 50px;
+    font-size: 3rem;
+  	color: white;
+    letter-spacing: 2px;
+    line-height: 1.5;
+    font-weight: normal;
+  }
+
+  .prev, .next{
+  	position: absolute;
+  	top: 50%;
+  	transform: translate(0, -50%);
+  	font-size: 35px;
+  	padding: 20px;
+  	cursor: pointer;
+  	color: #fff;
+  	transition: 0.1s;
+  	user-select: none;
+  }
+
+  #slogan{
+    font-size: 1.6rem;
+  	color: #cd7700;
+  	text-align: center;
+    margin-top: -20px;
+    font-weight: normal;
+  }
+
+  .dot{
+  	display: inline-block;
+  	width: 12px;
+  	height: 12px;
+  	border: 3px solid #fff;
+  	border-radius: 50%;
+  	margin: 0 10px;
+  	cursor: pointer;
+  }
+
+}
+/* slide show ends */

@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>transaction page</title>
+<link rel="stylesheet" href="/css/flash.css">
+</head>
+
+<div id="danger">
+    <% if(errorMessage && errorMessage.length > 0){ %>
+        <div id="danger1" class="danger">
+					<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+            <%= errorMessage %>
+        </div>
+    <% } %>
+    <% if(successMessage && successMessage.length > 0){ %>
+        <div id="alert" class="alert">
+					<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+            <%= successMessage %>
+        </div>
+    <% } %>
+		<% if(welcomeMessage && welcomeMessage.length > 0){ %>
+        <div id="alert" class="alert">
+					<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+            <%= welcomeMessage %> <%= user.fname %>
+        </div>
+    <% } %>
+		<% if(logoutMessage && logoutMessage.length > 0){ %>
+        <div id="alert" class="alert">
+					<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+            <%= logoutMessage %> <strong>
+        </div>
+    <% } %>
+		<% if(warningMessage && warningMessage.length > 0){ %>
+        <div id="alert2" class="warning">
+					<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+            <%= warningMessage %> <strong>
+        </div>
+    <% } %>
+</div>

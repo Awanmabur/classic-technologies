@@ -1,0 +1,30 @@
+<%-include("../partials/header") %>
+
+<div id="contact" class="container">
+
+  <h2 style="text-align:center; color: #cd7700; font-size:2em; margin-top: 25px">Edit This Post</h2>
+
+  <div class="row">
+    <form action="/edit-blogPost/<%= blog._id %>" method="POST" enctype="multipart/form-data">
+    <div class="column" data-aos="zoom-in-left" data-aos-delay="180">
+
+      <img id="serv2" src="/uploads/<%= blog.image %>" alt="Image Preview" width="100%">
+
+    </div>
+
+    <div class="column" data-aos="zoom-in-right" data-aos-delay="250">
+        <label class="contact1" for="email">blog title</label>
+        <input class="contact2" type="text" name="title" maxlength="50" value="<%= blog.title %>">
+        <label class="contact1" for="image">blog Image</label>
+        <input class="contact2" type="file" value="<%= blog.image %>" name="imageUrl">
+        <label class="contact1" for="subject">content</label>
+        <textarea id="content" name="content" style="height:170px"> <%= blog.content %> </textarea>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </div>
+</div>
+<!-- contact -->
+
+
+<%-include("../partials/footer") %>

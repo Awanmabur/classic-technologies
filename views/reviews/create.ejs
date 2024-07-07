@@ -1,0 +1,31 @@
+<!-- creating page starts here -->
+
+<%-include("../partials/header") %>
+
+<%-include("../partials/flash") %>
+
+<div id="contact">
+  <div class="create">
+    <span>Create Your Review Below</span>
+  </div>
+  <div class="row">
+    <form action="/createReview" method="POST" enctype="multipart/form-data">
+    <div class="column" data-aos="zoom-in-left" data-aos-delay="180">
+      <input id="uploadsheet" type="file" name="image" accept="image/*" required>
+    </div>
+    <div class="column" data-aos="zoom-in-right" data-aos-delay="250">
+      <label class="create-review">Your Full Name</label>
+      <input required="true" autocomplete="false" class="contact2" type="text" name="username" placeholder="Your full Name here">
+      <label class="create-review">Your Title</label>
+      <input required="true" autocomplete="false" class="contact2" type="text" name="title" maxlength="15" placeholder="Your Title">
+      <label class="create-review" for="subject">Write Your Review Below</label>
+      <textarea required="true" autocomplete="false" id="subject" name="review" placeholder="Write something.." style="height:170px"></textarea>
+      <input type="submit" value="Submit Review">
+     </form>
+    </div>
+  </div>
+</div>
+
+<%-include("../partials/footer") %>
+
+<!-- creating page starts end here -->

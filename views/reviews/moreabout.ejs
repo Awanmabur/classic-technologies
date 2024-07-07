@@ -1,0 +1,39 @@
+<%-include("../partials/header") %>
+
+<section class="about" id="about">
+
+  <div class="container">
+    <div class="review" style="text-align:center">
+      <span> Review Details</span>
+    </div>
+    <div class="row">
+      <div style="margin-top: 30px" class="column" data-skew="90deg,90deg" data-aos="fade-left" data-aos-duration="1000">
+        <img id="text" src="/uploads/<%= review.image %>" width="auto" height="auto" alt="">
+      </div>
+
+      <div id="about1" class="column" data-scale="4" data-aos="fade-right" data-aos-duration="1000">
+
+        <div class="review-inner">
+
+          <p> <strong>Reviewer's Name: <%= review.username %></strong> </p>
+
+          <p> <strong> <em>Reviewer's Title: <%= review.title %></em> </strong> </p>
+
+        </div>
+
+        <p><%= review.review %></p>
+
+       <% if (review.ownerToken === userToken) { %>
+        <p style="margin-top: 20px">
+          <a href="/edit-review/<%= review._id %>" class="btn btn-warning">Edit</a>
+          <a href="/delete-review/<%= review._id %>" class="btn">Delete</a>
+        </p>
+      <% } %>
+
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<%-include("../partials/footer") %>
