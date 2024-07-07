@@ -7,6 +7,9 @@ const User = require('../models/User');
 const {checkLoginStatus} = require("../middlewares/loginStatus");
 
 
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
+
 router.get('/', checkLoginStatus, async (req, res) => {
   const userId = req.user;
   const user = await User.findById(userId);
