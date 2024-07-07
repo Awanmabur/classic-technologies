@@ -6,6 +6,9 @@ const Review = require('../models/review');
 const User = require('../models/User');
 const {checkLoginStatus} = require("../middlewares/loginStatus");
 
+const app = express();
+ 
+app.use(express.json());
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
