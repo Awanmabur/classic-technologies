@@ -47,7 +47,7 @@ exports.create = async (req, res, next) => {
   try {
     const userId = req.user;
     const user = await User.findById(userId);
-    res.render('./Blogpost/create', {user});
+    res.render('./blogPost/create', {user});
   } catch (error) {
     req.flash('error', 'There is problem getting your blogs, please try again.');
     return res.redirect('/');
@@ -136,7 +136,7 @@ exports.edit = async (req, res, next) => {
   const userId = req.user;
   const user = await User.findById(userId);
   const blog = await BlogPost.findOne({ _id: id });
-  res.render("./Blogpost/edit", { blog, user });
+  res.render("./blogPost/edit", { blog, user });
 };
 
 
