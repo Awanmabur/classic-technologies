@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 const passport = require('passport');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
+const { urlencoded } = require('body-parser');
 const session = require('cookie-session');
 const flash = require('connect-flash');
 
@@ -23,6 +24,7 @@ const {superAdmin} = require('./seeders/admin');
 superAdmin();
 
 // *************************    Assets    ****************************************//
+app.use(urlencoded({extended:true}))
 app.use(express.static(path.join(__dirname,'public')));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
