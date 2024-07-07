@@ -12,7 +12,7 @@ router.get('/', checkLoginStatus, async (req, res) => {
 
   const blog = await BlogPost.find({}).limit(3);;
   const review = await Review.find({});
-  res.render("/home/index.ejs", { blog, user, review });
+  res.render("../home/index", { blog, user, review });
 });
 
 router.get('/contact', checkLoginStatus, async (req, res) => {
