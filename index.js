@@ -61,7 +61,7 @@ app.use(function (req, res, next) {
 app.use(require("./routes/index"))
 app.use(require("./routes/users"))
 app.use(require("./routes/admin"))
-app.use(require("./routes/blogPost"))
+app.use(require("./routes/blogpost"))
 app.use(require("./routes/account"))
 app.use(require("./routes/reviews"))
 
