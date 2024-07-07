@@ -1,7 +1,7 @@
 const express = require("express");
 const router = require("express").Router();
 const BlogPost = require('../models/BlogPost');
-const Review = require('../models/Review');
+const Review = require('../models/review');
 const User = require('../models/User');
 const {checkLoginStatus} = require("../middlewares/loginStatus");
 
