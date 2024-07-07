@@ -6,13 +6,7 @@ const Review = require('../models/review');
 const User = require('../models/User');
 const {checkLoginStatus} = require("../middlewares/loginStatus");
 
-const app = express();
  
-app.use(express.json());
-
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
-
 router.get('/', checkLoginStatus, async (req, res) => {
   const userId = req.user;
   const user = await User.findById(userId);
@@ -26,7 +20,7 @@ router.get('/contact', checkLoginStatus, async (req, res) => {
   const userId = req.user;
   const user = await User.findById(userId);
 
-  res.render("/home/contact", { user });
+  res.render("./home/contact", { user });
 });
 
 router.get('/top-management', checkLoginStatus, async (req, res) => {
