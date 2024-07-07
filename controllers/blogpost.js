@@ -34,7 +34,7 @@ exports.index = async (req, res, next) => {
       const userId = req.user;
       const user = await User.findById(userId);
       const blog = await BlogPost.find({});
-      res.render('/BlogPost/index', { blog, user });
+      res.render('./blogPost/index', { blog, user });
   } catch (error) {
     req.flash('error', 'There is problem getting about you, please try again.');
     return res.redirect('/');
