@@ -27,56 +27,56 @@ router.get('/top-management', checkLoginStatus, async (req, res) => {
   const userId = req.user;
   const user = await User.findById(userId);
 
-  res.render("/home/top-management", { user });
+  res.render("./home/top-management", { user });
 });
 
 router.get('/frontend', checkLoginStatus, async (req, res) => {
   const userId = req.user;
   const user = await User.findById(userId);
 
-  res.render("/home/frontends", { user });
+  res.render("./home/frontends", { user });
 });
 
 router.get('/backend', checkLoginStatus, async (req, res) => {
   const userId = req.user;
   const user = await User.findById(userId);
 
-  res.render("/home/backendprojects", { user });
+  res.render("./home/backendprojects", { user });
 });
 
 router.get('/graphics', checkLoginStatus, async (req, res) => {
   const userId = req.user;
   const user = await User.findById(userId);
 
-  res.render("/home/graphicprojects", { user });
+  res.render("./home/graphicprojects", { user });
 });
 
 router.get('/services', checkLoginStatus, async (req, res) => {
   const userId = req.user;
   const user = await User.findById(userId);
 
-  res.render("/home/services", { user });
+  res.render("./home/services", { user });
 });
 
 router.get('/partners', checkLoginStatus, async (req, res) => {
   const userId = req.user;
   const user = await User.findById(userId);
 
-  res.render("/home/partner", { user });
+  res.render("./home/partner", { user });
 });
 
 router.get('/about', checkLoginStatus, async (req, res) => {
   const userId = req.user;
   const user = await User.findById(userId);
 
-  res.render("/home/about", { user });
+  res.render("./home/about", { user });
 });
 
 router.get('/team', checkLoginStatus, async (req, res) => {
   const userId = req.user;
   const user = await User.findById(userId);
 
-  res.render("/home/team", { user });
+  res.render("./home/team", { user });
 });
 
 
