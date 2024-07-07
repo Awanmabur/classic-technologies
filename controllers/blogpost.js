@@ -203,7 +203,7 @@ exports.show = async (req, res, next) => {
   const userId = req.user;
   const user = await User.findById(userId);
   const blog = await BlogPost.findOne({ _id: id });
-  res.render("./Blogpost/moreabout", { blog, userId, user });
+  res.render("./blogPost/moreabout", { blog, userId, user });
 };
 
 
