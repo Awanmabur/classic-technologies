@@ -218,6 +218,8 @@ exports.blogpostAdmin = async (req, res, next) => {
 // ***route for deleting image and associated text ***
 exports.destroy = async (req, res, next) => {
   const postId = req.params.postId;
+  const blog = await BlogPost.findById(postId);
+
 
   BlogPost.findById(postId, (err, post) => {
     if (err || !post) {
@@ -225,9 +227,16 @@ exports.destroy = async (req, res, next) => {
       return res.redirect('/blogPost');
     }
 
-    // Delete image from uploads folder
-    const imagePath = path.join(__dirname, '../public/uploads', post.image);
-    fs.unlinkSync(imagePath);
+    if (postId) {
+        // Check and delete images if they exist
+        if (blog.image) {
+            fs.unlinkSync(path.join(__dirname, '../public/uploads', blog.image));
+        }
+      }
+
+    // // Delete image from uploads folder
+    // const imagePath = path.join(__dirname, '../public/uploads', post.image);
+    // fs.unlinkSync(imagePath);
 
     // Delete the post from the database
     BlogPost.findByIdAndRemove(postId, (err) => {
