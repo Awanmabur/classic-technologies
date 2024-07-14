@@ -227,12 +227,12 @@ exports.destroy = async (req, res, next) => {
       return res.redirect('/blogPost');
     }
 
-    if (postId) {
-        // Check and delete images if they exist
-        if (blog.image) {
-            fs.unlinkSync(path.join(__dirname, '../public/uploads', blog.image));
-        }
-      }
+    // if (postId) {
+    //     // Check and delete images if they exist
+    //     if (blog.image) {
+    //         fs.unlinkSync(path.join(__dirname, '../public/uploads', blog.image));
+    //     }
+    //   }
 
     // // Delete image from uploads folder
     // const imagePath = path.join(__dirname, '../public/uploads', post.image);
