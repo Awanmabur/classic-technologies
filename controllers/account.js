@@ -127,11 +127,11 @@ try {
           return res.redirect('/profile');
         }
 
-  // Delete the old image if a new image was uploaded
-  if (imageUrl && existingPost.image) {
-    const imagePath = path.join(__dirname, '../public/uploads', existingPost.image);
-    fs.unlinkSync(imagePath); // Delete the old image file
-  }
+  // // Delete the old image if a new image was uploaded
+  // if (imageUrl && existingPost.image) {
+  //   const imagePath = path.join(__dirname, '../public/uploads', existingPost.image);
+  //   fs.unlinkSync(imagePath); // Delete the old image file
+  // }
 
   // Update the blog post with the new data
   existingPost.bios = bios;
@@ -145,7 +145,6 @@ try {
   res.redirect('/profile');
 
 } catch (error) {
-  console.log(error);
   req.flash('error', 'there is problem updating your post');
   return res.redirect('/profile');
 }
