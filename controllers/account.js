@@ -145,6 +145,7 @@ try {
   res.redirect('/profile');
 
 } catch (error) {
+  console.log(error);
   req.flash('error', 'there is problem updating your post');
   return res.redirect('/profile');
 }
