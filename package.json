@@ -36,7 +36,7 @@
     "passport": "^0.6.0",
     "path": "^0.12.7",
     "pdfkit": "^0.13.0",
-    "puppeteer": "^20.8.2",
+    "puppeteer": "^22.13.0",
     "session": "^0.1.0"
   }
 }
