@@ -5,7 +5,7 @@ exports.connectMonggose =()=>{
     {
         useNewUrlParser: true
     })
-    .then((e)=>console.log("Connected to Mongodb =>>Momo transaction Website Project"))
+    .then((e)=>console.log("Connected to Mongodb =>>classic technologies Website Project"))
     .catch((e)=>console.log("Not Connect Mongodb"))
 }
 
