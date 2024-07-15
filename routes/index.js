@@ -37,6 +37,13 @@ router.get('/services', checkLoginStatus, async (req, res) => {
   res.render("./home/services", { user });
 });
 
+router.get('/privacy-policy', checkLoginStatus, async (req, res) => {
+  const userId = req.user;
+  const user = await User.findById(userId);
+
+  res.render("./home/privacy-policy", { user });
+});
+
 router.get('/partners', checkLoginStatus, async (req, res) => {
   const userId = req.user;
   const user = await User.findById(userId);
