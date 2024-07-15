@@ -6,7 +6,7 @@ const Review = require('../models/review');
 const User = require('../models/User');
 const {checkLoginStatus} = require("../middlewares/loginStatus");
 
- 
+
 router.get('/', checkLoginStatus, async (req, res) => {
   const userId = req.user;
   const user = await User.findById(userId);
@@ -30,26 +30,26 @@ router.get('/top-management', checkLoginStatus, async (req, res) => {
   res.render("./home/top-management", { user });
 });
 
-router.get('/frontend', checkLoginStatus, async (req, res) => {
-  const userId = req.user;
-  const user = await User.findById(userId);
-
-  res.render("./home/frontends", { user });
-});
-
-router.get('/backend', checkLoginStatus, async (req, res) => {
-  const userId = req.user;
-  const user = await User.findById(userId);
-
-  res.render("./home/backendprojects", { user });
-});
-
-router.get('/graphics', checkLoginStatus, async (req, res) => {
-  const userId = req.user;
-  const user = await User.findById(userId);
-
-  res.render("./home/graphicprojects", { user });
-});
+// router.get('/frontend', checkLoginStatus, async (req, res) => {
+//   const userId = req.user;
+//   const user = await User.findById(userId);
+//
+//   res.render("./home/frontends", { user });
+// });
+//
+// router.get('/backend', checkLoginStatus, async (req, res) => {
+//   const userId = req.user;
+//   const user = await User.findById(userId);
+//
+//   res.render("./home/backendprojects", { user });
+// });
+//
+// router.get('/graphics', checkLoginStatus, async (req, res) => {
+//   const userId = req.user;
+//   const user = await User.findById(userId);
+//
+//   res.render("./home/graphicprojects", { user });
+// });
 
 router.get('/services', checkLoginStatus, async (req, res) => {
   const userId = req.user;
