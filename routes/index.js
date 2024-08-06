@@ -16,6 +16,11 @@ router.get('/', checkLoginStatus, async (req, res) => {
   res.render("./home/index", { blog, user, review });
 });
 
+
+router.get('/ads.txt', async (req, res) => {
+  res.render("./home/Ads");
+});
+
 router.get('/contact', checkLoginStatus, async (req, res) => {
   const userId = req.user;
   const user = await User.findById(userId);
