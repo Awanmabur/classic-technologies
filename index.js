@@ -92,6 +92,12 @@ app.get('/sitemap.xml', (req, res) => {
     });
 });
 
+
+app.get('/robots.txt', (req, res) => {
+    res.type('text/plain');
+    res.sendFile(path.join(__dirname, 'public/robots.txt'));
+});
+
 // ************************* PORT ***********************************//
 
 app.listen(PORT, () => {
