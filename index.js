@@ -10,6 +10,7 @@ const session = require('cookie-session');
 const flash = require('connect-flash');
 const { SitemapStream, streamToPromise } = require('sitemap');
 const { createGzip } = require('zlib');
+const compression = require('compression');
 
 const app = express();
 
@@ -20,6 +21,8 @@ const {connectMonggose} = require('./config/db')
 connectMonggose();
 
 app.use(express.json());
+
+app.use(compression());
 
 //run seeders
 const {superAdmin} = require('./seeders/admin');
