@@ -8,9 +8,6 @@ const bodyParser = require('body-parser');
 const { urlencoded } = require('body-parser');
 const session = require('cookie-session');
 const flash = require('connect-flash');
-const { SitemapStream, streamToPromise } = require('sitemap');
-const { createGzip } = require('zlib');
-
 
 const app = express();
 
@@ -21,8 +18,6 @@ const {connectMonggose} = require('./config/db')
 connectMonggose();
 
 app.use(express.json());
-
- 
 
 //run seeders
 const {superAdmin} = require('./seeders/admin');
@@ -72,31 +67,6 @@ app.use(require("./routes/admin"))
 app.use(require("./routes/blogpost"))
 app.use(require("./routes/account"))
 app.use(require("./routes/reviews"))
-
-
-
-app.get('/sitemap.xml', (req, res) => {
-    res.header('Content-Type', 'application/xml');
-    res.header('Content-Encoding', 'gzip');
-
-    const sitemap = new SitemapStream({ hostname: 'https://www.junubclassic.com/' });
-    const pipeline = sitemap.pipe(createGzip());
-
-    sitemap.write({ url: '/', changefreq: 'daily', priority: 1.0 });
-    sitemap.write({ url: '/about', changefreq: 'monthly', priority: 0.8 });
-    sitemap.end();
-
-    streamToPromise(pipeline).then(sm => res.send(sm)).catch((err) => {
-        console.error(err);
-        res.status(500).end();
-    });
-});
-
-
-app.get('/robots.txt', (req, res) => {
-    res.type('text/plain');
-    res.sendFile(path.join(__dirname, 'public/robots.txt'));
-});
 
 // ************************* PORT ***********************************//
 
