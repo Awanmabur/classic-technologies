@@ -11,7 +11,6 @@ const flash = require('connect-flash');
 const { SitemapStream, streamToPromise } = require('sitemap');
 const { createGzip } = require('zlib');
 const compression = require('compression');
-const helmet = require('helmet');
 
 
 const app = express();
@@ -25,8 +24,6 @@ connectMonggose();
 app.use(express.json());
 
 app.use(compression());
-
-app.use(helmet());
 
 //run seeders
 const {superAdmin} = require('./seeders/admin');
