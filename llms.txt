@@ -1,0 +1,19 @@
+# Classic Technologies
+
+Classic Technologies builds professional websites, mobile app interfaces, ecommerce platforms, business dashboards, backend systems and AI-assisted workflows for businesses that want stronger trust, clearer messaging and better client conversion online.
+
+## Core services
+- Conversion-focused business website design
+- Mobile app UI and MVP product-flow planning
+- Ecommerce catalog, checkout and order-flow direction
+- Backend systems, dashboards, portals and APIs
+- AI automation, support assistants and workflow helpers
+- Deployment, domain, SSL, performance and launch support
+
+## Contact
+Phone / WhatsApp: +256 781 977 217
+Second line: +256 773 364 680
+Email: info@junubclassic.org
+
+## Site structure
+The site includes crawlable pages for services, portfolio proof, pricing direction, contact information, privacy policy, sitemap.xml and robots.txt. Content is written in readable HTML with clear headings, internal links and production SEO metadata.
