@@ -1022,6 +1022,112 @@ img,svg,video,canvas,iframe{max-width:100%!important;}
   }
 }
 
+
+
+/* === Mobile smooth scrolling performance pass === */
+@media (max-width: 760px), (pointer: coarse){
+  html{
+    scroll-behavior:smooth!important;
+    -webkit-text-size-adjust:100%;
+  }
+  html,body{
+    width:100%;
+    max-width:100%;
+    overflow-x:clip!important;
+    -webkit-overflow-scrolling:touch;
+    overscroll-behavior-y:auto;
+  }
+  body{
+    touch-action:pan-y;
+  }
+  .grid-bg,
+  .grain,
+  .cursor,
+  .side-dots{
+    display:none!important;
+  }
+  .header,
+  .nav,
+  .progress,
+  .top,
+  .float-contact{
+    transform:translateZ(0);
+    backface-visibility:hidden;
+  }
+  .nav,
+  .float-card,
+  .hero-logo,
+  .map,
+  .footer-float{
+    backdrop-filter:none!important;
+    -webkit-backdrop-filter:none!important;
+  }
+  .loader{
+    transition:.28s var(--ease)!important;
+  }
+  .reveal{
+    transform:translateY(14px)!important;
+    transition-duration:.42s!important;
+    transition-delay:min(var(--delay,0ms),120ms)!important;
+    will-change:opacity,transform;
+  }
+  .reveal.show{
+    transform:none!important;
+  }
+  .tilt,
+  .magnetic,
+  .scroll-float,
+  .scroll-card,
+  [data-scroll-card],
+  .flow-card,
+  .bento-card,
+  .project-stack-card,
+  .portfolio-card,
+  .package-card,
+  .trust-badge{
+    will-change:auto!important;
+  }
+  .tilt,
+  .magnetic,
+  .scroll-float,
+  [data-scroll-card]{
+    transform:none!important;
+  }
+  .hero:before,
+  .hero:after,
+  .orbit,
+  .map:before,
+  .hero-logo img,
+  .float-card,
+  .marquee-track{
+    animation-play-state:paused!important;
+  }
+  .btn:hover,
+  .btn-light:hover,
+  .btn-dark:hover,
+  .bento-card:hover,
+  .flow-card:hover,
+  .portfolio-card:hover,
+  .project-stack-card:hover,
+  .socials a:hover,
+  .footer-links a:hover{
+    transform:none!important;
+  }
+  .progress{
+    height:2px!important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto!important;}
+  *,*::before,*::after{
+    animation-duration:.01ms!important;
+    animation-iteration-count:1!important;
+    scroll-behavior:auto!important;
+    transition-duration:.01ms!important;
+  }
+}
+
 </style>
 <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/><meta content="https://junubclassic.org/" property="og:url"/><meta content="https://junubclassic.org/assets/classic-technologies-logo.png" property="og:image"/><link href="https://junubclassic.org/" rel="canonical"/><link href="https://junubclassic.org/sitemap.xml" rel="sitemap"/><script id="schema-org-jsonld" type="application/ld+json">{
   "@context": "https://schema.org",
