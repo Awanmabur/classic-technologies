@@ -1177,6 +1177,140 @@ img,svg,video,canvas,iframe{
   }
 }
 
+
+
+/* === FINAL PHONE OVERFLOW + SMOOTH SCROLL PATCH ===
+   Fixes horizontal phone overflow without touching the project stacked scroll structure. */
+html,
+body{
+  width:100%!important;
+  max-width:100%!important;
+  overscroll-behavior-x:none;
+  touch-action:pan-y;
+}
+@supports (overflow: clip){
+  html,
+  body{overflow-x:clip!important;}
+}
+@media(max-width:680px){
+  /* The hero decorative circles were the main phone overflow source. Clip only horizontally. */
+  .hero,
+  .page-hero{
+    max-width:100vw!important;
+    overflow-x:clip!important;
+    overflow-y:visible!important;
+  }
+  .hero:before,
+  .hero:after,
+  .page-hero:before,
+  .page-hero:after{
+    max-width:100vw!important;
+  }
+  .container,
+  .nav,
+  .trust-wrap,
+  .footer-float,
+  .page-hero-card,
+  .page-panel,
+  .proof-band,
+  .final-cta,
+  .contact-card,
+  .form-shell,
+  .booking-card,
+  .estimator-panel,
+  .estimator-result,
+  .package-card,
+  .bento-card,
+  .flow-card,
+  .portfolio-card,
+  .detail-card{
+    max-width:calc(100vw - 18px)!important;
+  }
+  .hero-lab,
+  .float-card,
+  .hero-logo{
+    max-width:100%!important;
+  }
+  .links{
+    max-width:calc(100vw - 18px)!important;
+    overflow-x:clip!important;
+  }
+  .btn,
+  .nav-link,
+  .tags span,
+  .portfolio-meta span,
+  .project-tags span,
+  .hero-stat,
+  .trust-badge,
+  .time-slot,
+  .route,
+  .contact-card a,
+  .footer-grid a{
+    min-width:0!important;
+    overflow-wrap:anywhere!important;
+  }
+  .hero-actions,
+  .project-actions,
+  .portfolio-actions,
+  .booking-actions,
+  .form-bottom,
+  .page-actions{
+    min-width:0!important;
+    max-width:100%!important;
+  }
+  /* Keep mobile scroll lighter while preserving the project stack. */
+  .scroll-card,
+  .flow-card,
+  .bento-card,
+  .portfolio-card,
+  .package-card,
+  .booking-card,
+  .contact-card{
+    will-change:auto!important;
+  }
+  .orbit,
+  .hero:before,
+  .hero:after,
+  .project-stack-intro:after{
+    animation-duration:90s!important;
+  }
+}
+/* Protect the stacked project effect after overflow fixes. */
+#projects,
+.project-stack-wrap,
+.project-stack-list{
+  overflow:visible!important;
+  contain:none!important;
+}
+.project-stack-card{
+  position:sticky!important;
+  transform-origin:top center!important;
+}
+@media(min-width:1081px){
+  .project-stack-card:nth-child(1){top:118px!important;z-index:1!important;}
+  .project-stack-card:nth-child(2){top:138px!important;z-index:2!important;}
+  .project-stack-card:nth-child(3){top:158px!important;z-index:3!important;}
+  .project-stack-card:nth-child(4){top:178px!important;z-index:4!important;}
+  .project-stack-card:nth-child(5){top:198px!important;z-index:5!important;}
+  .project-stack-card:nth-child(6){top:218px!important;z-index:6!important;}
+}
+@media(max-width:1080px){
+  .project-stack-card:nth-child(1){top:88px!important;z-index:1!important;}
+  .project-stack-card:nth-child(2){top:100px!important;z-index:2!important;}
+  .project-stack-card:nth-child(3){top:112px!important;z-index:3!important;}
+  .project-stack-card:nth-child(4){top:124px!important;z-index:4!important;}
+  .project-stack-card:nth-child(5){top:136px!important;z-index:5!important;}
+  .project-stack-card:nth-child(6){top:148px!important;z-index:6!important;}
+}
+@media(max-width:680px){
+  .project-stack-card:nth-child(1){top:72px!important;z-index:1!important;}
+  .project-stack-card:nth-child(2){top:82px!important;z-index:2!important;}
+  .project-stack-card:nth-child(3){top:92px!important;z-index:3!important;}
+  .project-stack-card:nth-child(4){top:102px!important;z-index:4!important;}
+  .project-stack-card:nth-child(5){top:112px!important;z-index:5!important;}
+  .project-stack-card:nth-child(6){top:122px!important;z-index:6!important;}
+}
+
 </style><script type="application/ld+json">{
   "@context": "https://schema.org",
   "@graph": [

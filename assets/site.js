@@ -56,3 +56,20 @@ window.addEventListener('load',()=>{
     },80);
   }
 });
+
+// Final mobile performance patch: throttle scroll work with requestAnimationFrame.
+(() => {
+  if (typeof window.update !== 'function') return;
+  const originalUpdate = window.update;
+  window.removeEventListener('scroll', originalUpdate);
+  let ticking = false;
+  const smoothScrollUpdate = () => {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(() => {
+      originalUpdate();
+      ticking = false;
+    });
+  };
+  window.addEventListener('scroll', smoothScrollUpdate, { passive: true });
+})();
