@@ -947,6 +947,156 @@ main section[id]{scroll-margin-top:72px!important;}
   .hero{padding-top:76px!important;padding-bottom:30px!important;}
 }
 
+
+/* === Safe mobile overflow repair: no project stack changes === */
+html,
+body{
+  width:100%!important;
+  max-width:100%!important;
+  overflow-x:hidden!important;
+}
+body{position:relative!important;}
+*,*::before,*::after{
+  box-sizing:border-box!important;
+  min-width:0;
+}
+img,svg,video,canvas,iframe{
+  max-width:100%!important;
+}
+.container,
+.nav,
+.footer-float,
+.trust-wrap,
+.page-hero-card,
+.page-panel,
+.final-cta,
+.proof-band{
+  max-width:calc(100vw - 18px)!important;
+}
+.btn,
+.nav-link,
+.chip,
+.tag,
+.tags span,
+.pill,
+.route,
+.route strong,
+.time-slot,
+.time-slot strong,
+.page-list a,
+.project-stack-intro .mini-list span,
+#about .about-points span,
+.booking-actions a,
+.footer-grid a,
+.contact-card a{
+  max-width:100%!important;
+  overflow-wrap:anywhere!important;
+  word-break:normal!important;
+}
+.hero-actions,
+.page-actions,
+.project-actions,
+.portfolio-actions,
+.booking-actions,
+.pills,
+.tags{
+  max-width:100%!important;
+  flex-wrap:wrap!important;
+}
+@media(max-width:900px){
+  .nav{
+    width:calc(100% - 20px)!important;
+    max-width:calc(100vw - 20px)!important;
+  }
+  .links{
+    position:fixed!important;
+    top:66px!important;
+    left:10px!important;
+    right:10px!important;
+    width:auto!important;
+    max-width:none!important;
+    transform:translateY(-12px) scale(.985)!important;
+    transform-origin:top center!important;
+  }
+  .menu-open .links{
+    transform:translateY(0) scale(1)!important;
+  }
+  .nav-link{
+    width:100%!important;
+    justify-content:flex-start!important;
+    text-align:left!important;
+  }
+}
+@media(max-width:680px){
+  .container{
+    width:calc(100% - 18px)!important;
+    max-width:calc(100vw - 18px)!important;
+  }
+  .nav{
+    width:calc(100% - 18px)!important;
+    max-width:calc(100vw - 18px)!important;
+  }
+  .links{
+    top:60px!important;
+    left:9px!important;
+    right:9px!important;
+    width:auto!important;
+    max-width:none!important;
+  }
+  .hero-actions,
+  .page-actions,
+  .project-actions,
+  .portfolio-actions,
+  .booking-actions,
+  .form-bottom{
+    display:flex!important;
+    flex-wrap:wrap!important;
+  }
+  .hero-actions .btn,
+  .page-actions .btn,
+  .project-actions .btn,
+  .portfolio-actions .btn,
+  .booking-actions .btn,
+  .form-bottom .btn{
+    flex:1 1 150px!important;
+    white-space:normal!important;
+    text-align:center!important;
+    padding-left:12px!important;
+    padding-right:12px!important;
+  }
+  .eyebrow,
+  .chip,
+  .trust-badge,
+  .time-slot,
+  .route,
+  .project-stack-intro .mini-list span,
+  #about .about-points span{
+    min-width:0!important;
+    max-width:100%!important;
+  }
+  .time-slot,
+  .route,
+  .project-stack-intro .mini-list span,
+  #about .about-points span{
+    display:flex!important;
+    flex-wrap:wrap!important;
+  }
+}
+@media(max-width:380px){
+  .hero-actions .btn,
+  .page-actions .btn,
+  .project-actions .btn,
+  .portfolio-actions .btn,
+  .booking-actions .btn,
+  .form-bottom .btn{
+    flex-basis:100%!important;
+  }
+  .hero-stat-grid,
+  .trust-wrap{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  }
+}
+
 </style><script type="application/ld+json">{
   "@context": "https://schema.org",
   "@graph": [
