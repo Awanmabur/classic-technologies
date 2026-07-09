@@ -907,273 +907,6 @@ main section[id]{scroll-margin-top:72px!important;}
   .hero{padding-top:76px!important;padding-bottom:30px!important;}
 }
 
-
-
-/* === Phone overflow repair: keep every page inside mobile width === */
-html,
-body{
-  width:100%!important;
-  max-width:100%!important;
-  overflow-x:hidden!important;
-}
-body{position:relative!important;}
-*,*::before,*::after{min-width:0;}
-img,svg,video,canvas,iframe{max-width:100%!important;}
-.container,
-.trust-wrap,
-.footer-float,
-.nav{
-  max-width:calc(100vw - 18px)!important;
-}
-.btn,
-.nav-link,
-.chip,
-.tag,
-.tags span,
-.page-list a,
-.route strong,
-.time-slot strong,
-.project-stack-intro .mini-list span,
-#about .about-points span{
-  max-width:100%!important;
-  overflow-wrap:anywhere!important;
-}
-@media(max-width:900px){
-  .links{
-    left:10px!important;
-    right:10px!important;
-    width:auto!important;
-    max-width:none!important;
-    transform:translateY(-12px) scale(.985)!important;
-  }
-  .menu-open .links{
-    transform:none!important;
-  }
-  .nav{
-    max-width:calc(100vw - 20px)!important;
-  }
-}
-@media(max-width:680px){
-  .container{
-    width:calc(100% - 18px)!important;
-  }
-  .nav{
-    width:calc(100% - 18px)!important;
-    max-width:calc(100vw - 18px)!important;
-  }
-  .links{
-    top:60px!important;
-    left:9px!important;
-    right:9px!important;
-    width:auto!important;
-    max-width:none!important;
-  }
-  main,
-  .hero,
-  .section,
-  .trust-strip,
-  .marquee,
-  .footer{
-    max-width:100vw!important;
-    overflow-x:hidden!important;
-  }
-  .hero-actions,
-  .hero-stat-grid,
-  .hero-lab,
-  .trust-wrap,
-  .portfolio-actions,
-  .project-actions,
-  .page-actions{
-    max-width:100%!important;
-  }
-  .project-actions,
-  .portfolio-actions,
-  .page-actions{
-    grid-template-columns:repeat(auto-fit,minmax(0,1fr))!important;
-  }
-  .btn{
-    white-space:normal!important;
-    text-align:center!important;
-  }
-  .eyebrow,
-  .chip,
-  .trust-badge,
-  .time-slot,
-  .project-stack-intro .mini-list span,
-  #about .about-points span{
-    min-width:0!important;
-    max-width:100%!important;
-  }
-  .time-slot,
-  .project-stack-intro .mini-list span,
-  #about .about-points span{
-    display:flex!important;
-    flex-wrap:wrap!important;
-  }
-}
-@media(max-width:380px){
-  .hero-actions,
-  .page-actions{
-    grid-template-columns:1fr!important;
-  }
-  .hero-stat-grid,
-  .trust-wrap{
-    grid-template-columns:repeat(2,minmax(0,1fr))!important;
-  }
-}
-
-
-
-/* === Mobile smooth scrolling performance pass === */
-@media (max-width: 760px), (pointer: coarse){
-  html{
-    scroll-behavior:smooth!important;
-    -webkit-text-size-adjust:100%;
-  }
-  html,body{
-    width:100%;
-    max-width:100%;
-    overflow-x:clip!important;
-    -webkit-overflow-scrolling:touch;
-    overscroll-behavior-y:auto;
-  }
-  body{
-    touch-action:pan-y;
-  }
-  .grid-bg,
-  .grain,
-  .cursor,
-  .side-dots{
-    display:none!important;
-  }
-  .header,
-  .nav,
-  .progress,
-  .top,
-  .float-contact{
-    transform:translateZ(0);
-    backface-visibility:hidden;
-  }
-  .nav,
-  .float-card,
-  .hero-logo,
-  .map,
-  .footer-float{
-    backdrop-filter:none!important;
-    -webkit-backdrop-filter:none!important;
-  }
-  .loader{
-    transition:.28s var(--ease)!important;
-  }
-  .reveal{
-    transform:translateY(14px)!important;
-    transition-duration:.42s!important;
-    transition-delay:min(var(--delay,0ms),120ms)!important;
-    will-change:opacity,transform;
-  }
-  .reveal.show{
-    transform:none!important;
-  }
-  .tilt,
-  .magnetic,
-  .scroll-float,
-  .scroll-card,
-  [data-scroll-card],
-  .flow-card,
-  .bento-card,
-  .project-stack-card,
-  .portfolio-card,
-  .package-card,
-  .trust-badge{
-    will-change:auto!important;
-  }
-  .tilt,
-  .magnetic,
-  .scroll-float,
-  [data-scroll-card]{
-    transform:none!important;
-  }
-  .hero:before,
-  .hero:after,
-  .orbit,
-  .map:before,
-  .hero-logo img,
-  .float-card,
-  .marquee-track{
-    animation-play-state:paused!important;
-  }
-  .btn:hover,
-  .btn-light:hover,
-  .btn-dark:hover,
-  .bento-card:hover,
-  .flow-card:hover,
-  .portfolio-card:hover,
-  .project-stack-card:hover,
-  .socials a:hover,
-  .footer-links a:hover{
-    transform:none!important;
-  }
-  .progress{
-    height:2px!important;
-  }
-}
-
-@media (prefers-reduced-motion: reduce){
-  html{scroll-behavior:auto!important;}
-  *,*::before,*::after{
-    animation-duration:.01ms!important;
-    animation-iteration-count:1!important;
-    scroll-behavior:auto!important;
-    transition-duration:.01ms!important;
-  }
-}
-
-
-
-/* === Main page cleanup + phone hero logo recenter === */
-@media(max-width:680px){
-  .hero-lab{position:relative!important;}
-  .hero-logo{
-    left:50%!important;
-    top:50%!important;
-    right:auto!important;
-    bottom:auto!important;
-    transform:translate3d(-50%,-50%,0)!important;
-    display:flex!important;
-    align-items:center!important;
-    justify-content:center!important;
-    text-align:center!important;
-    overflow:visible!important;
-  }
-  .hero-logo img{
-    display:block!important;
-    width:78%!important;
-    max-width:210px!important;
-    max-height:170px!important;
-    height:auto!important;
-    margin:auto!important;
-    object-fit:contain!important;
-    align-self:center!important;
-    justify-self:center!important;
-    transform:none!important;
-    animation:none!important;
-    position:relative!important;
-    left:auto!important;
-    right:auto!important;
-    top:auto!important;
-    bottom:auto!important;
-  }
-}
-@media(max-width:390px){
-  .hero-logo{
-    left:50%!important;
-    top:50%!important;
-    transform:translate3d(-50%,-50%,0)!important;
-    margin:0!important;
-  }
-  .hero-logo img{width:76%!important;max-width:190px!important;}
-}
-
 </style>
 <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/><meta content="https://junubclassic.org/" property="og:url"/><meta content="https://junubclassic.org/assets/classic-technologies-logo.png" property="og:image"/><link href="https://junubclassic.org/" rel="canonical"/><link href="https://junubclassic.org/sitemap.xml" rel="sitemap"/><script id="schema-org-jsonld" type="application/ld+json">{
   "@context": "https://schema.org",
@@ -1274,7 +1007,7 @@ img,svg,video,canvas,iframe{max-width:100%!important;}
 <body>
 <div class="progress" id="progress"></div><div class="cursor" id="cursor"></div><div class="grid-bg"></div><div class="grain"></div>
 <div class="loader" id="loader"><div class="loader-card"><div class="loader-logo"><img alt="Classic Technologies logo" src="assets/classic-technologies-logo.png"/></div><p>Matching the best parts into one final website.</p></div></div>
-<header class="header" id="header"><nav aria-label="Primary navigation" class="nav"><a class="brand magnetic" href="index.html#home"><span class="brand-logo"><img alt="Classic Technologies logo" src="assets/classic-technologies-logo.png"/></span><span class="brand-name"><strong>Classic Technologies</strong><span>Digital solutions</span></span></a><div class="links" id="links"><a class="nav-link active" href="#home">Home</a><a class="nav-link" href="#about">About</a><a class="nav-link" href="#services">Services</a><a class="nav-link" href="#projects">Portfolio</a><a class="nav-link" href="#contact">Contact</a></div><a class="btn btn-dark magnetic" href="#contact">Start your project</a><button aria-controls="links" aria-expanded="false" aria-label="Open menu" class="menu" id="menu"><span></span></button></nav></header>
+<header class="header" id="header"><nav aria-label="Primary navigation" class="nav"><a class="brand magnetic" href="index.html#home"><span class="brand-logo"><img alt="Classic Technologies logo" src="assets/classic-technologies-logo.png"/></span><span class="brand-name"><strong>Classic Technologies</strong><span>Digital solutions</span></span></a><div class="links" id="links"><a class="nav-link active" href="#home">Home</a><a class="nav-link" href="#about">About</a><a class="nav-link" href="#services">Services</a><a class="nav-link" href="#projects">Portfolio</a><a class="nav-link" href="#packages">Pricing</a><a class="nav-link" href="#contact">Contact</a></div><a class="btn btn-dark magnetic" href="#contact">Start your project</a><button aria-controls="links" aria-expanded="false" aria-label="Open menu" class="menu" id="menu"><span></span></button></nav></header>
 <main>
 <section class="hero" id="home"><div class="container hero-grid"><div><div class="eyebrow reveal"><i></i> Premium digital presence for ambitious brands</div><h1 class="split" data-split="">Websites, apps and business systems built to win trust, enquiries and sales.</h1><p class="hero-copy reveal" style="--delay:160ms">Classic Technologies helps serious businesses turn ideas into premium digital products: persuasive websites, clean app interfaces, ecommerce platforms, dashboards and AI-ready systems built for real client conversion.</p><div class="hero-actions reveal" style="--delay:260ms"><a class="btn btn-dark magnetic" href="#contact">Request a website</a><a class="btn btn-light magnetic" href="#services">Explore services</a></div><div class="hero-stat-grid reveal" style="--delay:360ms">
 <div class="hero-stat stat-animate"><b class="count-up" data-suffix="+" data-value="6">0</b><span>Projects</span></div>
@@ -1332,7 +1065,25 @@ img,svg,video,canvas,iframe{max-width:100%!important;}
 <p>Domain, hosting, SSL, DNS, redirects, analytics-ready setup, launch checks and ongoing support so the website or system can stay stable after it goes live.</p>
 <div class="tags"><span>Hosting</span><span>SSL</span><span>Launch</span></div>
 <a class="btn btn-light magnetic service-more" href="deployment-support.html">Learn more</a></article></div></div></section>
-
+<section class="section" id="solutions">
+<div class="container">
+<div class="section-head">
+<div>
+<div class="kicker reveal">SEO service pages</div>
+<h2 class="reveal">Dedicated pages that explain every offer clearly for clients and search engines.</h2>
+</div>
+<p class="section-desc reveal" style="--delay:120ms">Each page gives Google, AI assistants and real clients a direct, crawlable explanation of what Classic Technologies offers, who it helps and what result the client can expect.</p>
+</div>
+<div class="solution-grid">
+<a class="solution-card reveal tilt" href="website-design.html"><span>01</span><h3>Business Website Design</h3><p>Conversion-focused websites, landing pages and company profiles that make services easy to understand and enquiries easy to send.</p></a>
+<a class="solution-card reveal tilt" href="mobile-app-development.html"><span>02</span><h3>Mobile App UI &amp; Development</h3><p>Clean mobile app screens, onboarding flows, dashboards and product structures for Android, iOS and cross-platform ideas.</p></a>
+<a class="solution-card reveal tilt" href="ecommerce-development.html"><span>03</span><h3>Ecommerce Platforms</h3><p>Product catalogs, sales pages, checkout-ready flows, order management direction and store dashboards for selling online.</p></a>
+<a class="solution-card reveal tilt" href="business-systems.html"><span>04</span><h3>Business Systems</h3><p>Dashboards, portals, booking tools and workflow systems that reduce manual work and make operations easier to control.</p></a>
+<a class="solution-card reveal tilt" href="ai-automation.html"><span>05</span><h3>AI Automation</h3><p>AI assistants, smart content helpers and workflow automations that help teams serve clients faster with less repetition.</p></a>
+<a class="solution-card reveal tilt" href="portfolio.html"><span>06</span><h3>Portfolio &amp; Proof</h3><p>Project stories, system thinking and technical proof that help clients see the quality behind the work before they enquire.</p></a>
+</div>
+</div>
+</section>
 <section class="section" id="experience"><div class="container"><div class="board"><div class="board-intro"><div><div class="kicker reveal">Scroll experience</div><h2 class="reveal">A smooth client journey that builds confidence before the enquiry.</h2></div><p class="reveal" style="--delay:120ms">The layout uses calm motion and clear sections to move visitors from first impression to proof, then from proof to enquiry without confusion.</p></div><div class="lane"><article class="scroll-card reveal" data-scroll-card=""><div><span class="sicon">1</span><h3>Attention</h3><p>Open with a sharp, premium hero that makes the company look established.</p></div><div class="meter"><i style="--w:92%"></i></div></article><article class="scroll-card reveal" data-scroll-card=""><div><span class="sicon">2</span><h3>Trust</h3><p>Use real projects and service proof to make visitors feel safe.</p></div><div class="meter"><i style="--w:88%"></i></div></article><article class="scroll-card reveal" data-scroll-card=""><div><span class="sicon">3</span><h3>Action</h3><p>Guide users toward WhatsApp, calls, email and quote requests.</p></div><div class="meter"><i style="--w:84%"></i></div></article><article class="scroll-card reveal" data-scroll-card=""><div><span class="sicon">4</span><h3>Growth</h3><p>Keep adding pages, services, dashboards and support as the business grows.</p></div><div class="meter"><i style="--w:78%"></i></div></article></div></div></div></section>
 <section class="section" id="projects"><div class="container"><div class="project-stack-wrap"><aside class="project-stack-intro reveal"><div class="kicker">Project section</div><h2>Project proof that shows strategy, design quality and real business thinking.</h2><p>Each project card is written as client proof: what the system does, who it supports and why the structure can help a real business grow beyond a simple website.</p><div class="mini-list"><span>Projects <b>6</b></span><span>Detail pages <b>Included</b></span><span>Images <b>From portfolio</b></span></div></aside><div class="project-stack-list"><article class="project-stack-card reveal dark-card" style="--stack:1;--delay:0ms">
 <div class="project-image-wrap">
@@ -1431,14 +1182,62 @@ img,svg,video,canvas,iframe{max-width:100%!important;}
 <a class="btn btn-light magnetic" href="https://github.com/Chariot-Technologies/chariot-technologies" rel="noopener" target="_blank">Code</a></div>
 </div>
 </article></div></div></div></section>
-
+<section class="section" id="portfolio"><div class="container"><div class="section-head"><div><div class="kicker reveal">Portfolio wall</div><h2 class="reveal">A quick portfolio wall for clients who want proof fast.</h2></div><p class="section-desc reveal" style="--delay:120ms">Browse polished project examples quickly, then open the full story to understand the business value, system structure and delivery thinking behind each solution.</p></div><div class="portfolio-gallery"><article class="portfolio-card wide reveal tilt" style="--delay:0ms">
+<a aria-label="Read more about Classic Events Pro (Event Management &amp; Ticketing)" class="portfolio-image-link" href="project.html?p=classic-events-pro"><div class="portfolio-visual image"><img alt="Classic Events Pro (Event Management &amp; Ticketing)" loading="lazy" src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&amp;fit=crop&amp;w=1400&amp;q=80"/></div></a>
+<div class="portfolio-content">
+<h3>Classic Events Pro (Event Management &amp; Ticketing)</h3>
+<p>A premium event platform with organizer tools, promoter tracking, ticketing, QR check-in, and admin controls — built end-to-end for production use.</p>
+<div class="portfolio-meta"><span>Events</span><span>Ticketing</span><span>Promoters</span></div>
+<div class="portfolio-actions"><a class="btn btn-dark magnetic" href="project.html?p=classic-events-pro">Read more</a><a class="btn btn-light magnetic" href="https://classicpro.events" rel="noopener" target="_blank">Live</a><a class="btn btn-light magnetic" href="https://github.com/Awanmabur/classic-events" rel="noopener" target="_blank">Code</a></div>
+</div>
+</article><article class="portfolio-card tall reveal tilt" style="--delay:70ms">
+<a aria-label="Read more about Classic Trip (Travel Booking &amp; Ticketing)" class="portfolio-image-link" href="project.html?p=classic-trip"><div class="portfolio-visual image"><img alt="Classic Trip (Travel Booking &amp; Ticketing)" loading="lazy" src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&amp;fit=crop&amp;w=1400&amp;q=80"/></div></a>
+<div class="portfolio-content">
+<h3>Classic Trip (Travel Booking &amp; Ticketing)</h3>
+<p>A premium booking system for bus/train/flights/hotels with operator dashboards, schedules, inventory, tickets, and promoter/affiliate tracking.</p>
+<div class="portfolio-meta"><span>Booking</span><span>Tickets</span><span>Inventory</span></div>
+<div class="portfolio-actions"><a class="btn btn-dark magnetic" href="project.html?p=classic-trip">Read more</a><a class="btn btn-light magnetic" href="https://awanmabur.github.io/classic-trip" rel="noopener" target="_blank">Live</a><a class="btn btn-light magnetic" href="https://github.com/Awanmabur/classic-trip" rel="noopener" target="_blank">Code</a></div>
+</div>
+</article><article class="portfolio-card reveal tilt" style="--delay:140ms">
+<a aria-label="Read more about Classic Education Suite (Multi-Tenant SaaS)" class="portfolio-image-link" href="project.html?p=classic-education-suite"><div class="portfolio-visual image"><img alt="Classic Education Suite (Multi-Tenant SaaS)" loading="lazy" src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&amp;fit=crop&amp;w=1400&amp;q=80"/></div></a>
+<div class="portfolio-content">
+<h3>Classic Education Suite (Multi-Tenant SaaS)</h3>
+<p>A premium education SaaS built for universities and schools: admissions, portals, finance-ready structure, LMS-ready patterns, analytics, and a School Profiles Directory listing institutions and services.</p>
+<div class="portfolio-meta"><span>SaaS</span><span>Education</span><span>Multi-tenant</span></div>
+<div class="portfolio-actions"><a class="btn btn-dark magnetic" href="project.html?p=classic-education-suite">Read more</a><span aria-disabled="true" class="btn btn-light btn-disabled">Live</span><span aria-disabled="true" class="btn btn-light btn-disabled">Code</span></div>
+</div>
+</article><article class="portfolio-card reveal tilt" style="--delay:210ms">
+<a aria-label="Read more about Classic Mart (E-commerce Platform)" class="portfolio-image-link" href="project.html?p=classic-mart"><div class="portfolio-visual image"><img alt="Classic Mart (E-commerce Platform)" loading="lazy" src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&amp;fit=crop&amp;w=1400&amp;q=80"/></div></a>
+<div class="portfolio-content">
+<h3>Classic Mart (E-commerce Platform)</h3>
+<p>A premium e-commerce platform with catalog, cart, checkout, orders, admin tools, and SEO-focused structure.</p>
+<div class="portfolio-meta"><span>E-commerce</span><span>Payments</span><span>Orders</span></div>
+<div class="portfolio-actions"><a class="btn btn-dark magnetic" href="project.html?p=classic-mart">Read more</a><a class="btn btn-light magnetic" href="https://awanmabur.github.io/classicmart/" rel="noopener" target="_blank">Live</a><a class="btn btn-light magnetic" href="https://github.com/Awanmabur/classicmart" rel="noopener" target="_blank">Code</a></div>
+</div>
+</article><article class="portfolio-card reveal tilt" style="--delay:280ms">
+<a aria-label="Read more about Juba Rentals (Real Estate &amp; Vehicles Marketplace)" class="portfolio-image-link" href="project.html?p=juba-rentals"><div class="portfolio-visual image"><img alt="Juba Rentals (Real Estate &amp; Vehicles Marketplace)" loading="lazy" src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&amp;fit=crop&amp;w=1400&amp;q=80"/></div></a>
+<div class="portfolio-content">
+<h3>Juba Rentals (Real Estate &amp; Vehicles Marketplace)</h3>
+<p>A premium listings platform for cars, houses and land with verification workflows, agent tools, and inquiry/lead management.</p>
+<div class="portfolio-meta"><span>Marketplace</span><span>Real Estate</span><span>Vehicles</span></div>
+<div class="portfolio-actions"><a class="btn btn-dark magnetic" href="project.html?p=juba-rentals">Read more</a><a class="btn btn-light magnetic" href="https://awanmabur.github.io/jubarentals/" rel="noopener" target="_blank">Live</a><a class="btn btn-light magnetic" href="https://github.com/Awanmabur/jubarentals" rel="noopener" target="_blank">Code</a></div>
+</div>
+</article><article class="portfolio-card reveal tilt" style="--delay:350ms">
+<a aria-label="Read more about Chariot Technologies (Mobility Platform)" class="portfolio-image-link" href="project.html?p=chariot-technologies"><div class="portfolio-visual image"><img alt="Chariot Technologies (Mobility Platform)" loading="lazy" src="https://images.unsplash.com/photo-1526662092594-e98c1e356d6a?auto=format&amp;fit=crop&amp;w=1400&amp;q=80"/></div></a>
+<div class="portfolio-content">
+<h3>Chariot Technologies (Mobility Platform)</h3>
+<p>A premium mobility platform connecting riders and drivers with safety patterns, scalable backend design, and ops dashboards foundation.</p>
+<div class="portfolio-meta"><span>Mobility</span><span>Platform</span><span>SaaS</span></div>
+<div class="portfolio-actions"><a class="btn btn-dark magnetic" href="project.html?p=chariot-technologies">Read more</a><a class="btn btn-light magnetic" href="https://www.chariot.ug" rel="noopener" target="_blank">Live</a><a class="btn btn-light magnetic" href="https://github.com/Chariot-Technologies/chariot-technologies" rel="noopener" target="_blank">Code</a></div>
+</div>
+</article></div></div></section><section class="section" id="packages"><div class="container"><div class="section-head"><div><div class="kicker reveal">Packages</div><h2 class="reveal">Clear starting options that help clients choose the right project path.</h2></div><p class="section-desc reveal" style="--delay:120ms">These package directions make enquiry easier. Final pricing depends on pages, content, integrations, dashboards, ecommerce needs and launch support.</p></div><div class="packages-grid"><article class="package-card reveal tilt"><div class="package-label">Starter</div><h3>Starter Website</h3><div class="package-price">Quote <small>based</small></div><p>For a small brand that needs a polished, credible online presence fast without confusing visitors or losing enquiries.</p><ul><li>One-page website</li><li>Services and contact sections</li><li>Mobile responsive layout</li><li>WhatsApp and call links</li></ul><a class="btn btn-light magnetic" href="#contact">Ask for starter</a></article><article class="package-card featured reveal tilt" style="--delay:90ms"><div class="package-label">Most requested</div><h3>Business Website</h3><div class="package-price">Quote <small>based</small></div><p>For companies that need a stronger website with service pages, proof, conversion sections and professional presentation that feels ready for serious clients.</p><ul><li>Homepage, about, services, contact</li><li>Portfolio and proof sections</li><li>SEO and social meta setup</li><li>Professional animations</li></ul><a class="btn btn-ghost magnetic" href="#contact">Request business site</a></article><article class="package-card reveal tilt" style="--delay:180ms"><div class="package-label">Selling online</div><h3>Ecommerce</h3><div class="package-price">Quote <small>based</small></div><p>For shops and service brands that need a product structure, order direction and a customer journey that makes buying easier.</p><ul><li>Product categories</li><li>Product detail pages</li><li>Checkout-ready structure</li><li>Admin / order view direction</li></ul><a class="btn btn-light magnetic" href="#contact">Plan ecommerce</a></article><article class="package-card reveal tilt" style="--delay:270ms"><div class="package-label">Custom</div><h3>App / System</h3><div class="package-price">Quote <small>based</small></div><p>For dashboards, mobile apps, booking tools, portals and complete platforms where users need clear flows and reliable business logic.</p><ul><li>App screens and flows</li><li>User roles and dashboards</li><li>Bookings, reports, workflows</li><li>Custom feature planning</li></ul><a class="btn btn-light magnetic" href="#contact">Discuss system</a></article></div></div></section>
 <section class="section" id="estimator"><div class="container"><div class="section-head"><div><div class="kicker reveal">Project estimator</div><h2 class="reveal">Choose the kind of digital product you need and get a clear starting direction.</h2></div><p class="section-desc reveal" style="--delay:120ms">This quick estimator helps clients understand the right project path before sending an enquiry, saving time and making the first discussion more focused.</p></div><div class="estimator-shell"><div class="estimator-panel reveal"><div class="kicker">Choose project</div><h2>What should Classic Technologies build?</h2><div class="estimate-options" id="estimateOptions"><button class="estimate-option active" data-desc="Best for companies that need a trusted online presence, clear services, proof and strong contact routes." data-list="Homepage|Services section|Portfolio or proof|Contact form and WhatsApp" data-title="Business Website" type="button"><i>W</i><div><strong>Business website</strong><span>Company presence and enquiries</span></div><span>Start here</span></button><button class="estimate-option" data-desc="Best when you need clean Android/iOS screens, onboarding, dashboard and user flows before development." data-list="Onboarding screens|Dashboard layouts|User profile|Clean app navigation" data-title="Mobile App Interface" type="button"><i>A</i><div><strong>Mobile app design</strong><span>App screens and user flow</span></div><span>UI plan</span></button><button class="estimate-option" data-desc="Best for shops, product brands and marketplaces that need product structure, categories and order flow." data-list="Product pages|Category layout|Checkout direction|Seller/admin views" data-title="Ecommerce Platform" type="button"><i>E</i><div><strong>Ecommerce</strong><span>Products, store and orders</span></div><span>Store plan</span></button><button class="estimate-option" data-desc="Best for organizations that need dashboards, user roles, bookings, reports or custom workflows." data-list="Admin dashboard|User roles|Reports and bookings|Custom workflow" data-title="Business System" type="button"><i>S</i><div><strong>Custom system</strong><span>Dashboard, roles and workflow</span></div><span>Custom</span></button></div></div><aside class="estimator-result reveal" style="--delay:140ms"><div class="estimate-result-content"><span>Recommended direction</span><h3 id="estimateTitle">Business Website</h3><p id="estimateDesc">Best for companies that need a trusted online presence, clear services, proof and strong contact routes.</p><ul class="estimate-list" id="estimateList"><li>Homepage</li><li>Services section</li><li>Portfolio or proof</li><li>Contact form and WhatsApp</li></ul></div><a class="btn btn-ghost magnetic" href="#contact">Send enquiry for this</a></aside></div></div></section>
 <section class="section" id="booking"><div class="container"><div class="booking-card reveal"><div><div class="kicker">Free consultation</div><h2>Book a focused project discussion before you build.</h2><p>Use WhatsApp, phone or email to discuss goals, pages, features, budget direction, launch timing and the best first version for your business.</p><div class="booking-actions"><a class="btn btn-ghost magnetic" href="https://wa.me/256781977217">WhatsApp +256 781 977 217</a><a class="btn btn-ghost magnetic" href="tel:+256781977217">Call +256 781 977 217</a></div></div><div class="booking-times"><a class="time-slot" href="#contact"><div><span>Option one</span><strong>Send project enquiry</strong></div><strong>↗</strong></a><a class="time-slot" href="https://wa.me/256781977217"><div><span>Option two</span><strong>WhatsApp consultation</strong></div><strong>↗</strong></a><a class="time-slot" href="mailto:info@junubclassic.org"><div><span>Option three</span><strong>Email project details</strong></div><strong>↗</strong></a></div></div></div></section>
 <section class="section" id="faq"><div class="container"><div class="faq-shell"><aside class="faq-note reveal"><div><div class="kicker">FAQ</div><h2>Helpful answers that remove doubt before a client starts.</h2><p>Clear answers reduce hesitation and help serious clients understand timeline, hosting, support, mobile responsiveness and how the project can grow after launch.</p></div><div class="faq-mini-stats"><span>Response route <b>WhatsApp / Email</b></span><span>Project types <b>Web, App, Store</b></span><span>Support <b>After launch</b></span></div></aside><div class="faq-list"><article class="faq-item reveal open"><button class="faq-question" type="button">How long does a website take? <i>+</i></button><div class="faq-answer" style="max-height: 120px;"><p>A focused business website can be prepared quickly when the content, pages and contact details are ready. Bigger systems and ecommerce projects need more planning.</p></div></article><article class="faq-item reveal" style="--delay:80ms"><button class="faq-question" type="button">Do you build mobile apps too? <i>+</i></button><div class="faq-answer"><p>Yes. Classic Technologies can design mobile app screens, onboarding, dashboards and user flows, then prepare the direction for Android or cross-platform development.</p></div></article><article class="faq-item reveal" style="--delay:160ms"><button class="faq-question" type="button">Can you add WhatsApp and call buttons? <i>+</i></button><div class="faq-answer"><p>Yes. The site can include direct WhatsApp, phone, email and enquiry form routes so clients can contact you quickly.</p></div></article><article class="faq-item reveal" style="--delay:240ms"><button class="faq-question" type="button">Can the website be hosted later? <i>+</i></button><div class="faq-answer"><p>Yes. The page is built in clean HTML, CSS and JavaScript and can be hosted on normal hosting, Netlify, Vercel, cPanel or your own server.</p></div></article></div></div></div></section>
 <section class="section contact" id="contact"><div class="container contact-grid"><aside class="contact-card reveal"><div class="contact-copy"><div class="kicker">Project enquiry</div><h2>Start your project with a clear plan, professional guidance and direct support.</h2><p>Share the result you want, the pages or features you need and the kind of clients you want to reach. Classic Technologies will help turn the idea into a practical, polished and launch-ready direction.</p></div><div class="routes"><a class="route" href="mailto:info@junubclassic.org"><div><span>Email</span><strong>info@junubclassic.org</strong></div><strong>↗</strong></a><a class="route" href="tel:+256781977217"><div><span>Call / WhatsApp</span><strong>+256 781 977 217</strong></div><strong>↗</strong></a><a class="route" href="tel:+256773364680"><div><span>Second line</span><strong>+256 773 364 680</strong></div><strong>↗</strong></a><a class="route" href="https://wa.me/256781977217"><div><span>WhatsApp</span><strong>Chat with Classic Technologies</strong></div><strong>↗</strong></a></div></aside><div class="form-shell reveal" style="--delay:140ms"><form class="form" id="contactForm"><div class="row"><div class="field"><label for="name">Full name</label><input id="name" name="name" placeholder="Your name" required="" type="text"/></div><div class="field"><label for="phone">Phone / WhatsApp</label><input id="phone" name="phone" placeholder="+256..." required="" type="tel"/></div></div><div class="row"><div class="field"><label for="email">Email address</label><input id="email" name="email" placeholder="you@example.com" type="email"/></div><div class="field"><label for="service">Project type</label><select id="service" name="service" required=""><option value="">Choose one</option><option>Business Websites &amp; UI/UX</option><option>Backend &amp; APIs</option><option>E-commerce Builds</option><option>Security &amp; Performance</option><option>SaaS Platforms</option><option>AI Integration</option><option>Deployment &amp; Domains</option></select></div></div><div><div class="field"><label>Quick choose</label></div><div class="pills" id="pills"><button class="pill active" type="button">Website</button><button class="pill" type="button">Mobile app</button><button class="pill" type="button">Ecommerce</button><button class="pill" type="button">Dashboard</button><button class="pill" type="button">System</button></div></div><div class="field"><label for="message">Project details</label><textarea id="message" name="message" placeholder="Tell us about your business, what you need, and when you want to launch." required=""></textarea></div><div class="form-bottom"><p class="form-note">Send your details and we will use your message to prepare the best project direction, pages, features, timeline and launch support.</p><button class="btn btn-dark magnetic" type="submit">Send enquiry</button></div><div class="status" id="formStatus">Thank you. Your enquiry is ready to send through the connected contact channel.</div></form></div></div></section>
 </main>
 <footer class="footer"><div class="footer-float"><div class="footer-grid"><div class="footer-brand"><a class="brand" href="index.html#home"><span class="brand-logo"><img alt="Classic Technologies logo" src="assets/classic-technologies-logo.png"/></span><span class="brand-name"><strong>Classic Technologies</strong><span>Digital solutions</span></span></a><p>Persuasive websites, app interfaces, ecommerce platforms, AI-ready workflows and business systems for brands that want to look serious and grow online.</p><div class="socials"><a href="#">FB</a><a href="#">IG</a><a href="#">IN</a><a href="#">X</a></div></div><div class="footer-col"><h3>Company</h3><ul class="footer-links"><li><a href="index.html#home">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="contact.html">Contact</a></li><li><a href="privacy-policy.html">Privacy Policy</a></li></ul></div><div class="footer-col"><h3>Services</h3><ul class="footer-links"><li><a href="website-design.html">Website Design</a></li><li><a href="mobile-app-development.html">Mobile App UI</a></li><li><a href="ecommerce-development.html">Ecommerce Builds</a></li><li><a href="business-systems.html">Business Systems</a></li><li><a href="ai-automation.html">AI Automation</a></li><li><a href="deployment-support.html">Deployment Support</a></li></ul></div><div class="footer-col"><h3>Contact</h3><ul class="footer-links"><li><a href="mailto:info@junubclassic.org">Email us</a></li><li><a href="tel:+256781977217">Call +256 781 977 217</a></li><li><a href="tel:+256773364680">Call +256 773 364 680</a></li><li><a href="https://wa.me/256781977217">WhatsApp</a></li><li><a href="#contact">Request a quote</a></li><li><a href="contact.html">Request a quote</a></li><li><a href="sitemap.xml">Sitemap</a></li><li><a href="llms.txt">AI summary</a></li></ul></div></div><div class="footer-bottom"><span>© <span id="year"></span> Classic Technologies. All rights reserved.</span><span>Built for clarity, trust, SEO visibility and client growth.</span></div></div></footer>
-<div class="side-dots" id="sideDots"><a class="active" href="#home"></a><a href="#about"></a><a href="#services"></a><a href="#projects"></a><a href="#faq"></a><a href="#contact"></a></div><div class="float-contact" id="floatContact"><a href="https://wa.me/256781977217">☏ <span>WhatsApp</span></a><a href="tel:+256781977217">☎ <span>Call</span></a></div><button class="top" id="top">↑</button>
+<div class="side-dots" id="sideDots"><a class="active" href="#home"></a><a href="#about"></a><a href="#services"></a><a href="#projects"></a><a href="#packages"></a><a href="#faq"></a><a href="#contact"></a></div><div class="float-contact" id="floatContact"><a href="https://wa.me/256781977217">☏ <span>WhatsApp</span></a><a href="tel:+256781977217">☎ <span>Call</span></a></div><button class="top" id="top">↑</button>
 <script>
 const PROJECTS=[{"id": "classic-events-pro", "title": "Classic Events Pro (Event Management & Ticketing)", "full": "Classic Events Pro (Event Management & Ticketing)", "desc": "A premium event platform with organizer tools, promoter tracking, ticketing, QR check-in, and admin controls — built end-to-end for production use.", "tags": ["Events", "Ticketing", "Promoters", "Admin", "Analytics"], "live": "https://classicpro.events", "code": "https://github.com/Awanmabur/classic-events", "initial": "EP", "tone": "dark", "img": "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=1400&q=80", "roles": [{"icon": "fa-solid fa-code", "title": "Full-Stack Ownership", "points": ["Designed and built the system end-to-end", "UI/UX, backend, database, and integrations", "Production-first architecture decisions"]}, {"icon": "fa-solid fa-diagram-project", "title": "System Architecture", "points": ["Modular controllers + clean routing", "Scalable patterns for events/tickets/orders", "Admin tools and permissions structure"]}, {"icon": "fa-solid fa-users-gear", "title": "Roles & Dashboards", "points": ["Organizer dashboard (events, tickets, sales)", "Promoter dashboard (links, sales, earnings)", "Admin moderation & approvals"]}, {"icon": "fa-solid fa-credit-card", "title": "Payments + Orders", "points": ["Checkout and order records", "Receipts and status tracking", "Refund-ready structure and reconciliation"]}, {"icon": "fa-solid fa-qrcode", "title": "Ticket QR + Check-in", "points": ["QR generation per ticket", "Validation flow for entry scanning", "Anti-fraud checks + status updates"]}, {"icon": "fa-solid fa-shield-halved", "title": "Security & Hardening", "points": ["Validation & safe input handling", "Rate limiting and safe auth patterns", "Audit-friendly logs and error handling"]}], "features": [{"icon": "fa-solid fa-calendar-check", "title": "Event Creation & Publishing", "desc": "Create events, sessions, ticket types, capacity rules, visibility, schedules, and promo logic."}, {"icon": "fa-solid fa-ticket", "title": "Ticketing & Orders", "desc": "Ticket categories, pricing tiers, buyer details, order confirmation, and receipt-ready structure."}, {"icon": "fa-solid fa-users", "title": "Promoter System", "desc": "Share links, ref codes, attribution, earnings calculation, payouts-ready records and reporting."}, {"icon": "fa-solid fa-qrcode", "title": "QR Tickets + Gate Validation", "desc": "QR ticket generation and entry verification workflow with unique IDs and validation state."}, {"icon": "fa-solid fa-clipboard-check", "title": "Admin Moderation Tools", "desc": "Approve events, edit requests, manage users/promoters, and enforce platform rules."}, {"icon": "fa-solid fa-chart-line", "title": "Analytics & Performance", "desc": "Sales insights, event trends, promoter performance, and peak-day reliability improvements."}], "challenges": [{"title": "Problem: Promoter attribution accuracy", "lines": [{"type": "fix", "text": "Solution: consistent query params + server-side attribution checks on checkout/order creation."}, {"type": "good", "text": "Result: reliable promoter reporting and fewer mis-attributions."}]}, {"title": "Problem: Peak traffic on event day", "lines": [{"type": "fix", "text": "Solution: optimized pages, reduced payloads, safe caching patterns, and controlled DB queries."}, {"type": "good", "text": "Result: stable performance under heavy load."}]}]}, {"id": "classic-trip", "title": "Classic Trip (Travel Booking & Ticketing)", "full": "Classic Trip (Travel Booking & Ticketing)", "desc": "A premium booking system for bus/train/flights/hotels with operator dashboards, schedules, inventory, tickets, and promoter/affiliate tracking.", "tags": ["Booking", "Tickets", "Inventory", "Promoters", "Admin"], "live": "https://awanmabur.github.io/classic-trip", "code": "https://github.com/Awanmabur/classic-trip", "initial": "TR", "tone": "light", "img": "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=1400&q=80", "roles": [{"icon": "fa-solid fa-code", "title": "Full-Stack Build From Scratch", "points": ["Built frontend and backend end-to-end", "Designed booking logic + operator workflows", "Implemented reusable UI components"]}, {"icon": "fa-solid fa-sitemap", "title": "Booking Architecture", "points": ["Unified booking model for multiple providers", "Reservation → confirmation lifecycle", "Extensible provider integration pattern"]}, {"icon": "fa-solid fa-calendar-days", "title": "Schedules & Availability", "points": ["Schedule creation and seat/room slots", "Availability checks + locking patterns", "Admin/operator controls"]}, {"icon": "fa-solid fa-user-shield", "title": "Auth + Roles", "points": ["Customer accounts & history", "Operator dashboards & permissions", "Admin oversight patterns"]}, {"icon": "fa-solid fa-users", "title": "Promoters / Affiliate Tracking", "points": ["Referral links and attribution", "Commission-ready accounting logs", "Promo performance reporting"]}, {"icon": "fa-solid fa-shield-halved", "title": "Production Quality", "points": ["Validation + security checks", "Error handling + logging", "Performance-first data access"]}], "features": [{"icon": "fa-solid fa-magnifying-glass", "title": "Search & Filters", "desc": "Routes, dates, pricing, class/type, and availability filters in a clean booking UI."}, {"icon": "fa-solid fa-ticket", "title": "Tickets & Booking References", "desc": "Booking reference IDs, confirmation flows, and receipt-ready records."}, {"icon": "fa-solid fa-layer-group", "title": "Multi-Provider Booking", "desc": "Bus/train/flight/hotel structure designed to scale and add providers easily."}, {"icon": "fa-solid fa-building", "title": "Operator Dashboard", "desc": "Manage schedules, inventory, pricing, and view sales/booking reports."}, {"icon": "fa-solid fa-users", "title": "Promoters / Referrals", "desc": "Share links, attribution on checkout, and promoter reporting & earnings structure."}, {"icon": "fa-solid fa-chart-line", "title": "Reports & Admin Controls", "desc": "Operational insights, booking trends, and admin moderation patterns."}], "challenges": [{"title": "Problem: Avoiding overbooking", "lines": [{"type": "fix", "text": "Solution: availability locking + confirmation steps with controlled inventory updates."}, {"type": "good", "text": "Result: fewer conflicts and reliable seat/room allocation."}]}, {"title": "Problem: Multiple provider flow complexity", "lines": [{"type": "fix", "text": "Solution: a single booking lifecycle with provider-specific metadata and adapters."}, {"type": "good", "text": "Result: easier scaling to new transport/hotel partners."}]}]}, {"id": "classic-education-suite", "title": "Classic Education Suite (Multi-Tenant SaaS)", "full": "Classic Education Suite (Multi-Tenant SaaS)", "desc": "A premium education SaaS built for universities and schools: admissions, portals, finance-ready structure, LMS-ready patterns, analytics, and a School Profiles Directory listing institutions and services.", "tags": ["SaaS", "Education", "Multi-tenant", "Portals", "School Profiles"], "live": "", "code": "", "initial": "ED", "tone": "light", "img": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1400&q=80", "roles": [{"icon": "fa-solid fa-code", "title": "Full-Stack SaaS Delivery", "points": ["Built tenant-ready platform end-to-end", "Frontend UX + backend logic + data layer", "Reusable components and clean UI patterns"]}, {"icon": "fa-solid fa-diagram-project", "title": "Multi-Tenancy & Isolation", "points": ["Tenant routing + branding hooks", "Clean boundaries per institution", "Scalable onboarding structure"]}, {"icon": "fa-solid fa-users-gear", "title": "Role-Based Portals (RBAC)", "points": ["Student/Staff/Lecturer/Admin portals", "Permission-controlled menus and actions", "Safe admin operations"]}, {"icon": "fa-solid fa-file-signature", "title": "Admissions Workflows", "points": ["Online applications + review", "Approval → enrollment flows", "Audit-friendly status transitions"]}, {"icon": "fa-solid fa-shield-halved", "title": "Security & Data Integrity", "points": ["Validation rules + safe inputs", "Consistent schemas and constraints", "Logs + error handling patterns"]}, {"icon": "fa-solid fa-chart-column", "title": "Analytics Foundation", "points": ["Dashboards and reporting hooks", "Institution-level metrics", "Growth-ready architecture"]}], "features": [{"icon": "fa-solid fa-building-columns", "title": "Multi-Tenant Institutions", "desc": "Tenant setup, branding, configurations and scalable onboarding patterns per school/university."}, {"icon": "fa-solid fa-user-graduate", "title": "Admissions + Enrollment", "desc": "Online application forms, review pipeline, approvals, and student onboarding flows."}, {"icon": "fa-solid fa-users-gear", "title": "Role Portals (RBAC)", "desc": "Students, lecturers, staff, finance/admin portals with permission-based experiences."}, {"icon": "fa-solid fa-id-card", "title": "Student Records & Services", "desc": "Profiles, documents, requests, department structures, and service workflows."}, {"icon": "fa-solid fa-school", "title": "School Profiles Directory", "desc": "A directory listing schools/universities with public profiles, programs/services, and discovery UX."}, {"icon": "fa-solid fa-chart-line", "title": "Reports & Analytics", "desc": "Dashboards for operations, admissions insights, and reporting-ready architecture."}], "challenges": [{"title": "Problem: Strong tenant separation", "lines": [{"type": "fix", "text": "Solution: tenant-aware routing and tenant configuration boundaries across the system."}, {"type": "good", "text": "Result: safer isolation and easier onboarding of new institutions."}]}, {"title": "Problem: Complex roles and permissions", "lines": [{"type": "fix", "text": "Solution: structured RBAC with clear portal views and admin-controlled privileges."}, {"type": "good", "text": "Result: fewer permission bugs and smoother UX per role."}]}]}, {"id": "classic-mart", "title": "Classic Mart (E-commerce Platform)", "full": "Classic Mart (E-commerce Platform)", "desc": "A premium e-commerce platform with catalog, cart, checkout, orders, admin tools, and SEO-focused structure.", "tags": ["E-commerce", "Payments", "Orders", "SEO", "Admin"], "live": "https://awanmabur.github.io/classicmart/", "code": "https://github.com/Awanmabur/classicmart", "initial": "CM", "tone": "dark", "img": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1400&q=80", "roles": [{"icon": "fa-solid fa-code", "title": "Full-Stack Build", "points": ["Built storefront + admin from scratch", "Backend APIs and DB models", "Checkout and order lifecycle"]}, {"icon": "fa-solid fa-cart-shopping", "title": "Storefront UX", "points": ["Product pages", "Cart UX", "Search/filter structure"]}, {"icon": "fa-solid fa-box", "title": "Orders & Inventory", "points": ["Order statuses and tracking", "Stock control patterns", "Admin operations"]}, {"icon": "fa-solid fa-credit-card", "title": "Checkout & Payments", "points": ["Payment-ready architecture", "Receipt records", "Conversion-friendly flows"]}, {"icon": "fa-solid fa-magnifying-glass", "title": "SEO & Performance", "points": ["SEO-first page structure", "Optimized assets patterns", "Fast browsing UX"]}, {"icon": "fa-solid fa-shield-halved", "title": "Security & Stability", "points": ["Validation and safe inputs", "Auth/account security patterns", "Error handling and logs"]}], "features": [{"icon": "fa-solid fa-layer-group", "title": "Product Catalog", "desc": "Categories, product variants, pricing, images, and SEO-ready product pages."}, {"icon": "fa-solid fa-cart-shopping", "title": "Cart & Checkout", "desc": "Cart persistence, checkout flow, totals calculations, and order creation."}, {"icon": "fa-solid fa-receipt", "title": "Orders & Receipts", "desc": "Order confirmation, buyer records, receipts and order status lifecycle."}, {"icon": "fa-solid fa-boxes-stacked", "title": "Inventory Patterns", "desc": "Stock tracking structures, admin adjustments, and low-stock readiness."}, {"icon": "fa-solid fa-user", "title": "Customer Accounts", "desc": "Profiles, addresses, order history and account management structure."}, {"icon": "fa-solid fa-chart-line", "title": "Admin Reports", "desc": "Sales trends, product insights and management dashboards foundation."}], "challenges": [{"title": "Problem: Checkout drop-offs", "lines": [{"type": "fix", "text": "Solution: simplified checkout steps and stronger CTA flow design."}, {"type": "good", "text": "Result: improved conversion and less friction."}]}, {"title": "Problem: Admin daily operations complexity", "lines": [{"type": "fix", "text": "Solution: clean admin screens and consistent management components."}, {"type": "good", "text": "Result: faster operations and fewer errors."}]}]}, {"id": "juba-rentals", "title": "Juba Rentals (Real Estate & Vehicles Marketplace)", "full": "Juba Rentals (Real Estate & Vehicles Marketplace)", "desc": "A premium listings platform for cars, houses and land with verification workflows, agent tools, and inquiry/lead management.", "tags": ["Marketplace", "Real Estate", "Vehicles", "Leads", "Admin"], "live": "https://awanmabur.github.io/jubarentals/", "code": "https://github.com/Awanmabur/jubarentals", "initial": "JR", "tone": "light", "img": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1400&q=80"}, {"id": "chariot-technologies", "title": "Chariot Technologies (Mobility Platform)", "full": "Chariot Technologies (Mobility Platform)", "desc": "A premium mobility platform connecting riders and drivers with safety patterns, scalable backend design, and ops dashboards foundation.", "tags": ["Mobility", "Platform", "SaaS", "Safety", "Ops"], "live": "https://www.chariot.ug", "code": "https://github.com/Chariot-Technologies/chariot-technologies", "initial": "CH", "tone": "light", "img": "https://images.unsplash.com/photo-1526662092594-e98c1e356d6a?auto=format&fit=crop&w=1400&q=80"}]; const SERVICES=[{"icon": "✦", "title": "Business Websites & UI/UX", "desc": "High-converting websites with modern structure, scroll animations, clear content and strong SEO.", "tags": ["Websites", "SEO", "UI/UX"]}, {"icon": "API", "title": "Backend & APIs", "desc": "Secure backend foundations for real products: authentication, user roles, dashboards, clean routing, API integrations and scalable architecture that can grow beyond the first version.", "tags": ["Node", "APIs", "Auth"]}, {"icon": "SHOP", "title": "E-commerce Builds", "desc": "Online stores with product catalogs, detail pages, cart and checkout direction, order management, payment-ready structure and admin dashboards that make selling easier to manage.", "tags": ["Store", "Orders", "Payments"]}, {"icon": "SEC", "title": "Security & Performance", "desc": "Performance and security improvements that protect trust: validation, safer forms, speed checks, SSL guidance, responsive testing and production readiness before launch.", "tags": ["Security", "Speed", "Production"]}, {"icon": "SaaS", "title": "SaaS Platforms", "desc": "Custom platforms with user roles, dashboards, workflow logic, reports, billing-ready structure and scalable foundations for SaaS, booking systems and internal business tools.", "tags": ["SaaS", "Roles", "Billing"]}, {"icon": "AI", "title": "AI Integration", "desc": "AI assistants, automated workflows, content helpers, intelligent dashboards and support tools added where they genuinely save time, improve service and help users complete tasks faster.", "tags": ["Assistants", "Automation", "Workflow"]}, {"icon": "DNS", "title": "Deployment & Domains", "desc": "Domain, hosting, SSL, DNS, redirects, analytics-ready setup, launch checks and ongoing support so the website or system can stay stable after it goes live.", "tags": ["Hosting", "SSL", "Launch"]}];
 
