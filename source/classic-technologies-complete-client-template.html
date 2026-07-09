@@ -65,6 +65,236 @@ a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}b
 .float-contact{position:fixed;left:18px;bottom:18px;z-index:1600;display:grid;gap:10px;transform:translateY(92px);opacity:0;transition:.35s var(--ease)}.float-contact.show{transform:none;opacity:1}.float-contact a{height:50px;border-radius:999px;display:inline-flex;align-items:center;gap:10px;padding:0 15px;background:var(--ink);color:var(--paper);box-shadow:0 18px 44px rgba(31,43,48,.22);font-size:13px;font-weight:950;transition:.25s var(--ease)}.float-contact a:hover{background:var(--accent-dark);transform:translateX(5px)}.side-dots{position:fixed;right:18px;top:50%;transform:translateY(-50%);z-index:1500;display:grid;gap:9px}.side-dots a{width:11px;height:11px;border-radius:999px;border:1px solid var(--accent-dark);background:rgba(255,255,255,.66);transition:.25s var(--ease)}.side-dots a.active{height:30px;background:var(--ink)}
 @media(max-width:1080px){.trust-wrap,.packages-grid{grid-template-columns:repeat(2,1fr)}.estimator-shell,.booking-card,.faq-shell{grid-template-columns:1fr}.faq-note{position:relative;top:auto}.portfolio-gallery{grid-template-columns:1fr 1fr}.portfolio-card.wide,.portfolio-card.tall{grid-column:auto;grid-row:auto}.side-dots{display:none}}@media(max-width:680px){.trust-wrap,.packages-grid,.portfolio-gallery{grid-template-columns:1fr}.trust-strip{padding-top:8px}.package-card,.estimator-panel,.estimator-result,.portfolio-card,.booking-card,.faq-note{border-radius:34px}.package-card{min-height:auto}.portfolio-gallery{grid-auto-rows:auto}.portfolio-card{min-height:300px}.booking-card{min-height:auto;padding:24px}.estimate-option{grid-template-columns:auto 1fr}.estimate-option>span:last-child{grid-column:2}.float-contact{left:12px;bottom:12px}.float-contact a{width:50px;padding:0;justify-content:center}.float-contact a span{display:none}}
 
+
+
+/* === Phone overflow repair + preserved stacked project scroll ===
+   Keeps the project cards sticky on all screen sizes while stopping horizontal phone overflow. */
+body{
+  overflow-x:hidden!important;
+  max-width:100%!important;
+}
+*,*::before,*::after{
+  box-sizing:border-box!important;
+  min-width:0;
+}
+img,svg,video,canvas,iframe{
+  max-width:100%!important;
+}
+.container,
+.nav,
+.footer-float,
+.trust-wrap,
+.page-hero-card,
+.page-panel,
+.final-cta,
+.proof-band,
+.contact-grid,
+.project-stack-wrap,
+.project-stack-list{
+  max-width:100%!important;
+}
+.btn,
+.nav-link,
+.chip,
+.tag,
+.tags span,
+.pill,
+.route,
+.route strong,
+.time-slot,
+.time-slot strong,
+.page-list a,
+.project-stack-intro .mini-list span,
+#about .about-points span,
+.booking-actions a,
+.footer-grid a,
+.contact-card a{
+  max-width:100%!important;
+  overflow-wrap:anywhere!important;
+  word-break:normal!important;
+}
+.hero-actions,
+.page-actions,
+.project-actions,
+.portfolio-actions,
+.booking-actions,
+.pills,
+.tags{
+  max-width:100%!important;
+  flex-wrap:wrap!important;
+}
+
+/* Restore the card-on-card sticky scroll effect that was disabled by responsive rules. */
+#projects,
+#projects .section,
+.project-stack-wrap,
+.project-stack-list{
+  overflow:visible!important;
+  contain:none!important;
+}
+.project-stack-wrap{
+  align-items:start!important;
+}
+.project-stack-list{
+  display:grid!important;
+  gap:18px!important;
+}
+.project-stack-card{
+  position:sticky!important;
+  top:118px!important;
+  transform-origin:top center!important;
+  z-index:1!important;
+}
+.project-stack-card:nth-child(1){top:118px!important;z-index:1!important;}
+.project-stack-card:nth-child(2){top:138px!important;z-index:2!important;}
+.project-stack-card:nth-child(3){top:158px!important;z-index:3!important;}
+.project-stack-card:nth-child(4){top:178px!important;z-index:4!important;}
+.project-stack-card:nth-child(5){top:198px!important;z-index:5!important;}
+.project-stack-card:nth-child(6){top:218px!important;z-index:6!important;}
+
+@media(max-width:1080px){
+  .project-stack-wrap{
+    grid-template-columns:1fr!important;
+  }
+  .project-stack-intro{
+    position:relative!important;
+    top:auto!important;
+  }
+  .project-stack-card{
+    position:sticky!important;
+    top:88px!important;
+  }
+  .project-stack-card:nth-child(1){top:88px!important;z-index:1!important;}
+  .project-stack-card:nth-child(2){top:100px!important;z-index:2!important;}
+  .project-stack-card:nth-child(3){top:112px!important;z-index:3!important;}
+  .project-stack-card:nth-child(4){top:124px!important;z-index:4!important;}
+  .project-stack-card:nth-child(5){top:136px!important;z-index:5!important;}
+  .project-stack-card:nth-child(6){top:148px!important;z-index:6!important;}
+}
+@media(max-width:900px){
+  .nav{
+    width:calc(100% - 20px)!important;
+    max-width:calc(100vw - 20px)!important;
+  }
+  .links{
+    position:fixed!important;
+    top:66px!important;
+    left:10px!important;
+    right:10px!important;
+    width:auto!important;
+    max-width:none!important;
+    transform:translateY(-12px) scale(.985)!important;
+    transform-origin:top center!important;
+  }
+  .menu-open .links{
+    transform:translateY(0) scale(1)!important;
+  }
+  .nav-link{
+    width:100%!important;
+    justify-content:flex-start!important;
+    text-align:left!important;
+  }
+}
+@media(max-width:680px){
+  html{
+    scroll-behavior:smooth!important;
+    -webkit-text-size-adjust:100%;
+  }
+  body{
+    -webkit-overflow-scrolling:touch;
+  }
+  .container{
+    width:calc(100% - 18px)!important;
+    max-width:calc(100vw - 18px)!important;
+  }
+  .nav{
+    width:calc(100% - 18px)!important;
+    max-width:calc(100vw - 18px)!important;
+  }
+  .links{
+    top:60px!important;
+    left:9px!important;
+    right:9px!important;
+    width:auto!important;
+    max-width:none!important;
+  }
+  .hero,
+  .hero-lab,
+  .trust-strip,
+  .marquee{
+    max-width:100vw!important;
+  }
+  .float-card{
+    max-width:calc(100vw - 26px)!important;
+  }
+  .project-stack-list{
+    gap:14px!important;
+  }
+  .project-stack-card{
+    position:sticky!important;
+    top:72px!important;
+    min-height:auto!important;
+  }
+  .project-stack-card:nth-child(1){top:72px!important;z-index:1!important;}
+  .project-stack-card:nth-child(2){top:82px!important;z-index:2!important;}
+  .project-stack-card:nth-child(3){top:92px!important;z-index:3!important;}
+  .project-stack-card:nth-child(4){top:102px!important;z-index:4!important;}
+  .project-stack-card:nth-child(5){top:112px!important;z-index:5!important;}
+  .project-stack-card:nth-child(6){top:122px!important;z-index:6!important;}
+  .hero-actions,
+  .page-actions,
+  .project-actions,
+  .portfolio-actions,
+  .booking-actions,
+  .form-bottom{
+    display:flex!important;
+    flex-wrap:wrap!important;
+  }
+  .hero-actions .btn,
+  .page-actions .btn,
+  .project-actions .btn,
+  .portfolio-actions .btn,
+  .booking-actions .btn,
+  .form-bottom .btn{
+    flex:1 1 150px!important;
+    white-space:normal!important;
+    text-align:center!important;
+    padding-left:12px!important;
+    padding-right:12px!important;
+  }
+  .eyebrow,
+  .chip,
+  .trust-badge,
+  .time-slot,
+  .route,
+  .project-stack-intro .mini-list span,
+  #about .about-points span{
+    min-width:0!important;
+    max-width:100%!important;
+  }
+  .time-slot,
+  .route,
+  .project-stack-intro .mini-list span,
+  #about .about-points span{
+    display:flex!important;
+    flex-wrap:wrap!important;
+  }
+}
+@media(max-width:380px){
+  .hero-actions .btn,
+  .page-actions .btn,
+  .project-actions .btn,
+  .portfolio-actions .btn,
+  .booking-actions .btn,
+  .form-bottom .btn{
+    flex-basis:100%!important;
+  }
+  .hero-stat-grid,
+  .trust-wrap{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  }
+}
+
 </style>
 
 <meta property="og:site_name" content="Classic Technologies">

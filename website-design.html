@@ -949,14 +949,13 @@ main section[id]{scroll-margin-top:72px!important;}
 }
 
 
-/* === Safe mobile overflow repair: no project stack changes === */
-html,
+
+/* === Phone overflow repair + preserved stacked project scroll ===
+   Keeps the project cards sticky on all screen sizes while stopping horizontal phone overflow. */
 body{
-  width:100%!important;
-  max-width:100%!important;
   overflow-x:hidden!important;
+  max-width:100%!important;
 }
-body{position:relative!important;}
 *,*::before,*::after{
   box-sizing:border-box!important;
   min-width:0;
@@ -971,8 +970,11 @@ img,svg,video,canvas,iframe{
 .page-hero-card,
 .page-panel,
 .final-cta,
-.proof-band{
-  max-width:calc(100vw - 18px)!important;
+.proof-band,
+.contact-grid,
+.project-stack-wrap,
+.project-stack-list{
+  max-width:100%!important;
 }
 .btn,
 .nav-link,
@@ -1004,6 +1006,54 @@ img,svg,video,canvas,iframe{
   max-width:100%!important;
   flex-wrap:wrap!important;
 }
+
+/* Restore the card-on-card sticky scroll effect that was disabled by responsive rules. */
+#projects,
+#projects .section,
+.project-stack-wrap,
+.project-stack-list{
+  overflow:visible!important;
+  contain:none!important;
+}
+.project-stack-wrap{
+  align-items:start!important;
+}
+.project-stack-list{
+  display:grid!important;
+  gap:18px!important;
+}
+.project-stack-card{
+  position:sticky!important;
+  top:118px!important;
+  transform-origin:top center!important;
+  z-index:1!important;
+}
+.project-stack-card:nth-child(1){top:118px!important;z-index:1!important;}
+.project-stack-card:nth-child(2){top:138px!important;z-index:2!important;}
+.project-stack-card:nth-child(3){top:158px!important;z-index:3!important;}
+.project-stack-card:nth-child(4){top:178px!important;z-index:4!important;}
+.project-stack-card:nth-child(5){top:198px!important;z-index:5!important;}
+.project-stack-card:nth-child(6){top:218px!important;z-index:6!important;}
+
+@media(max-width:1080px){
+  .project-stack-wrap{
+    grid-template-columns:1fr!important;
+  }
+  .project-stack-intro{
+    position:relative!important;
+    top:auto!important;
+  }
+  .project-stack-card{
+    position:sticky!important;
+    top:88px!important;
+  }
+  .project-stack-card:nth-child(1){top:88px!important;z-index:1!important;}
+  .project-stack-card:nth-child(2){top:100px!important;z-index:2!important;}
+  .project-stack-card:nth-child(3){top:112px!important;z-index:3!important;}
+  .project-stack-card:nth-child(4){top:124px!important;z-index:4!important;}
+  .project-stack-card:nth-child(5){top:136px!important;z-index:5!important;}
+  .project-stack-card:nth-child(6){top:148px!important;z-index:6!important;}
+}
 @media(max-width:900px){
   .nav{
     width:calc(100% - 20px)!important;
@@ -1029,6 +1079,13 @@ img,svg,video,canvas,iframe{
   }
 }
 @media(max-width:680px){
+  html{
+    scroll-behavior:smooth!important;
+    -webkit-text-size-adjust:100%;
+  }
+  body{
+    -webkit-overflow-scrolling:touch;
+  }
   .container{
     width:calc(100% - 18px)!important;
     max-width:calc(100vw - 18px)!important;
@@ -1044,6 +1101,29 @@ img,svg,video,canvas,iframe{
     width:auto!important;
     max-width:none!important;
   }
+  .hero,
+  .hero-lab,
+  .trust-strip,
+  .marquee{
+    max-width:100vw!important;
+  }
+  .float-card{
+    max-width:calc(100vw - 26px)!important;
+  }
+  .project-stack-list{
+    gap:14px!important;
+  }
+  .project-stack-card{
+    position:sticky!important;
+    top:72px!important;
+    min-height:auto!important;
+  }
+  .project-stack-card:nth-child(1){top:72px!important;z-index:1!important;}
+  .project-stack-card:nth-child(2){top:82px!important;z-index:2!important;}
+  .project-stack-card:nth-child(3){top:92px!important;z-index:3!important;}
+  .project-stack-card:nth-child(4){top:102px!important;z-index:4!important;}
+  .project-stack-card:nth-child(5){top:112px!important;z-index:5!important;}
+  .project-stack-card:nth-child(6){top:122px!important;z-index:6!important;}
   .hero-actions,
   .page-actions,
   .project-actions,
