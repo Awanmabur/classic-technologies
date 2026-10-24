@@ -1,19 +1,33 @@
 # Classic Technologies
 
-Classic Technologies builds professional websites, mobile app interfaces, ecommerce platforms, business dashboards, backend systems and AI-assisted workflows for businesses that want stronger trust, clearer messaging and better client conversion online.
+> Official website of Classic Technologies, providing website design, ecommerce development, mobile app interfaces, backend systems, security and performance services, AI integrations, and digital deployment support.
 
-## Core services
-- Conversion-focused business website design
-- Mobile app UI and MVP product-flow planning
-- Ecommerce catalog, checkout and order-flow direction
-- Backend systems, dashboards, portals and APIs
-- AI automation, support assistants and workflow helpers
-- Deployment, domain, SSL, performance and launch support
+Classic Technologies helps businesses establish a professional digital presence, explain their services, and plan and build digital products. The following links point to public pages of the official website.
 
-## Contact
-Phone / WhatsApp: +256 781 977 217
-Second line: +256 773 364 680
-Email: info@junubclassic.org
+## Main pages
 
-## Site structure
-The site includes crawlable pages for services, portfolio proof, pricing direction, contact information, privacy policy, sitemap.xml and robots.txt. Content is written in readable HTML with clear headings, internal links and production SEO metadata.
+- [Classic Technologies home](https://classictechgroup.com/)
+- [About Classic Technologies](https://classictechgroup.com/about.html)
+- [All digital services](https://classictechgroup.com/services.html)
+- [Portfolio and selected projects](https://classictechgroup.com/portfolio.html)
+- [Pricing information](https://classictechgroup.com/pricing.html)
+- [Contact and project enquiries](https://classictechgroup.com/contact.html)
+
+## Services
+
+- [Business website design and UI/UX](https://classictechgroup.com/website-design.html)
+- [Backend systems and APIs](https://classictechgroup.com/backend-systems.html)
+- [E-commerce development](https://classictechgroup.com/ecommerce-development.html)
+- [Business systems and SaaS platforms](https://classictechgroup.com/business-systems.html)
+- [Mobile app development](https://classictechgroup.com/mobile-app-development.html)
+- [AI integrations and automation](https://classictechgroup.com/ai-automation.html)
+- [Website performance and security](https://classictechgroup.com/performance-security.html)
+- [Deployment, domains, and hosting support](https://classictechgroup.com/deployment-support.html)
+
+## Site discovery and policies
+
+- [XML sitemap](https://classictechgroup.com/sitemap.xml)
+- [Crawler guidance](https://classictechgroup.com/robots.txt)
+- [Privacy policy](https://classictechgroup.com/privacy-policy.html)
+
+For telephone, WhatsApp and email contact details, refer to the [official contact page](https://classictechgroup.com/contact.html). The HTML pages and linked project details provide the authoritative descriptions of Classic Technologies' work.
