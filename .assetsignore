@@ -1,0 +1,16 @@
+# DENY BY DEFAULT: only explicitly public website content is uploaded.
+# This prevents repository metadata, deployment settings, source archives,
+# backups, credentials and future root-level files from becoming web assets.
+*
+# Public website pages (root HTML files only).
+!/*.html
+# Runtime assets used by the HTML pages.
+!/assets/
+!/assets/**
+!/data/
+!/data/**
+# Search and site-discovery metadata.
+!/robots.txt
+!/sitemap.xml
+!/humans.txt
+!/llms.txt

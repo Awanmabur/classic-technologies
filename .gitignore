@@ -1,0 +1,17 @@
+# Local tooling and generated deployment files
+.wrangler/
+node_modules/
+dist/
+coverage/
+.DS_Store
+Thumbs.db
+
+# Local credentials; do not commit
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Keep source archives out of future accidental commits
+*.zip
