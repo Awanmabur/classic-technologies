@@ -24,6 +24,15 @@ Classic Technologies helps businesses establish a professional digital presence,
 - [Website performance and security](https://classictechgroup.com/performance-security.html)
 - [Deployment, domains, and hosting support](https://classictechgroup.com/deployment-support.html)
 
+## Project case studies
+
+- [Classic Events Pro (Event Management & Ticketing)](https://classictechgroup.com/project-classic-events-pro.html)
+- [Classic Trip (Travel Booking & Ticketing)](https://classictechgroup.com/project-classic-trip.html)
+- [Classic Education Suite (Multi-Tenant SaaS)](https://classictechgroup.com/project-classic-education-suite.html)
+- [Classic Mart (E-commerce Platform)](https://classictechgroup.com/project-classic-mart.html)
+- [Juba Rentals (Real Estate & Vehicles Marketplace)](https://classictechgroup.com/project-juba-rentals.html)
+- [Chariot Technologies (Mobility Platform)](https://classictechgroup.com/project-chariot-technologies.html)
+
 ## Site discovery and policies
 
 - [XML sitemap](https://classictechgroup.com/sitemap.xml)
