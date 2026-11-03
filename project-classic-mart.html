@@ -1040,8 +1040,8 @@ body{
 
 
 /* Preserve the 3D case-study entrance without blocking first paint on external animations. */
-@keyframes caseHeroEnter{from{opacity:0;transform:perspective(1200px) translate3d(0,80px,-240px)}to{opacity:1;transform:none}}
-@keyframes caseThumbEnter{from{opacity:0;transform:perspective(1200px) translate3d(160px,0,-240px) rotateY(70deg)}to{opacity:1;transform:none}}
+@keyframes caseHeroEnter{from{transform:perspective(1200px) translate3d(0,80px,-240px)}to{transform:none}}
+@keyframes caseThumbEnter{from{transform:perspective(1200px) translate3d(160px,0,-240px) rotateY(70deg)}to{transform:none}}
 #projectRoot .project-case-hero .heroCard.reveal{opacity:1;transform:none;animation:caseHeroEnter .72s var(--ease) both}
 #projectRoot .project-case-hero .thumb.reveal{opacity:1;transform:none;animation:caseThumbEnter .8s var(--ease) both}
 @media(prefers-reduced-motion:reduce){#projectRoot .project-case-hero .heroCard.reveal,#projectRoot .project-case-hero .thumb.reveal{animation:none!important;opacity:1!important;transform:none!important}}
