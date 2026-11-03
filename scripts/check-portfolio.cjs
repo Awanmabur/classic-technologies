@@ -86,6 +86,25 @@ for(const project of data.projects){
 }
 for(const app of data.mobileApps)
   assert.ok(fs.existsSync(path.join(root,app.img)),app.id+' has a missing portfolio image');
+// LCP regression: do not block the overlay on slow third-party resources.
+const siteScript=read('assets/site.js');
+assert.ok(siteScript.includes("if(loader) setTimeout(()=>loader.classList.add('hide'),240)"),
+  'Loading overlay must not wait for full window load');
+const heroAssets=[
+  ['project-classic-trip.html','assets/portfolio/classic-trip.svg'],
+  ['project-classic-mart.html','assets/portfolio/classic-mart-dashboard.png'],
+];
+for(const [filename,asset] of heroAssets){
+  const page=read(filename);
+  assert.ok(fs.existsSync(path.join(root,asset)),filename+' hero asset missing');
+  assert.ok(page.includes('rel="preload" as="image" fetchpriority="high" href="'+asset+'"'),filename+' must preload its hero asset');
+  assert.ok(page.includes('src="'+asset+'"'),filename+' must show the same hero asset');
+  assert.ok(page.includes('loading="eager" decoding="async" fetchpriority="high"'),filename+' lost high image priority');
+}
+assert.ok(fs.statSync(path.join(root,'assets/portfolio/classic-mart-dashboard.png')).size>20000,
+  'Classic Mart original dashboard screenshot is missing or truncated');
+assert.ok(!read('project-classic-mart.html').includes('raw.githubusercontent.com/Awanmabur/classic-mart/master/dashboard-preview/'),
+  'Avoid third-party host for the LCP screenshot');
 // Static local href/src and sitemap destinations must resolve to existing
 // files without needing remote checks or any site redesign.
 const publishedFiles=new Set(fs.readdirSync(root,{withFileTypes:true})
