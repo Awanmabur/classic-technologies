@@ -37,8 +37,8 @@ Classic Technologies helps businesses establish a professional digital presence,
 - [Classic Rentals](https://classictechgroup.com/project-classic-rentals) — Property and vehicle rental marketplace project
 
 ### Published Android applications
-- [Classic Hymnal](https://play.google.com/store/apps/details?id=com.classictechnologies.dinkahymnal) — Dinka hymnals, offline reading, search, available audio and worship programmes
-- [Lëk Jöt de Yecu Krïtho](https://play.google.com/store/apps/details?id=com.classictechnologies.lekjotdinkabible) — Dinka Bible reading, listening, quizzes and daily devotion
+- [Classic Hymnal case study](https://classictechgroup.com/project-classic-hymnal) — Dinka hymnals, offline reading, search, available audio and worship programmes. [Official Android listing](https://play.google.com/store/apps/details?id=com.classictechnologies.dinkahymnal).
+- [Lëk Jöt de Yecu Krïtho case study](https://classictechgroup.com/project-lek-jot-de-yecu-kritho) — Dinka Bible reading, listening, quizzes and daily devotion. [Official Android listing](https://play.google.com/store/apps/details?id=com.classictechnologies.lekjotdinkabible).
 
 The portfolio includes platform categories for Android, iOS, Windows and macOS. Only the Android releases above are independently verified at present.
 
