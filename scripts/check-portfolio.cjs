@@ -100,6 +100,14 @@ for(const [filename,asset] of heroAssets){
   assert.ok(page.includes('rel="preload" as="image" fetchpriority="high" href="'+asset+'"'),filename+' must preload its hero asset');
   assert.ok(page.includes('src="'+asset+'"'),filename+' must show the same hero asset');
   assert.ok(page.includes('loading="eager" decoding="async" fetchpriority="high"'),filename+' lost high image priority');
+  // Text and hero image must be paintable immediately, even while the 3D transform runs.
+  for(const keyframe of ['caseHeroEnter','caseThumbEnter']){
+    const rule=page.match(new RegExp('@keyframes '+keyframe+'\\{from\\{[^}]*\\}to\\{[^}]*\\}\\}'));
+    assert.ok(rule,filename+' lost its case study '+keyframe+' entrance');
+    assert.ok(!rule[0].includes('opacity:0'),filename+' delays main content paint during '+keyframe);
+  }
+  assert.ok(page.includes("jq('#projectRoot .role-card,#projectRoot .feat-card').smoove"),
+    filename+' lost approved lower-page reveal effects');
 }
 assert.ok(fs.statSync(path.join(root,'assets/portfolio/classic-mart-dashboard.png')).size>20000,
   'Classic Mart original dashboard screenshot is missing or truncated');
