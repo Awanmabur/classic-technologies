@@ -36,9 +36,11 @@ Classic Technologies helps businesses establish a professional digital presence,
 - [Classic Campus](https://classictechgroup.com/project-classic-campus) — University ERP, finance and eLearning platform
 - [Classic Rentals](https://classictechgroup.com/project-classic-rentals) — Property and vehicle rental marketplace project
 
-### Mobile projects
-- [Classic Events Pro — Android App](https://classictechgroup.com/project-classic-events-android) — Native Android event experience
-- [Chariot Uganda — Mobile Mobility Experience](https://classictechgroup.com/project-chariot-mobile) — Rider and driver journeys
+### Published Android applications
+- [Classic Hymnal](https://play.google.com/store/apps/details?id=com.classictechnologies.dinkahymnal) — Dinka hymnals, offline reading, search, available audio and worship programmes
+- [Lëk Jöt de Yecu Krïtho](https://play.google.com/store/apps/details?id=com.classictechnologies.lekjotdinkabible) — Dinka Bible reading, listening, quizzes and daily devotion
+
+The portfolio includes platform categories for Android, iOS, Windows and macOS. Only the Android releases above are independently verified at present.
 
 ## Site discovery and policies
 
