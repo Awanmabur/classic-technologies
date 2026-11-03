@@ -1038,6 +1038,13 @@ body{
   .project-stack-card:nth-child(6){top:122px!important;z-index:6!important;}
 }
 
+
+/* Preserve the 3D case-study entrance without blocking first paint on external animations. */
+@keyframes caseHeroEnter{from{opacity:0;transform:perspective(1200px) translate3d(0,80px,-240px)}to{opacity:1;transform:none}}
+@keyframes caseThumbEnter{from{opacity:0;transform:perspective(1200px) translate3d(160px,0,-240px) rotateY(70deg)}to{opacity:1;transform:none}}
+#projectRoot .project-case-hero .heroCard.reveal{opacity:1;transform:none;animation:caseHeroEnter .72s var(--ease) both}
+#projectRoot .project-case-hero .thumb.reveal{opacity:1;transform:none;animation:caseThumbEnter .8s var(--ease) both}
+@media(prefers-reduced-motion:reduce){#projectRoot .project-case-hero .heroCard.reveal,#projectRoot .project-case-hero .thumb.reveal{animation:none!important;opacity:1!important;transform:none!important}}
 </style><meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/><meta content="https://classictechgroup.com/project-classic-trip" property="og:url"/><meta content="https://classictechgroup.com/assets/classic-technologies-logo.png" property="og:image"/><link href="https://classictechgroup.com/project-classic-trip" rel="canonical"/><script id="schema-org-jsonld" type="application/ld+json">{
   "@context": "https://schema.org",
   "@graph": [
@@ -1095,6 +1102,6 @@ body{
   revealEls.forEach(el=>io.observe(el));
   setTimeout(()=>{document.querySelectorAll('#projectRoot .hero-anim,#projectRoot .thumb-anim').forEach(el=>el.classList.add('show'));},80);
   const jq=window.jQuery;
-  if(jq&&jq.fn&&jq.fn.smoove){jq('#projectRoot .hero-anim,#projectRoot .thumb-anim').smoove({offset:'45%'});jq('#projectRoot .role-card,#projectRoot .feat-card').smoove({offset:'40%'});jq('#projectRoot .chal-card').smoove({offset:'42%'});}
+  if(jq&&jq.fn&&jq.fn.smoove){/* Above-fold hero animates via CSS; Smoove remains on lower cards. */jq('#projectRoot .role-card,#projectRoot .feat-card').smoove({offset:'40%'});jq('#projectRoot .chal-card').smoove({offset:'42%'});}
 })();
 </script></body></html>
