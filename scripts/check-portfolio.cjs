@@ -43,6 +43,8 @@ const htmlPages=fs.readdirSync(root).filter(name=>name.endsWith('.html'));
 assert.ok(htmlPages.length>=25,'Published HTML inventory unexpectedly shrank');
 for(const filename of htmlPages){
   const page=read(filename);
+  // Google's HTML verification token is not a webpage and must remain untouched.
+  if(!page.toLowerCase().includes('<html'))continue;
   assert.ok(!page.includes('256707180023'),filename+' still advertises the retired WhatsApp number');
   assert.ok(!page.includes('www.classictechgroup.com'),filename+' contains a noncanonical company URL');
   assert.ok(page.includes('info@classictechgroup.com'),filename+' is missing official contact email');
