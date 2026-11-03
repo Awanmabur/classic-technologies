@@ -93,13 +93,23 @@ assert.ok(siteScript.includes("if(loader) setTimeout(()=>loader.classList.add('h
 const heroAssets=[
   ['project-classic-trip.html','assets/portfolio/classic-trip.svg'],
   ['project-classic-mart.html','assets/portfolio/classic-mart-dashboard.png'],
+  ['project-autobrand-ai.html','assets/portfolio/autobrand-og.png'],
+  ['project-classic-academy.html','assets/portfolio/classic-academy-hero.webp'],
+  ['project-classic-events-pro.html','assets/portfolio/classic-events-pro.svg'],
+  ['project-classic-finhub.html','assets/portfolio/classic-finhub.svg'],
+  ['project-classic-campus.html','assets/portfolio/classic-campus.svg'],
+  ['project-classic-rentals.html','assets/portfolio/classic-rentals.svg'],
+  ['project-classic-hymnal.html','assets/portfolio/classic-hymnal.svg'],
+  ['project-lek-jot-de-yecu-kritho.html','assets/portfolio/lek-jot-de-yecu-kritho.svg'],
 ];
 for(const [filename,asset] of heroAssets){
   const page=read(filename);
   assert.ok(fs.existsSync(path.join(root,asset)),filename+' hero asset missing');
   assert.ok(page.includes('rel="preload" as="image" fetchpriority="high" href="'+asset+'"'),filename+' must preload its hero asset');
   assert.ok(page.includes('src="'+asset+'"'),filename+' must show the same hero asset');
-  assert.ok(page.includes('loading="eager" decoding="async" fetchpriority="high"'),filename+' lost high image priority');
+  const heroTag=page.match(/<div class="thumb reveal thumb-anim"[^>]*><img[^>]*>/)?.[0]||'';
+  for(const attribute of ['loading="eager"','decoding="async"','fetchpriority="high"'])
+    assert.ok(heroTag.includes(attribute),filename+' lost hero image attribute '+attribute);
   // Text and hero image must be paintable immediately, even while the 3D transform runs.
   for(const keyframe of ['caseHeroEnter','caseThumbEnter']){
     const rule=page.match(new RegExp('@keyframes '+keyframe+'\\{from\\{[^}]*\\}to\\{[^}]*\\}\\}'));
@@ -113,6 +123,18 @@ assert.ok(fs.statSync(path.join(root,'assets/portfolio/classic-mart-dashboard.pn
   'Classic Mart original dashboard screenshot is missing or truncated');
 assert.ok(!read('project-classic-mart.html').includes('raw.githubusercontent.com/Awanmabur/classic-mart/master/dashboard-preview/'),
   'Avoid third-party host for the LCP screenshot');
+for(const [file,description] of [
+  ['assets/portfolio/autobrand-og.png','AutoBrand original hero'],
+  ['assets/portfolio/classic-academy-hero.webp','Classic Academy original hero'],
+]){
+  assert.ok(fs.statSync(path.join(root,file)).size>20000,description+' image missing or truncated');
+}
+for(const [filename,upstream] of [
+  ['project-autobrand-ai.html','raw.githubusercontent.com/Awanmabur/AutoBrand-ai/master/public/assets/autobrand-og.png'],
+  ['project-classic-academy.html','raw.githubusercontent.com/Awanmabur/classic-academy/main/public/img/hero.webp'],
+]){
+  assert.ok(!read(filename).includes(upstream),filename+' still relies on remote hero image');
+}
 // Static local href/src and sitemap destinations must resolve to existing
 // files without needing remote checks or any site redesign.
 const publishedFiles=new Set(fs.readdirSync(root,{withFileTypes:true})
