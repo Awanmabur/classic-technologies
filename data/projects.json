@@ -76,7 +76,7 @@
       "id": "classic-trip",
       "title": "Classic Trip",
       "subtitle": "Travel booking marketplace across East Africa",
-      "desc": "A multi-provider travel marketplace connecting customers with bus journeys, accommodation, flights, local rides and related travel services. The product combines route discovery, dated availability, reservation flows, digital tickets and operator-facing management in one travel experience.",
+      "desc": "A multi-provider travel marketplace connecting customers with bus journeys, accommodation, flights, local rides and related travel services. The product combines route discovery, dated availability, reservation flows, digital tickets and operator-facing management in one travel experience. The case study also covers booking confirmation states, operator permissions and how third-party availability must be verified.",
       "tags": [
         "Travel technology",
         "Booking",
@@ -85,7 +85,7 @@
       ],
       "live": "https://classic-trip.com",
       "code": "https://github.com/Awanmabur/classic-trip",
-      "img": "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=1400&q=80",
+      "img": "assets/portfolio/classic-trip.svg",
       "roles": [
         {
           "icon": "fa-solid fa-code",
@@ -207,7 +207,7 @@
       "id": "classic-mart",
       "title": "Classic Mart",
       "subtitle": "Marketplace for buyers, sellers and product promoters",
-      "desc": "An ecommerce marketplace where shoppers discover products, sellers manage storefronts and promoters can earn commission from eligible tracked sales without owning inventory. The system brings together catalogue discovery, checkout, fulfilment, seller operations and account-level controls.",
+      "desc": "An ecommerce marketplace where shoppers discover products, sellers manage storefronts and promoters can earn commission from eligible tracked sales without owning inventory. The system brings together catalogue discovery, checkout, fulfilment, seller operations and account-level controls. Its architecture must manage payment states, inventory integrity, seller permissions, promoter attribution and recovery after provider failures.",
       "tags": [
         "Ecommerce",
         "Multi-vendor",
@@ -216,7 +216,7 @@
       ],
       "live": "https://classic-mart.com",
       "code": "https://github.com/Awanmabur/classic-mart",
-      "img": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1400&q=80",
+      "img": "assets/portfolio/classic-mart.svg",
       "roles": [
         {
           "icon": "fa-solid fa-code",
@@ -338,7 +338,7 @@
       "id": "autobrand-ai",
       "title": "AutoBrand AI",
       "subtitle": "AI-assisted social content operations",
-      "desc": "A brand-focused content and social-media workflow platform combining Brand Brain, AI-assisted content creation, asset organization, review and approval, scheduling and publishing integrations. Designed to keep teams in control of what gets approved and shared.",
+      "desc": "A brand-focused content and social-media workflow platform combining Brand Brain, AI-assisted content creation, asset organization, review and approval, scheduling and publishing integrations. Designed to keep teams in control of what gets approved and shared. Review permissions, provider limits, publishing retries and approval trails are central to keeping automation accountable.",
       "tags": [
         "AI workflows",
         "Social media",
@@ -347,7 +347,7 @@
       ],
       "live": "https://autobrand.classictechgroup.com",
       "code": "https://github.com/Awanmabur/AutoBrand-ai",
-      "img": "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=1400&q=80",
+      "img": "assets/portfolio/autobrand-ai.svg",
       "roles": [
         {
           "icon": "fa-solid fa-brain",
@@ -411,7 +411,7 @@
       "id": "classic-academy",
       "title": "Classic Academy",
       "subtitle": "School management and admissions software",
-      "desc": "A school management platform covering public school profiles, admissions, student and staff administration, fees, examinations and parent-facing communication. The architecture separates institution-level operations from public discovery and application journeys.",
+      "desc": "A school management platform covering public school profiles, admissions, student and staff administration, fees, examinations and parent-facing communication. The architecture separates institution-level operations from public discovery and application journeys. Its case study addresses institution data separation, staff permissions, academic operations and secure access to student records.",
       "tags": [
         "School management",
         "Admissions",
@@ -420,7 +420,7 @@
       ],
       "live": "https://www.classicacademy.app",
       "code": "https://github.com/Awanmabur/classic-academy",
-      "img": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1400&q=80",
+      "img": "assets/portfolio/classic-academy.svg",
       "roles": [
         {
           "icon": "fa-solid fa-school",
@@ -484,7 +484,7 @@
       "id": "classic-events-pro",
       "title": "Classic Events Pro",
       "subtitle": "Event discovery, ticketing and promoter operations",
-      "desc": "An event discovery and ticketing platform for organizers, guests and promoters. Public event listings connect to ticket sales, QR entry workflows, promoter attribution, service discovery and role-specific operational tools.",
+      "desc": "An event discovery and ticketing platform for organizers, guests and promoters. Public event listings connect to ticket sales, QR entry workflows, promoter attribution, service discovery and role-specific operational tools. The engineering scope includes controlled event edits, ticket capacity, QR verification, payment reconciliation and promoter commissions.",
       "tags": [
         "Event ticketing",
         "Organizers",
@@ -493,7 +493,7 @@
       ],
       "live": "https://events.classictechgroup.com",
       "code": "https://github.com/Awanmabur/classic-events",
-      "img": "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=1400&q=80",
+      "img": "assets/portfolio/classic-events-pro.svg",
       "roles": [
         {
           "icon": "fa-solid fa-code",
@@ -615,7 +615,7 @@
       "id": "classic-finhub",
       "title": "Classic FinHub",
       "subtitle": "Financial operations and multi-tenant dashboard prototype",
-      "desc": "A finance operations interface exploring organization workspaces, role-controlled dashboards, transactions, reporting and operational visibility. The available repository demonstrates application structure; regulated money movement and live production availability are not claimed.",
+      "desc": "A finance operations interface exploring organization workspaces, role-controlled dashboards, transactions, reporting and operational visibility. The available repository demonstrates application structure; regulated money movement and live production availability are not claimed. The available repository represents an interface prototype; live regulated money movement and production readiness are not claimed.",
       "tags": [
         "Fintech UX",
         "Operations",
@@ -624,7 +624,7 @@
       ],
       "live": "",
       "code": "https://github.com/Awanmabur/finhub",
-      "img": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1400&q=80",
+      "img": "assets/portfolio/classic-finhub.svg",
       "roles": [
         {
           "icon": "fa-solid fa-building-columns",
@@ -675,7 +675,7 @@
       "id": "classic-campus",
       "title": "Classic Campus",
       "subtitle": "University ERP, finance and eLearning platform",
-      "desc": "A university and college management platform combining admissions, student records, academic departments, timetables, campus finance and learning workflows. Its public-facing pages explain institution modules while operational records belong behind authenticated roles.",
+      "desc": "A university and college management platform combining admissions, student records, academic departments, timetables, campus finance and learning workflows. Its public-facing pages explain institution modules while operational records belong behind authenticated roles. The underlying design must separate tenant data and staff permissions across admissions, learning, scheduling and finance modules.",
       "tags": [
         "University ERP",
         "LMS",
@@ -685,7 +685,7 @@
       "live": "",
       "officialDomain": "https://www.classicampus.com",
       "code": "https://github.com/Awanmabur/classicampus",
-      "img": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1400&q=80",
+      "img": "assets/portfolio/classic-campus.svg",
       "roles": [
         {
           "icon": "fa-solid fa-building-columns",
@@ -741,7 +741,7 @@
       "id": "classic-rentals",
       "title": "Classic Rentals",
       "subtitle": "Property and vehicle rental marketplace project",
-      "desc": "A rentals marketplace project for discovering property, accommodation and vehicle listings, comparing relevant details and contacting owners or agents. The current repository documents the application; a verified public production domain has not been established.",
+      "desc": "A rentals marketplace project for discovering property, accommodation and vehicle listings, comparing relevant details and contacting owners or agents. The current repository documents the application; a verified public production domain has not been established. The case study addresses owner permissions, listing accuracy, moderation, verification and customer trust.",
       "tags": [
         "Rentals",
         "Property",
@@ -750,7 +750,7 @@
       ],
       "live": "",
       "code": "https://github.com/Awanmabur/classic-rentals",
-      "img": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1400&q=80",
+      "img": "assets/portfolio/classic-rentals.svg",
       "roles": [
         {
           "icon": "fa-solid fa-house",
@@ -802,8 +802,8 @@
     {
       "id": "classic-events-android",
       "title": "Classic Events Pro — Android App",
-      "subtitle": "Native Android event experience",
-      "desc": "Android application project for the Classic Events ecosystem, maintained separately from the web event platform. The linked repository contains an Android Studio application; public store distribution is not yet independently verified.",
+      "subtitle": "Android WebView companion for events",
+      "desc": "Android application project for the Classic Events ecosystem, maintained separately from the web event platform. The linked repository contains an Android Studio application; public store distribution is not yet independently verified. This is a Java WebView companion, not an independently native ticketing client; its retired domain needs remediation.",
       "tags": [
         "Android",
         "Mobile app",
@@ -811,7 +811,7 @@
       ],
       "live": "",
       "code": "https://github.com/Awanmabur/classic_events_pro",
-      "img": "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=1400&q=80",
+      "img": "assets/portfolio/classic-events-android.svg",
       "roles": [],
       "features": [],
       "challenges": []
@@ -820,7 +820,7 @@
       "id": "chariot-mobile",
       "title": "Chariot Uganda — Mobile Mobility Experience",
       "subtitle": "Rider and driver journeys",
-      "desc": "Mobile-focused transport experience for riders and drivers in Uganda. The public Chariot website explains rides, delivery and driver participation; this portfolio does not claim a separately verified app-store listing.",
+      "desc": "Mobile-focused transport experience for riders and drivers in Uganda. The public Chariot website explains rides, delivery and driver participation; this portfolio does not claim a separately verified app-store listing. The case study distinguishes mobile product goals from an independently verified app-store release and live dispatch.",
       "tags": [
         "Mobility",
         "Rider journeys",
@@ -828,7 +828,7 @@
       ],
       "live": "https://www.chariot.ug",
       "code": "https://github.com/Chariot-Technologies/chariot-technologies",
-      "img": "https://images.unsplash.com/photo-1526662092594-e98c1e356d6a?auto=format&fit=crop&w=1400&q=80",
+      "img": "assets/portfolio/chariot-mobile.svg",
       "roles": [],
       "features": [],
       "challenges": []
