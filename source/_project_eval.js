@@ -44,7 +44,7 @@ const obj = {
                 desc: "A premium booking system for bus/train/flights/hotels with operator dashboards, schedules, inventory, tickets, and promoter/affiliate tracking.",
                 tags: ["Booking", "Tickets", "Inventory", "Promoters", "Admin"],
                 img: "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=1400&q=80",
-                live: "https://awanmabur.github.io/classic-trip",
+                live: "https://classic-trip.com",
                 code: "https://github.com/Awanmabur/classic-trip",
                 roles: [
                     { icon: "fa-solid fa-code", title: "Full-Stack Build From Scratch", points: ["Built frontend and backend end-to-end", "Designed booking logic + operator workflows", "Implemented reusable UI components"] },
@@ -124,8 +124,8 @@ const obj = {
                 desc: "A premium e-commerce platform with catalog, cart, checkout, orders, admin tools, and SEO-focused structure.",
                 tags: ["E-commerce", "Payments", "Orders", "SEO", "Admin"],
                 img: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1400&q=80",
-                live: "https://awanmabur.github.io/classicmart/",
-                code: "https://github.com/Awanmabur/classicmart",
+                live: "https://classic-mart.com",
+                code: "https://github.com/Awanmabur/classic-mart",
                 roles: [
                     { icon: "fa-solid fa-code", title: "Full-Stack Build", points: ["Built storefront + admin from scratch", "Backend APIs and DB models", "Checkout and order lifecycle"] },
                     { icon: "fa-solid fa-cart-shopping", title: "Storefront UX", points: ["Product pages", "Cart UX", "Search/filter structure"] },
