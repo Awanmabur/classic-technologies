@@ -38,6 +38,17 @@ for(const app of data.mobileApps){
 assert.ok(section.includes('Classic Campus')&&section.includes('Classic Rentals'),'Active platforms lost');
 for(const filename of ['project-classic-events-android.html','project-chariot-mobile.html'])
   assert.ok(fs.existsSync(path.join(root,filename)),'Legacy case study removed: '+filename);
+// Legacy indexed query URLs must lead to existing case-study files rather than
+// open-redirecting or rendering obsolete/duplicate project content.
+const legacyPage=read('project.html');
+const legacyMatch=legacyPage.match(/const known = new Set\\((\\[[^\\]]+\\])\\);/);
+assert.ok(legacyMatch,'Legacy project migration allowlist missing');
+const legacyIds=JSON.parse(legacyMatch[1]);
+assert.ok(legacyIds.length>=data.projects.length+data.mobileApps.length);
+assert.ok(legacyPage.includes("window.location.replace('https://classictechgroup.com/project-' + id"),
+  'Legacy query links must lead to the apex canonical case URLs');
+for(const id of legacyIds) assert.ok(fs.existsSync(path.join(root,'project-'+id+'.html')),
+  'Legacy mapping points at a missing case study '+id);
 // Branding regression checks across every published top-level page.
 const htmlPages=fs.readdirSync(root).filter(name=>name.endsWith('.html'));
 assert.ok(htmlPages.length>=25,'Published HTML inventory unexpectedly shrank');
