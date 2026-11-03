@@ -800,35 +800,43 @@
   ],
   "mobileApps": [
     {
-      "id": "classic-events-android",
-      "title": "Classic Events Pro — Android App",
-      "subtitle": "Android WebView companion for events",
-      "desc": "Android application project for the Classic Events ecosystem, maintained separately from the web event platform. The linked repository contains an Android Studio application; public store distribution is not yet independently verified. This is a Java WebView companion, not an independently native ticketing client; its retired domain needs remediation.",
+      "id": "classic-hymnal",
+      "title": "Classic Hymnal",
+      "subtitle": "Dinka hymns and offline worship library",
+      "desc": "Classic Hymnal is a published Android app that brings four Dinka hymnals into one accessible library for worship, personal devotion, choir practice and Christian learning. It supports offline hymn reading, search by number, title and text, available audio, favourites, notes, collections, worship programmes, and personal backups. The app preserves the individual hymnals’ identity and numbering while keeping users’ personal library on their devices.",
       "tags": [
         "Android",
-        "Mobile app",
-        "Events"
+        "Dinka",
+        "Offline hymnals",
+        "Worship"
       ],
-      "live": "",
-      "code": "https://github.com/Awanmabur/classic_events_pro",
-      "img": "assets/portfolio/classic-events-android.svg",
+      "live": "https://play.google.com/store/apps/details?id=com.classictechnologies.dinkahymnal",
+      "code": "",
+      "img": "assets/portfolio/classic-hymnal.svg",
+      "platforms": [
+        "android"
+      ],
       "roles": [],
       "features": [],
       "challenges": []
     },
     {
-      "id": "chariot-mobile",
-      "title": "Chariot Uganda — Mobile Mobility Experience",
-      "subtitle": "Rider and driver journeys",
-      "desc": "Mobile-focused transport experience for riders and drivers in Uganda. The public Chariot website explains rides, delivery and driver participation; this portfolio does not claim a separately verified app-store listing. The case study distinguishes mobile product goals from an independently verified app-store release and live dispatch.",
+      "id": "lek-jot-de-yecu-kritho",
+      "title": "Lëk Jöt de Yecu Krïtho",
+      "subtitle": "Dinka Bible and daily devotional learning",
+      "desc": "Lëk Jöt de Yecu Krïtho is a published Dinka-language Android Bible application for Scripture reading, listening, quizzes and daily devotional study. It helps Dinka-speaking Christians access biblical texts on mobile devices for personal devotion, church teaching and learning. The Google Play listing confirms its Android publication; iOS, Windows and macOS releases are not claimed.",
       "tags": [
-        "Mobility",
-        "Rider journeys",
-        "Driver onboarding"
+        "Android",
+        "Dinka Bible",
+        "Reading",
+        "Devotion"
       ],
-      "live": "https://www.chariot.ug",
-      "code": "https://github.com/Chariot-Technologies/chariot-technologies",
-      "img": "assets/portfolio/chariot-mobile.svg",
+      "live": "https://play.google.com/store/apps/details?id=com.classictechnologies.lekjotdinkabible",
+      "code": "",
+      "img": "assets/portfolio/lek-jot-de-yecu-kritho.svg",
+      "platforms": [
+        "android"
+      ],
       "roles": [],
       "features": [],
       "challenges": []
