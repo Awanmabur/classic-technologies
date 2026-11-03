@@ -7,36 +7,36 @@ Classic Technologies helps businesses establish a professional digital presence,
 ## Main pages
 
 - [Classic Technologies home](https://classictechgroup.com/)
-- [About Classic Technologies](https://classictechgroup.com/about.html)
-- [All digital services](https://classictechgroup.com/services.html)
-- [Portfolio and selected projects](https://classictechgroup.com/portfolio.html)
-- [Pricing information](https://classictechgroup.com/pricing.html)
-- [Contact and project enquiries](https://classictechgroup.com/contact.html)
+- [About Classic Technologies](https://classictechgroup.com/about)
+- [All digital services](https://classictechgroup.com/services)
+- [Portfolio and selected projects](https://classictechgroup.com/portfolio)
+- [Pricing information](https://classictechgroup.com/pricing)
+- [Contact and project enquiries](https://classictechgroup.com/contact)
 
 ## Services
 
-- [Business website design and UI/UX](https://classictechgroup.com/website-design.html)
-- [Backend systems and APIs](https://classictechgroup.com/backend-systems.html)
-- [E-commerce development](https://classictechgroup.com/ecommerce-development.html)
-- [Business systems and SaaS platforms](https://classictechgroup.com/business-systems.html)
-- [Mobile app development](https://classictechgroup.com/mobile-app-development.html)
-- [AI integrations and automation](https://classictechgroup.com/ai-automation.html)
-- [Website performance and security](https://classictechgroup.com/performance-security.html)
-- [Deployment, domains, and hosting support](https://classictechgroup.com/deployment-support.html)
+- [Business website design and UI/UX](https://classictechgroup.com/website-design)
+- [Backend systems and APIs](https://classictechgroup.com/backend-systems)
+- [E-commerce development](https://classictechgroup.com/ecommerce-development)
+- [Business systems and SaaS platforms](https://classictechgroup.com/business-systems)
+- [Mobile app development](https://classictechgroup.com/mobile-app-development)
+- [AI integrations and automation](https://classictechgroup.com/ai-automation)
+- [Website performance and security](https://classictechgroup.com/performance-security)
+- [Deployment, domains, and hosting support](https://classictechgroup.com/deployment-support)
 
 ## Project case studies
 
-- [Classic Events Pro (Event Management & Ticketing)](https://classictechgroup.com/project-classic-events-pro.html)
-- [Classic Trip (Travel Booking & Ticketing)](https://classictechgroup.com/project-classic-trip.html)
-- [Classic Education Suite (Multi-Tenant SaaS)](https://classictechgroup.com/project-classic-education-suite.html)
-- [Classic Mart (E-commerce Platform)](https://classictechgroup.com/project-classic-mart.html)
-- [Juba Rentals (Real Estate & Vehicles Marketplace)](https://classictechgroup.com/project-juba-rentals.html)
-- [Chariot Technologies (Mobility Platform)](https://classictechgroup.com/project-chariot-technologies.html)
+- [Classic Events Pro (Event Management & Ticketing)](https://classictechgroup.com/project-classic-events-pro)
+- [Classic Trip (Travel Booking & Ticketing)](https://classictechgroup.com/project-classic-trip)
+- [Classic Education Suite (Multi-Tenant SaaS)](https://classictechgroup.com/project-classic-education-suite)
+- [Classic Mart (E-commerce Platform)](https://classictechgroup.com/project-classic-mart)
+- [Juba Rentals (Real Estate & Vehicles Marketplace)](https://classictechgroup.com/project-juba-rentals)
+- [Chariot Technologies (Mobility Platform)](https://classictechgroup.com/project-chariot-technologies)
 
 ## Site discovery and policies
 
 - [XML sitemap](https://classictechgroup.com/sitemap.xml)
 - [Crawler guidance](https://classictechgroup.com/robots.txt)
-- [Privacy policy](https://classictechgroup.com/privacy-policy.html)
+- [Privacy policy](https://classictechgroup.com/privacy-policy)
 
-For telephone, WhatsApp and email contact details, refer to the [official contact page](https://classictechgroup.com/contact.html). The HTML pages and linked project details provide the authoritative descriptions of Classic Technologies' work.
+For telephone, WhatsApp and email contact details, refer to the [official contact page](https://classictechgroup.com/contact). The HTML pages and linked project details provide the authoritative descriptions of Classic Technologies' work.
