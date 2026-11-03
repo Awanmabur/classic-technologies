@@ -26,12 +26,19 @@ Classic Technologies helps businesses establish a professional digital presence,
 
 ## Project case studies
 
-- [Classic Events Pro (Event Management & Ticketing)](https://classictechgroup.com/project-classic-events-pro)
-- [Classic Trip (Travel Booking & Ticketing)](https://classictechgroup.com/project-classic-trip)
-- [Classic Education Suite (Multi-Tenant SaaS)](https://classictechgroup.com/project-classic-education-suite)
-- [Classic Mart (E-commerce Platform)](https://classictechgroup.com/project-classic-mart)
-- [Juba Rentals (Real Estate & Vehicles Marketplace)](https://classictechgroup.com/project-juba-rentals)
-- [Chariot Technologies (Mobility Platform)](https://classictechgroup.com/project-chariot-technologies)
+### Active platforms
+- [Classic Trip](https://classictechgroup.com/project-classic-trip) — Travel booking marketplace across East Africa
+- [Classic Mart](https://classictechgroup.com/project-classic-mart) — Marketplace for buyers, sellers and product promoters
+- [AutoBrand AI](https://classictechgroup.com/project-autobrand-ai) — AI-assisted social content operations
+- [Classic Academy](https://classictechgroup.com/project-classic-academy) — School management and admissions software
+- [Classic Events Pro](https://classictechgroup.com/project-classic-events-pro) — Event discovery, ticketing and promoter operations
+- [Classic FinHub](https://classictechgroup.com/project-classic-finhub) — Financial operations and multi-tenant dashboard prototype
+- [Classic Campus](https://classictechgroup.com/project-classic-campus) — University ERP, finance and eLearning platform
+- [Classic Rentals](https://classictechgroup.com/project-classic-rentals) — Property and vehicle rental marketplace project
+
+### Mobile projects
+- [Classic Events Pro — Android App](https://classictechgroup.com/project-classic-events-android) — Native Android event experience
+- [Chariot Uganda — Mobile Mobility Experience](https://classictechgroup.com/project-chariot-mobile) — Rider and driver journeys
 
 ## Site discovery and policies
 
