@@ -818,7 +818,8 @@
       ],
       "roles": [],
       "features": [],
-      "challenges": []
+      "challenges": [],
+      "caseStudy": "/project-classic-hymnal"
     },
     {
       "id": "lek-jot-de-yecu-kritho",
@@ -839,7 +840,8 @@
       ],
       "roles": [],
       "features": [],
-      "challenges": []
+      "challenges": [],
+      "caseStudy": "/project-lek-jot-de-yecu-kritho"
     }
   ]
 }
