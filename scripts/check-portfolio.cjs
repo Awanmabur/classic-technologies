@@ -63,6 +63,29 @@ for(const filename of htmlPages){
   assert.ok(page.includes('256773364680'),filename+' is missing the direct-call number');
   assert.ok(page.includes('256781977217'),filename+' is missing the approved WhatsApp number');
 }
+// Enforce crawlable, self-canonical public sitemap pages without changing the UI.
+// The sitemap is the authoritative indexable page inventory, not every HTML file.
+const sitemapPaths=[...sitemap.matchAll(/<loc>https:\/\/classictechgroup\.com\/([^<]*)<\/loc>/g)].map(x=>x[1]);
+assert.ok(sitemapPaths.length>=20,'Sitemap unexpectedly lost published pages');
+assert.equal(new Set(sitemapPaths).size,sitemapPaths.length,'Duplicate sitemap entries');
+for(const slug of sitemapPaths){
+  const filename=slug?slug+'.html':'index.html';
+  assert.ok(fs.existsSync(path.join(root,filename)),'Missing sitemap page: '+filename);
+  const page=read(filename),url='https://classictechgroup.com/'+slug;
+  assert.ok(page.includes('href="'+url+'" rel="canonical"'),filename+' has a missing or incorrect canonical URL');
+  assert.ok(page.includes('content="'+url+'" property="og:url"'),filename+' has a missing or incorrect Open Graph URL');
+  assert.ok(/<title>[^<]+<\/title>/i.test(page),filename+' missing page title');
+  assert.ok(/name="description"/.test(page),filename+' missing meta description');
+  assert.ok(/content="index, follow/.test(page),filename+' is blocked from indexing despite sitemap inclusion');
+  assert.ok(/type="application\/ld\+json"/.test(page),filename+' missing structured data');
+}
+for(const project of data.projects){
+  assert.ok(project.desc&&project.desc.length>=160,project.id+' has thin case-study copy');
+  assert.ok(!project.live||/^https:\/\//.test(project.live),project.id+' has an invalid public URL');
+  assert.ok(fs.existsSync(path.join(root,project.img)),project.id+' has a missing portfolio image');
+}
+for(const app of data.mobileApps)
+  assert.ok(fs.existsSync(path.join(root,app.img)),app.id+' has a missing portfolio image');
 // Static local href/src and sitemap destinations must resolve to existing
 // files without needing remote checks or any site redesign.
 const publishedFiles=new Set(fs.readdirSync(root,{withFileTypes:true})
