@@ -1,6 +1,9 @@
 
 const body=document.body,header=document.getElementById('header'),loader=document.getElementById('loader'),progress=document.getElementById('progress'),topBtn=document.getElementById('top'),menu=document.getElementById('menu'),cursor=document.getElementById('cursor'),floatContact=document.getElementById('floatContact');
-window.addEventListener('load',()=>setTimeout(()=>loader&&loader.classList.add('hide'),420));
+// Reveal the site after its critical HTML is parsed, not after every image and
+// third-party script finishes loading. Slow remote project previews must not
+// keep the full-screen loader covering otherwise usable content.
+if(loader) setTimeout(()=>loader.classList.add('hide'),240);
 const year=document.getElementById('year'); if(year) year.textContent=new Date().getFullYear();
 document.querySelectorAll('[data-split]').forEach(el=>{const words=el.textContent.trim().split(' ');el.textContent='';words.forEach((w,i)=>{const s=document.createElement('span');s.textContent=w;s.style.setProperty('--i',i);el.appendChild(s);});});
 function closeMenu(){body.classList.remove('menu-open'); if(menu) menu.setAttribute('aria-expanded','false');}
