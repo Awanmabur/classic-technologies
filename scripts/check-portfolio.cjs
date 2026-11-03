@@ -63,4 +63,26 @@ for(const filename of htmlPages){
   assert.ok(page.includes('256773364680'),filename+' is missing the direct-call number');
   assert.ok(page.includes('256781977217'),filename+' is missing the approved WhatsApp number');
 }
-console.log('PASS — Classic Technologies layout, 8 active platforms, 2 apps, 4 filters, case studies, SEO links and branding');
+// Static local href/src and sitemap destinations must resolve to existing
+// files without needing remote checks or any site redesign.
+const publishedFiles=new Set(fs.readdirSync(root,{withFileTypes:true})
+  .filter(item=>item.isFile()).map(item=>item.name));
+const resolvesLocal=raw=>{
+  if(!raw||raw[0]==='#'||raw.startsWith('//'))return true;
+  if(/^(?:https?:|mailto:|tel:|javascript:|data:)/i.test(raw)||raw.includes('\${'))return true;
+  const pathname=raw.split(/[?#]/)[0].replace(/^\/+/,'');
+  if(!pathname)return true;
+  const options=[pathname,pathname+'.html',pathname+'/index.html'];
+  return options.some(candidate=>fs.existsSync(path.join(root,candidate)));
+};
+for(const filename of htmlPages){
+  const page=read(filename);
+  if(!page.toLowerCase().includes('<html'))continue;
+  for(const match of page.matchAll(/\b(?:href|src)=["']([^"']+)["']/g)){
+    assert.ok(resolvesLocal(match[1]),filename+' has a broken local link: '+match[1]);
+  }
+}
+for(const match of sitemap.matchAll(/<loc>https:\/\/classictechgroup\.com\/([^<]*)<\/loc>/g)){
+  assert.ok(resolvesLocal('/'+match[1]),'Sitemap references a missing page: '+match[1]);
+}
+console.log('PASS — Classic Technologies layout, 8 active platforms, 2 apps, 4 filters, case studies, SEO links, branding and local routes');
