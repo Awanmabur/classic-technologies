@@ -41,9 +41,10 @@ for(const filename of ['project-classic-events-android.html','project-chariot-mo
 // Legacy indexed query URLs must lead to existing case-study files rather than
 // open-redirecting or rendering obsolete/duplicate project content.
 const legacyPage=read('project.html');
-const legacyMatch=legacyPage.match(/const known = new Set\\((\\[[^\\]]+\\])\\);/);
-assert.ok(legacyMatch,'Legacy project migration allowlist missing');
-const legacyIds=JSON.parse(legacyMatch[1]);
+const legacyStart=legacyPage.indexOf('const known = new Set(');
+const legacyEnd=legacyPage.indexOf(');',legacyStart);
+assert.ok(legacyStart>=0&&legacyEnd>legacyStart,'Legacy project migration allowlist missing');
+const legacyIds=JSON.parse(legacyPage.slice(legacyStart+'const known = new Set('.length,legacyEnd));
 assert.ok(legacyIds.length>=data.projects.length+data.mobileApps.length);
 assert.ok(legacyPage.includes("window.location.replace('https://classictechgroup.com/project-' + id"),
   'Legacy query links must lead to the apex canonical case URLs');
