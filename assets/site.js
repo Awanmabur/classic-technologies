@@ -73,3 +73,14 @@ window.addEventListener('load',()=>{
   };
   window.addEventListener('scroll', smoothScrollUpdate, { passive: true });
 })();
+
+
+/* Restore project-specific branded artwork if an external preview cannot load. */
+document.querySelectorAll('img[data-portfolio-fallback]').forEach(img=>{
+  const restore=()=>{
+    const backup=img.getAttribute('data-portfolio-fallback');
+    if(backup&&img.getAttribute('src')!==backup) img.src=backup;
+  };
+  img.addEventListener('error',restore,{once:true});
+  if(img.complete&&!img.naturalWidth)restore();
+});
