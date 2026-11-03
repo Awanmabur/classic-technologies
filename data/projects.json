@@ -73,155 +73,18 @@
   ],
   "projects": [
     {
-      "id": "classic-events-pro",
-      "title": "Classic Events Pro (Event Management & Ticketing)",
-      "full": "Classic Events Pro (Event Management & Ticketing)",
-      "desc": "A production-minded event and ticketing platform designed to help organizers sell tickets, manage promoters, verify entry with QR check-in and control event operations from a professional dashboard.",
-      "tags": [
-        "Events",
-        "Ticketing",
-        "Promoters",
-        "Admin",
-        "Analytics"
-      ],
-      "live": "https://events.classictechgroup.com",
-      "code": "https://github.com/Awanmabur/classic-events",
-      "initial": "EP",
-      "tone": "dark",
-      "img": "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=1400&q=80",
-      "roles": [
-        {
-          "icon": "fa-solid fa-code",
-          "title": "Full-Stack Ownership",
-          "points": [
-            "Designed and built the system end-to-end",
-            "UI/UX, backend, database, and integrations",
-            "Production-first architecture decisions"
-          ]
-        },
-        {
-          "icon": "fa-solid fa-diagram-project",
-          "title": "System Architecture",
-          "points": [
-            "Modular controllers + clean routing",
-            "Scalable patterns for events/tickets/orders",
-            "Admin tools and permissions structure"
-          ]
-        },
-        {
-          "icon": "fa-solid fa-users-gear",
-          "title": "Roles & Dashboards",
-          "points": [
-            "Organizer dashboard (events, tickets, sales)",
-            "Promoter dashboard (links, sales, earnings)",
-            "Admin moderation & approvals"
-          ]
-        },
-        {
-          "icon": "fa-solid fa-credit-card",
-          "title": "Payments + Orders",
-          "points": [
-            "Checkout and order records",
-            "Receipts and status tracking",
-            "Refund-ready structure and reconciliation"
-          ]
-        },
-        {
-          "icon": "fa-solid fa-qrcode",
-          "title": "Ticket QR + Check-in",
-          "points": [
-            "QR generation per ticket",
-            "Validation flow for entry scanning",
-            "Anti-fraud checks + status updates"
-          ]
-        },
-        {
-          "icon": "fa-solid fa-shield-halved",
-          "title": "Security & Hardening",
-          "points": [
-            "Validation & safe input handling",
-            "Rate limiting and safe auth patterns",
-            "Audit-friendly logs and error handling"
-          ]
-        }
-      ],
-      "features": [
-        {
-          "icon": "fa-solid fa-calendar-check",
-          "title": "Event Creation & Publishing",
-          "desc": "Create events, sessions, ticket types, capacity rules, visibility, schedules, and promo logic."
-        },
-        {
-          "icon": "fa-solid fa-ticket",
-          "title": "Ticketing & Orders",
-          "desc": "Ticket categories, pricing tiers, buyer details, order confirmation, and receipt-ready structure."
-        },
-        {
-          "icon": "fa-solid fa-users",
-          "title": "Promoter System",
-          "desc": "Share links, ref codes, attribution, earnings calculation, payouts-ready records and reporting."
-        },
-        {
-          "icon": "fa-solid fa-qrcode",
-          "title": "QR Tickets + Gate Validation",
-          "desc": "QR ticket generation and entry verification workflow with unique IDs and validation state."
-        },
-        {
-          "icon": "fa-solid fa-clipboard-check",
-          "title": "Admin Moderation Tools",
-          "desc": "Approve events, edit requests, manage users/promoters, and enforce platform rules."
-        },
-        {
-          "icon": "fa-solid fa-chart-line",
-          "title": "Analytics & Performance",
-          "desc": "Sales insights, event trends, promoter performance, and peak-day reliability improvements."
-        }
-      ],
-      "challenges": [
-        {
-          "title": "Problem: Promoter attribution accuracy",
-          "lines": [
-            {
-              "type": "fix",
-              "text": "Solution: consistent query params + server-side attribution checks on checkout/order creation."
-            },
-            {
-              "type": "good",
-              "text": "Result: reliable promoter reporting and fewer mis-attributions."
-            }
-          ]
-        },
-        {
-          "title": "Problem: Peak traffic on event day",
-          "lines": [
-            {
-              "type": "fix",
-              "text": "Solution: optimized pages, reduced payloads, safe caching patterns, and controlled DB queries."
-            },
-            {
-              "type": "good",
-              "text": "Result: stable performance under heavy load."
-            }
-          ]
-        }
-      ]
-    },
-    {
       "id": "classic-trip",
-      "title": "Classic Trip (Travel Booking & Ticketing)",
-      "full": "Classic Trip (Travel Booking & Ticketing)",
-      "desc": "A booking and ticketing system concept for transport and travel businesses, with schedules, inventory, operators, tickets, promotions and customer-facing booking flows.",
+      "title": "Classic Trip",
+      "subtitle": "Travel booking marketplace across East Africa",
+      "desc": "A multi-provider travel marketplace connecting customers with bus journeys, accommodation, flights, local rides and related travel services. The product combines route discovery, dated availability, reservation flows, digital tickets and operator-facing management in one travel experience.",
       "tags": [
+        "Travel technology",
         "Booking",
-        "Tickets",
-        "Inventory",
-        "Promoters",
-        "Admin"
+        "Multi-provider",
+        "Operations"
       ],
-      "live": "https://awanmabur.github.io/classic-trip",
+      "live": "https://classic-trip.com",
       "code": "https://github.com/Awanmabur/classic-trip",
-      "initial": "TR",
-      "tone": "light",
       "img": "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=1400&q=80",
       "roles": [
         {
@@ -341,155 +204,18 @@
       ]
     },
     {
-      "id": "classic-education-suite",
-      "title": "Classic Education Suite (Multi-Tenant SaaS)",
-      "full": "Classic Education Suite (Multi-Tenant SaaS)",
-      "desc": "A multi-tenant education SaaS direction for schools and universities, connecting admissions, learner portals, institution profiles, finance-ready structure and LMS-ready workflows.",
-      "tags": [
-        "SaaS",
-        "Education",
-        "Multi-tenant",
-        "Portals",
-        "School Profiles"
-      ],
-      "live": "",
-      "code": "",
-      "initial": "ED",
-      "tone": "light",
-      "img": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1400&q=80",
-      "roles": [
-        {
-          "icon": "fa-solid fa-code",
-          "title": "Full-Stack SaaS Delivery",
-          "points": [
-            "Built tenant-ready platform end-to-end",
-            "Frontend UX + backend logic + data layer",
-            "Reusable components and clean UI patterns"
-          ]
-        },
-        {
-          "icon": "fa-solid fa-diagram-project",
-          "title": "Multi-Tenancy & Isolation",
-          "points": [
-            "Tenant routing + branding hooks",
-            "Clean boundaries per institution",
-            "Scalable onboarding structure"
-          ]
-        },
-        {
-          "icon": "fa-solid fa-users-gear",
-          "title": "Role-Based Portals (RBAC)",
-          "points": [
-            "Student/Staff/Lecturer/Admin portals",
-            "Permission-controlled menus and actions",
-            "Safe admin operations"
-          ]
-        },
-        {
-          "icon": "fa-solid fa-file-signature",
-          "title": "Admissions Workflows",
-          "points": [
-            "Online applications + review",
-            "Approval → enrollment flows",
-            "Audit-friendly status transitions"
-          ]
-        },
-        {
-          "icon": "fa-solid fa-shield-halved",
-          "title": "Security & Data Integrity",
-          "points": [
-            "Validation rules + safe inputs",
-            "Consistent schemas and constraints",
-            "Logs + error handling patterns"
-          ]
-        },
-        {
-          "icon": "fa-solid fa-chart-column",
-          "title": "Analytics Foundation",
-          "points": [
-            "Dashboards and reporting hooks",
-            "Institution-level metrics",
-            "Growth-ready architecture"
-          ]
-        }
-      ],
-      "features": [
-        {
-          "icon": "fa-solid fa-building-columns",
-          "title": "Multi-Tenant Institutions",
-          "desc": "Tenant setup, branding, configurations and scalable onboarding patterns per school/university."
-        },
-        {
-          "icon": "fa-solid fa-user-graduate",
-          "title": "Admissions + Enrollment",
-          "desc": "Online application forms, review pipeline, approvals, and student onboarding flows."
-        },
-        {
-          "icon": "fa-solid fa-users-gear",
-          "title": "Role Portals (RBAC)",
-          "desc": "Students, lecturers, staff, finance/admin portals with permission-based experiences."
-        },
-        {
-          "icon": "fa-solid fa-id-card",
-          "title": "Student Records & Services",
-          "desc": "Profiles, documents, requests, department structures, and service workflows."
-        },
-        {
-          "icon": "fa-solid fa-school",
-          "title": "School Profiles Directory",
-          "desc": "A directory listing schools/universities with public profiles, programs/services, and discovery UX."
-        },
-        {
-          "icon": "fa-solid fa-chart-line",
-          "title": "Reports & Analytics",
-          "desc": "Dashboards for operations, admissions insights, and reporting-ready architecture."
-        }
-      ],
-      "challenges": [
-        {
-          "title": "Problem: Strong tenant separation",
-          "lines": [
-            {
-              "type": "fix",
-              "text": "Solution: tenant-aware routing and tenant configuration boundaries across the system."
-            },
-            {
-              "type": "good",
-              "text": "Result: safer isolation and easier onboarding of new institutions."
-            }
-          ]
-        },
-        {
-          "title": "Problem: Complex roles and permissions",
-          "lines": [
-            {
-              "type": "fix",
-              "text": "Solution: structured RBAC with clear portal views and admin-controlled privileges."
-            },
-            {
-              "type": "good",
-              "text": "Result: fewer permission bugs and smoother UX per role."
-            }
-          ]
-        }
-      ]
-    },
-    {
       "id": "classic-mart",
-      "title": "Classic Mart (E-commerce Platform)",
-      "full": "Classic Mart (E-commerce Platform)",
-      "desc": "An ecommerce platform direction with product catalogs, detail pages, cart and checkout planning, order management and admin tools for serious online selling.",
+      "title": "Classic Mart",
+      "subtitle": "Marketplace for buyers, sellers and product promoters",
+      "desc": "An ecommerce marketplace where shoppers discover products, sellers manage storefronts and promoters can earn commission from eligible tracked sales without owning inventory. The system brings together catalogue discovery, checkout, fulfilment, seller operations and account-level controls.",
       "tags": [
-        "E-commerce",
-        "Payments",
-        "Orders",
-        "SEO",
-        "Admin"
+        "Ecommerce",
+        "Multi-vendor",
+        "Promoters",
+        "Checkout"
       ],
-      "live": "https://awanmabur.github.io/classicmart/",
-      "code": "https://github.com/Awanmabur/classicmart",
-      "initial": "CM",
-      "tone": "dark",
+      "live": "https://classic-mart.com",
+      "code": "https://github.com/Awanmabur/classic-mart",
       "img": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1400&q=80",
       "roles": [
         {
@@ -609,40 +335,503 @@
       ]
     },
     {
-      "id": "juba-rentals",
-      "title": "Juba Rentals (Real Estate & Vehicles Marketplace)",
-      "full": "Juba Rentals (Real Estate & Vehicles Marketplace)",
-      "desc": "A listings marketplace concept for real estate and vehicles with verification thinking, agent tools, enquiry management and structured search for buyers.",
+      "id": "autobrand-ai",
+      "title": "AutoBrand AI",
+      "subtitle": "AI-assisted social content operations",
+      "desc": "A brand-focused content and social-media workflow platform combining Brand Brain, AI-assisted content creation, asset organization, review and approval, scheduling and publishing integrations. Designed to keep teams in control of what gets approved and shared.",
       "tags": [
-        "Marketplace",
-        "Real Estate",
-        "Vehicles",
-        "Leads",
-        "Admin"
+        "AI workflows",
+        "Social media",
+        "Approvals",
+        "Content operations"
       ],
-      "live": "https://awanmabur.github.io/jubarentals/",
-      "code": "https://github.com/Awanmabur/jubarentals",
-      "initial": "JR",
-      "tone": "light",
-      "img": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1400&q=80"
+      "live": "https://autobrand.classictechgroup.com",
+      "code": "https://github.com/Awanmabur/AutoBrand-ai",
+      "img": "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=1400&q=80",
+      "roles": [
+        {
+          "icon": "fa-solid fa-brain",
+          "title": "Brand context",
+          "points": [
+            "Brand Brain and reusable brand guidance",
+            "Brand-aware content workflows"
+          ]
+        },
+        {
+          "icon": "fa-solid fa-users-gear",
+          "title": "Review controls",
+          "points": [
+            "Team approvals and publishing permissions",
+            "Distinct workspaces for content operations"
+          ]
+        },
+        {
+          "icon": "fa-solid fa-link",
+          "title": "Provider integrations",
+          "points": [
+            "Connected social services subject to provider permissions",
+            "Google Drive asset workflows"
+          ]
+        }
+      ],
+      "features": [
+        {
+          "icon": "fa-solid fa-pen-nib",
+          "title": "AI Content Assistance",
+          "desc": "Create and refine drafts using brand context while maintaining human approval."
+        },
+        {
+          "icon": "fa-solid fa-calendar-days",
+          "title": "Scheduling & Publishing",
+          "desc": "Organize posts and publishing workflows for supported connected channels."
+        },
+        {
+          "icon": "fa-solid fa-chart-line",
+          "title": "Operations & Analytics",
+          "desc": "Manage content status and assess supported channel performance."
+        }
+      ],
+      "challenges": [
+        {
+          "title": "Challenge: Consistent brand voice",
+          "lines": [
+            {
+              "type": "fix",
+              "text": "Approach: centralize brand guidance and maintain approval before publication."
+            },
+            {
+              "type": "good",
+              "text": "Value: fewer off-brand posts and more accountable publishing."
+            }
+          ]
+        }
+      ]
     },
     {
-      "id": "chariot-technologies",
-      "title": "Chariot Technologies (Mobility Platform)",
-      "full": "Chariot Technologies (Mobility Platform)",
-      "desc": "A premium mobility platform connecting riders and drivers with safety patterns, scalable backend design, and ops dashboards foundation.",
+      "id": "classic-academy",
+      "title": "Classic Academy",
+      "subtitle": "School management and admissions software",
+      "desc": "A school management platform covering public school profiles, admissions, student and staff administration, fees, examinations and parent-facing communication. The architecture separates institution-level operations from public discovery and application journeys.",
+      "tags": [
+        "School management",
+        "Admissions",
+        "Fees",
+        "Education"
+      ],
+      "live": "https://www.classicacademy.app",
+      "code": "https://github.com/Awanmabur/classic-academy",
+      "img": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1400&q=80",
+      "roles": [
+        {
+          "icon": "fa-solid fa-school",
+          "title": "Institution management",
+          "points": [
+            "School configuration and public profiles",
+            "Admissions and operational records"
+          ]
+        },
+        {
+          "icon": "fa-solid fa-users",
+          "title": "Role-aware experience",
+          "points": [
+            "Staff and school administration",
+            "Parent and student workflows"
+          ]
+        },
+        {
+          "icon": "fa-solid fa-shield-halved",
+          "title": "Platform controls",
+          "points": [
+            "Controlled access to private records",
+            "Institution-specific data separation"
+          ]
+        }
+      ],
+      "features": [
+        {
+          "icon": "fa-solid fa-file-signature",
+          "title": "Admissions",
+          "desc": "Public enrollment and school application journeys."
+        },
+        {
+          "icon": "fa-solid fa-receipt",
+          "title": "School Operations",
+          "desc": "Fees, records and academic administration workflows."
+        },
+        {
+          "icon": "fa-solid fa-comments",
+          "title": "Communication",
+          "desc": "Information flow between school teams and families."
+        }
+      ],
+      "challenges": [
+        {
+          "title": "Challenge: Multiple school roles",
+          "lines": [
+            {
+              "type": "fix",
+              "text": "Approach: separate public admissions from protected role-specific school operations."
+            },
+            {
+              "type": "good",
+              "text": "Value: clearer access boundaries and simpler everyday workflows."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "classic-events-pro",
+      "title": "Classic Events Pro",
+      "subtitle": "Event discovery, ticketing and promoter operations",
+      "desc": "An event discovery and ticketing platform for organizers, guests and promoters. Public event listings connect to ticket sales, QR entry workflows, promoter attribution, service discovery and role-specific operational tools.",
+      "tags": [
+        "Event ticketing",
+        "Organizers",
+        "QR check-in",
+        "Promoters"
+      ],
+      "live": "https://events.classictechgroup.com",
+      "code": "https://github.com/Awanmabur/classic-events",
+      "img": "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=1400&q=80",
+      "roles": [
+        {
+          "icon": "fa-solid fa-code",
+          "title": "Full-Stack Ownership",
+          "points": [
+            "Designed and built the system end-to-end",
+            "UI/UX, backend, database, and integrations",
+            "Production-first architecture decisions"
+          ]
+        },
+        {
+          "icon": "fa-solid fa-diagram-project",
+          "title": "System Architecture",
+          "points": [
+            "Modular controllers + clean routing",
+            "Scalable patterns for events/tickets/orders",
+            "Admin tools and permissions structure"
+          ]
+        },
+        {
+          "icon": "fa-solid fa-users-gear",
+          "title": "Roles & Dashboards",
+          "points": [
+            "Organizer dashboard (events, tickets, sales)",
+            "Promoter dashboard (links, sales, earnings)",
+            "Admin moderation & approvals"
+          ]
+        },
+        {
+          "icon": "fa-solid fa-credit-card",
+          "title": "Payments + Orders",
+          "points": [
+            "Checkout and order records",
+            "Receipts and status tracking",
+            "Refund-ready structure and reconciliation"
+          ]
+        },
+        {
+          "icon": "fa-solid fa-qrcode",
+          "title": "Ticket QR + Check-in",
+          "points": [
+            "QR generation per ticket",
+            "Validation flow for entry scanning",
+            "Anti-fraud checks + status updates"
+          ]
+        },
+        {
+          "icon": "fa-solid fa-shield-halved",
+          "title": "Security & Hardening",
+          "points": [
+            "Validation & safe input handling",
+            "Rate limiting and safe auth patterns",
+            "Audit-friendly logs and error handling"
+          ]
+        }
+      ],
+      "features": [
+        {
+          "icon": "fa-solid fa-calendar-check",
+          "title": "Event Creation & Publishing",
+          "desc": "Create events, sessions, ticket types, capacity rules, visibility, schedules, and promo logic."
+        },
+        {
+          "icon": "fa-solid fa-ticket",
+          "title": "Ticketing & Orders",
+          "desc": "Ticket categories, pricing tiers, buyer details, order confirmation, and receipt-ready structure."
+        },
+        {
+          "icon": "fa-solid fa-users",
+          "title": "Promoter System",
+          "desc": "Share links, ref codes, attribution, earnings calculation, payouts-ready records and reporting."
+        },
+        {
+          "icon": "fa-solid fa-qrcode",
+          "title": "QR Tickets + Gate Validation",
+          "desc": "QR ticket generation and entry verification workflow with unique IDs and validation state."
+        },
+        {
+          "icon": "fa-solid fa-clipboard-check",
+          "title": "Admin Moderation Tools",
+          "desc": "Approve events, edit requests, manage users/promoters, and enforce platform rules."
+        },
+        {
+          "icon": "fa-solid fa-chart-line",
+          "title": "Analytics & Performance",
+          "desc": "Sales insights, event trends, promoter performance, and peak-day reliability improvements."
+        }
+      ],
+      "challenges": [
+        {
+          "title": "Problem: Promoter attribution accuracy",
+          "lines": [
+            {
+              "type": "fix",
+              "text": "Solution: consistent query params + server-side attribution checks on checkout/order creation."
+            },
+            {
+              "type": "good",
+              "text": "Result: reliable promoter reporting and fewer mis-attributions."
+            }
+          ]
+        },
+        {
+          "title": "Problem: Peak traffic on event day",
+          "lines": [
+            {
+              "type": "fix",
+              "text": "Solution: optimized pages, reduced payloads, safe caching patterns, and controlled DB queries."
+            },
+            {
+              "type": "good",
+              "text": "Result: stable performance under heavy load."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "classic-finhub",
+      "title": "Classic FinHub",
+      "subtitle": "Financial operations and multi-tenant dashboard prototype",
+      "desc": "A finance operations interface exploring organization workspaces, role-controlled dashboards, transactions, reporting and operational visibility. The available repository demonstrates application structure; regulated money movement and live production availability are not claimed.",
+      "tags": [
+        "Fintech UX",
+        "Operations",
+        "Multi-tenant",
+        "Prototype"
+      ],
+      "live": "",
+      "code": "https://github.com/Awanmabur/finhub",
+      "img": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1400&q=80",
+      "roles": [
+        {
+          "icon": "fa-solid fa-building-columns",
+          "title": "Finance operations",
+          "points": [
+            "Workspace and account-oriented interface",
+            "Transaction and reporting concepts"
+          ]
+        },
+        {
+          "icon": "fa-solid fa-users-gear",
+          "title": "Organization design",
+          "points": [
+            "Tenant and role-oriented views",
+            "Financial-operation administration patterns"
+          ]
+        }
+      ],
+      "features": [
+        {
+          "icon": "fa-solid fa-table-columns",
+          "title": "Operations Dashboard",
+          "desc": "A consolidated view of records, workflow states and financial activity concepts."
+        },
+        {
+          "icon": "fa-solid fa-shield-halved",
+          "title": "Role-Aware Interfaces",
+          "desc": "Demonstration of controlled finance administration screens."
+        }
+      ],
+      "challenges": [
+        {
+          "title": "Challenge: Reliable financial workflows",
+          "lines": [
+            {
+              "type": "fix",
+              "text": "Design focus: explicit user roles, status tracking, reconciliation and auditability."
+            },
+            {
+              "type": "good",
+              "text": "Project scope: interface prototype, not a claim of licensed payment processing."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "classic-campus",
+      "title": "Classic Campus",
+      "subtitle": "University ERP, finance and eLearning platform",
+      "desc": "A university and college management platform combining admissions, student records, academic departments, timetables, campus finance and learning workflows. Its public-facing pages explain institution modules while operational records belong behind authenticated roles.",
+      "tags": [
+        "University ERP",
+        "LMS",
+        "Finance",
+        "Admissions"
+      ],
+      "live": "",
+      "officialDomain": "https://www.classicampus.com",
+      "code": "https://github.com/Awanmabur/classicampus",
+      "img": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1400&q=80",
+      "roles": [
+        {
+          "icon": "fa-solid fa-building-columns",
+          "title": "Campus operations",
+          "points": [
+            "Institution-wide module structure",
+            "Admissions, academic and finance workflows"
+          ]
+        },
+        {
+          "icon": "fa-solid fa-users-gear",
+          "title": "Academic roles",
+          "points": [
+            "Student and staff portals",
+            "Administrative permissions and reporting"
+          ]
+        }
+      ],
+      "features": [
+        {
+          "icon": "fa-solid fa-graduation-cap",
+          "title": "University Administration",
+          "desc": "Admissions, student records and academic workflows."
+        },
+        {
+          "icon": "fa-solid fa-book-open",
+          "title": "Learning & Scheduling",
+          "desc": "eLearning and timetable-oriented experiences."
+        },
+        {
+          "icon": "fa-solid fa-chart-column",
+          "title": "Finance & Reporting",
+          "desc": "Campus operational reporting and finance modules."
+        }
+      ],
+      "challenges": [
+        {
+          "title": "Challenge: Complex institutional operations",
+          "lines": [
+            {
+              "type": "fix",
+              "text": "Design focus: modular academic, administrative and finance workflows."
+            },
+            {
+              "type": "good",
+              "text": "Value: a consistent experience across campus teams."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "classic-rentals",
+      "title": "Classic Rentals",
+      "subtitle": "Property and vehicle rental marketplace project",
+      "desc": "A rentals marketplace project for discovering property, accommodation and vehicle listings, comparing relevant details and contacting owners or agents. The current repository documents the application; a verified public production domain has not been established.",
+      "tags": [
+        "Rentals",
+        "Property",
+        "Vehicles",
+        "Marketplace"
+      ],
+      "live": "",
+      "code": "https://github.com/Awanmabur/classic-rentals",
+      "img": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1400&q=80",
+      "roles": [
+        {
+          "icon": "fa-solid fa-house",
+          "title": "Rental discovery",
+          "points": [
+            "Property and vehicle category browsing",
+            "Listing and enquiry experiences"
+          ]
+        },
+        {
+          "icon": "fa-solid fa-users",
+          "title": "Owners and agents",
+          "points": [
+            "Listing ownership and enquiry flow concepts",
+            "Administrative oversight for marketplace records"
+          ]
+        }
+      ],
+      "features": [
+        {
+          "icon": "fa-solid fa-magnifying-glass",
+          "title": "Search & Discovery",
+          "desc": "Explore listings by relevant property and vehicle attributes."
+        },
+        {
+          "icon": "fa-solid fa-envelope",
+          "title": "Enquiries",
+          "desc": "Connect interested customers with a listing contact route."
+        }
+      ],
+      "challenges": [
+        {
+          "title": "Challenge: Trust in listings",
+          "lines": [
+            {
+              "type": "fix",
+              "text": "Design focus: clear listing details, contact paths and verification controls."
+            },
+            {
+              "type": "good",
+              "text": "Scope: application project; a public live marketplace is not yet verified."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "mobileApps": [
+    {
+      "id": "classic-events-android",
+      "title": "Classic Events Pro — Android App",
+      "subtitle": "Native Android event experience",
+      "desc": "Android application project for the Classic Events ecosystem, maintained separately from the web event platform. The linked repository contains an Android Studio application; public store distribution is not yet independently verified.",
+      "tags": [
+        "Android",
+        "Mobile app",
+        "Events"
+      ],
+      "live": "",
+      "code": "https://github.com/Awanmabur/classic_events_pro",
+      "img": "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=1400&q=80",
+      "roles": [],
+      "features": [],
+      "challenges": []
+    },
+    {
+      "id": "chariot-mobile",
+      "title": "Chariot Uganda — Mobile Mobility Experience",
+      "subtitle": "Rider and driver journeys",
+      "desc": "Mobile-focused transport experience for riders and drivers in Uganda. The public Chariot website explains rides, delivery and driver participation; this portfolio does not claim a separately verified app-store listing.",
       "tags": [
         "Mobility",
-        "Platform",
-        "SaaS",
-        "Safety",
-        "Ops"
+        "Rider journeys",
+        "Driver onboarding"
       ],
       "live": "https://www.chariot.ug",
       "code": "https://github.com/Chariot-Technologies/chariot-technologies",
-      "initial": "CH",
-      "tone": "light",
-      "img": "https://images.unsplash.com/photo-1526662092594-e98c1e356d6a?auto=format&fit=crop&w=1400&q=80"
+      "img": "https://images.unsplash.com/photo-1526662092594-e98c1e356d6a?auto=format&fit=crop&w=1400&q=80",
+      "roles": [],
+      "features": [],
+      "challenges": []
     }
   ]
 }
