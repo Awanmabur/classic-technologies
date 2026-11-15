@@ -31,7 +31,7 @@ Classic Technologies helps businesses establish a professional digital presence,
 - [Classic Mart](https://classictechgroup.com/project-classic-mart) — Marketplace for buyers, sellers and product promoters
 - [AutoBrand AI](https://classictechgroup.com/project-autobrand-ai) — AI-assisted social content operations
 - [Classic Academy](https://classictechgroup.com/project-classic-academy) — School management and admissions software
-- [Classic Events Pro](https://classictechgroup.com/project-classic-events-pro) — Event discovery, ticketing and promoter operations
+- [Classic Events](https://classictechgroup.com/project-classic-events-pro) — Event discovery, ticketing and promoter operations
 - [Classic FinHub](https://classictechgroup.com/project-classic-finhub) — Financial operations and multi-tenant dashboard prototype
 - [Classic Campus](https://classictechgroup.com/project-classic-campus) — University ERP, finance and eLearning platform
 - [Classic Rentals](https://classictechgroup.com/project-classic-rentals) — Property and vehicle rental marketplace project

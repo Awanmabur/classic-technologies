@@ -482,7 +482,7 @@
     },
     {
       "id": "classic-events-pro",
-      "title": "Classic Events Pro",
+      "title": "Classic Events",
       "subtitle": "Event discovery, ticketing and promoter operations",
       "desc": "An event discovery and ticketing platform for organizers, guests and promoters. Public event listings connect to ticket sales, QR entry workflows, promoter attribution, service discovery and role-specific operational tools. The engineering scope includes controlled event edits, ticket capacity, QR verification, payment reconciliation and promoter commissions.",
       "tags": [
