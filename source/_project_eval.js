@@ -1,6 +1,6 @@
 const obj = {
             "classic-events-pro": {
-                title: "Classic Events Pro (Event Management & Ticketing)",
+                title: "Classic Events (Event Management & Ticketing)",
                 desc: "A premium event platform with organizer tools, promoter tracking, ticketing, QR check-in, and admin controls — built end-to-end for production use.",
                 tags: ["Events", "Ticketing", "Promoters", "Admin", "Analytics"],
                 img: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=1400&q=80",
